@@ -155,4 +155,41 @@ fig.tight_layout()
 savefig_transparent(fig, "figure2_composition_breakdown.png")
 plt.close(fig)
 
-print("Saved figure1_stale_rate_by_vintage.png and figure2_composition_breakdown.png")
+# ============================================================
+# Figure 3 -- merge-event date distribution across the full panel
+# (all 81,963 merge events recorded for the 48,746 candidates;
+# same canvas/typography family, single-series vertical bar chart)
+# ============================================================
+fig, ax = new_figure()
+
+years = ["2000","2001","2002","2003","2004","2005","2006","2007","2008",
+         "2009","2010","2011","2012","2013","2014","2015","2016","2017"]
+counts = {
+    "2000": 2073, "2001": 1309, "2002": 735, "2003": 11263, "2004": 10525,
+    "2005": 0, "2006": 6982, "2007": 522, "2008": 37867, "2009": 6338,
+    "2010": 487, "2011": 68, "2012": 61, "2013": 430, "2014": 2897,
+    "2015": 83, "2016": 321, "2017": 2,
+}
+vals = [counts[y] for y in years]
+
+# window used elsewhere in the paper (2014-2017) picked out in the critical
+# red, everything else in a neutral muted gray -- makes the "no bar right of
+# 2017" point visually self-evident without an annotation
+window = {"2014", "2015", "2016", "2017"}
+bar_colors = [CRITICAL if y in window else OTHER_GRAY for y in years]
+
+ax.bar(years, vals, width=0.62, color=bar_colors, zorder=3)
+
+ax.set_ylabel("Merge events (of 81,963 total)", color=INK_SECONDARY, fontsize=AXIS_LABEL_FONTSIZE)
+ax.set_xticks(range(len(years)))
+ax.set_xticklabels(years, color=INK_SECONDARY, fontsize=TICK_FONTSIZE - 1, rotation=45, ha="right")
+ax.tick_params(axis="y", colors=INK_MUTED, labelsize=TICK_FONTSIZE)
+ax.yaxis.grid(True, color=GRIDLINE, linewidth=0.8, zorder=0)
+ax.set_axisbelow(True)
+strip_spines(ax, keep=("bottom",))
+
+fig.tight_layout()
+savefig_transparent(fig, "figure3_merge_date_distribution.png")
+plt.close(fig)
+
+print("Saved figure1_stale_rate_by_vintage.png, figure2_composition_breakdown.png, and figure3_merge_date_distribution.png")
