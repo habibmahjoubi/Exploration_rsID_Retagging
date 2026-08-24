@@ -1,0 +1,35 @@
+# Nextflow pipeline work directory -- multi-GB intermediate BAM/VCF/reference
+# outputs from the real sarek validation run. Not source material; RESULTS.md
+# in sarek_validation/ documents the run itself and stays tracked.
+sarek_validation/work/
+sarek_validation/.nextflow*
+sarek_validation/nextflow.log*
+
+# Nextflow / Docker run artifacts if the pipeline is ever re-run from repo root
+.nextflow/
+.nextflow.log*
+work/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Large reference/genomic downloads that should never be re-added at repo
+# root by accident (already present, tracked deliberately, under data/ --
+# these patterns only guard against a stray future download elsewhere)
+*.bam
+*.bai
+*.cram
+*.fasta
+*.fa
+*.fai
+*.dict

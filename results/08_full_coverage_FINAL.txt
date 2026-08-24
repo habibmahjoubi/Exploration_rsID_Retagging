@@ -1,0 +1,42 @@
+Couverture complète du fichier dbSNP chr20 (9,62 Go) -- CHIFFRE DÉFINITIF
+==========================================================================
+
+Méthode : flux complet (curl | bzip2 -dc | python), sans stockage intermédiaire
+sur disque, ~1h de traitement (démarré 22:08, terminé ~23:24).
+
+RÉSULTAT (remplace/corrige results/01 et results/02)
+------------------------------------------------------
+Enregistrements RefSNP chr20 parsés (TOTALITÉ du fichier) : 25 938 655
+Erreurs de parsing                                         : 0
+Positions GIAB touchées (position seule)                   : 104 082
+  -> AVEC historique de fusion                              : 49 730
+  -> SANS historique de fusion                              : 54 352
+
+**TAUX DE FUSION FINAL, COUVERTURE COMPLÈTE : 47,78 %**
+
+COMPARAISON AVEC L'ESTIMATION INITIALE (biaisée)
+--------------------------------------------------
+Échantillon initial (rsID bas/anciens, results/01)   : 73,75 %
+Échantillon partiel élargi (results/02)              : 73,79 %
+**Couverture complète (ce fichier)**                 : **47,78 %**
+
+Écart de ~26 points -- confirme précisément le biais anticipé et documenté dès
+le début : trier par numéro de rsID surreprésente les variants anciens/très
+étudiés (donc plus susceptibles d'avoir accumulé des fusions sur 25 ans) par
+rapport à un vrai tirage aléatoire sur l'ensemble du spectre.
+
+CONCLUSION
+----------
+Le chiffre corrigé est plus conservateur mais reste massif : près d'une
+variante réelle sur deux (47,78 %) repose sur un identifiant dbSNP qui a
+historiquement absorbé au moins un prédécesseur fusionné. La conclusion
+qualitative du papier (le mécanisme existe à grande échelle) est confirmée,
+pas infirmée -- seul le chiffre précis change, dans le sens attendu.
+
+IMPORTANT -- ce qui N'EST PAS encore recalculé à cette échelle complète :
+le panel "impact en aval" (candidats à fusion 2014-2017, tests bundles GATK/GDC,
+résultats 05-07) est encore dérivé de l'échantillon partiel (315 939
+enregistrements), pas des 25,9M complets. Un panel de candidats à fusion
+récente construit sur la couverture complète donnerait un nombre de candidats
+et un taux de péremption plus fiables -- c'est la prochaine étape prioritaire
+si le papier avance (voir brief_projet.md).

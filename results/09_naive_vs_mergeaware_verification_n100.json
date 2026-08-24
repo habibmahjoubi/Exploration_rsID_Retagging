@@ -1,0 +1,710 @@
+{
+  "summary": {
+    "n_sampled": 100,
+    "n_no_primary_snapshot_data": 100,
+    "n_confirmed_match_via_merge_ledger": 100,
+    "n_errors": 0
+  },
+  "details": [
+    {
+      "old_rsid": "60973865",
+      "expected_current": "6129293",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6129293",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "56422737",
+      "expected_current": "927153",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs927153",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "678607",
+      "expected_current": "215546",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs215546",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58117241",
+      "expected_current": "2801002",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2801002",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "6108113",
+      "expected_current": "2423347",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2423347",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "60778052",
+      "expected_current": "2250525",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2250525",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17200890",
+      "expected_current": "1205700",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs1205700",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61090754",
+      "expected_current": "873925",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs873925",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58929136",
+      "expected_current": "8114335",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs8114335",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "7352775",
+      "expected_current": "6078686",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6078686",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "807217",
+      "expected_current": "756021",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs756021",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58733990",
+      "expected_current": "6098373",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6098373",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "7271701",
+      "expected_current": "6035210",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6035210",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "390173",
+      "expected_current": "235014",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs235014",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "529400",
+      "expected_current": "228204",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs228204",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17297338",
+      "expected_current": "808681",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs808681",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58206798",
+      "expected_current": "2224504",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2224504",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "57259452",
+      "expected_current": "2313978",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2313978",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59709057",
+      "expected_current": "6064161",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6064161",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "74273092",
+      "expected_current": "6105995",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6105995",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17524025",
+      "expected_current": "221667",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs221667",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17250341",
+      "expected_current": "6083699",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6083699",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "3938574",
+      "expected_current": "2103736",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2103736",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58267642",
+      "expected_current": "28612490",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs28612490",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61632825",
+      "expected_current": "6134705",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6134705",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59302572",
+      "expected_current": "12625415",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs12625415",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17225858",
+      "expected_current": "6078600",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6078600",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "6417464",
+      "expected_current": "6034394",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6034394",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17250355",
+      "expected_current": "2235847",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2235847",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "8120690",
+      "expected_current": "6044777",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6044777",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "8126137",
+      "expected_current": "6096903",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6096903",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59086917",
+      "expected_current": "2869402",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2869402",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "371283",
+      "expected_current": "159097",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs159097",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17203127",
+      "expected_current": "1555279",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs1555279",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "57262274",
+      "expected_current": "12480027",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs12480027",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "7264725",
+      "expected_current": "6035334",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6035334",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "6052838",
+      "expected_current": "4813715",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs4813715",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "10331949",
+      "expected_current": "2869004",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2869004",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "13038582",
+      "expected_current": "1499873",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs1499873",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "57992283",
+      "expected_current": "2208762",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2208762",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17190332",
+      "expected_current": "4813084",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs4813084",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58764794",
+      "expected_current": "869449",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs869449",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59458202",
+      "expected_current": "804622",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs804622",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "8121096",
+      "expected_current": "6018804",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6018804",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "2424516",
+      "expected_current": "844936",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs844936",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "35321975",
+      "expected_current": "4997813",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs4997813",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "6043421",
+      "expected_current": "4814395",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs4814395",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "7268558",
+      "expected_current": "6107059",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6107059",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58716135",
+      "expected_current": "2427268",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2427268",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "443635",
+      "expected_current": "292135",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs292135",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "62203380",
+      "expected_current": "58064549",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs58064549",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "60683242",
+      "expected_current": "6047714",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6047714",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58417862",
+      "expected_current": "6075822",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6075822",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58045419",
+      "expected_current": "1028307",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs1028307",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17487449",
+      "expected_current": "6018151",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6018151",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "1775218",
+      "expected_current": "708925",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs708925",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61567378",
+      "expected_current": "6081187",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6081187",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "6087491",
+      "expected_current": "3764672",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs3764672",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58741585",
+      "expected_current": "6123274",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6123274",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "60401254",
+      "expected_current": "6116430",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6116430",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59449148",
+      "expected_current": "6011540",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6011540",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "52794635",
+      "expected_current": "6089371",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6089371",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58011657",
+      "expected_current": "2051065",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2051065",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17440845",
+      "expected_current": "13039689",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs13039689",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "56746576",
+      "expected_current": "577116",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs577116",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17255721",
+      "expected_current": "306757",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs306757",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59022072",
+      "expected_current": "6141006",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6141006",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "60198698",
+      "expected_current": "2273444",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2273444",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "56921390",
+      "expected_current": "3092639",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs3092639",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17804241",
+      "expected_current": "714079",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs714079",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61407329",
+      "expected_current": "2315656",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2315656",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17340520",
+      "expected_current": "857247",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs857247",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "60064419",
+      "expected_current": "6018867",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6018867",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17721303",
+      "expected_current": "2869315",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2869315",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "8120137",
+      "expected_current": "6046080",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6046080",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "7265443",
+      "expected_current": "6127377",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6127377",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61542312",
+      "expected_current": "6012633",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6012633",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "57906349",
+      "expected_current": "1570841",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs1570841",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "58105693",
+      "expected_current": "6014708",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6014708",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "17351784",
+      "expected_current": "4911198",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs4911198",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "57291852",
+      "expected_current": "2183644",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2183644",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61583689",
+      "expected_current": "7265718",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs7265718",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "6049507",
+      "expected_current": "2474508",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2474508",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61345973",
+      "expected_current": "12625849",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs12625849",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "52803606",
+      "expected_current": "8184448",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs8184448",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59954178",
+      "expected_current": "6133739",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6133739",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "61034285",
+      "expected_current": "600407",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs600407",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "7360879",
+      "expected_current": "6110100",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6110100",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59117032",
+      "expected_current": "6126738",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6126738",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "60112831",
+      "expected_current": "1836442",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs1836442",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "56459711",
+      "expected_current": "6075348",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6075348",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "62205679",
+      "expected_current": "57298584",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs57298584",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "6086292",
+      "expected_current": "2423338",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2423338",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "4461330",
+      "expected_current": "1574341",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs1574341",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "59809900",
+      "expected_current": "6049103",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6049103",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "57387346",
+      "expected_current": "6018631",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6018631",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "3818001",
+      "expected_current": "2734515",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs2734515",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "8182892",
+      "expected_current": "6129561",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6129561",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "13041548",
+      "expected_current": "11086753",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs11086753",
+      "resolves_to_expected_current": true
+    },
+    {
+      "old_rsid": "7270602",
+      "expected_current": "6082448",
+      "naive_verdict": "UNKNOWN/RETIRED (no live data of its own)",
+      "merge_aware_verdict": "-> rs6082448",
+      "resolves_to_expected_current": true
+    }
+  ]
+}

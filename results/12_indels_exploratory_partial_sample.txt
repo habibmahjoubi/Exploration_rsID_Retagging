@@ -1,0 +1,65 @@
+Extension aux indels (exploratoire, échantillon partiel) — suite à la demande "continue sur les indels"
+================================================================================================================
+
+MÉTHODE
+-------
+Jusqu'ici, le matching exact-allèle excluait totalement les indels (limite
+documentée dès le début : la convention d'ancrage SPDI de dbSNP ne correspond
+pas directement à la convention avec base d'ancrage de VCF).
+
+Implémentation d'une fonction de normalisation (scripts/normalize.py) : trim
+du suffixe partagé puis du préfixe partagé entre REF et ALT (VCF), pour
+obtenir une forme minimale comparable directement au format SPDI de dbSNP
+(vérifié : idempotente sur une entrée déjà minimale de type SPDI). Auto-tests
+inclus dans le script, tous passent.
+
+Limite assumée et maintenant QUANTIFIÉE (pas juste supposée) : ceci est un
+trim préfixe/suffixe simple, pas un réalignement complet contre la séquence
+de référence dans les régions homopolymères/répétitions courtes -- deux
+outils peuvent choisir des ancrages différents mais équivalents pour le même
+indel dans un tel contexte, et ce script ne les fera pas correspondre.
+
+RÉSULTAT SUR L'ÉCHANTILLON PARTIEL (400 Mo, pas la couverture complète)
+--------------------------------------------------------------------------
+Panel de candidats étendu aux indels : 55 299 (dont 7 451 indels), contre
+47 841 SNV seules -- soit +13,5 % de candidats supplémentaires réels.
+
+Sous-ensemble fusion 2014-2017 étendu : 4 096 candidats (1 439 indels, 2 657
+SNV) contre 2 657 avant (SNV seules).
+
+TAUX DE MATCHING RÉUSSI, indels vs SNV (bundle dbSNP138) :
+  SNV   : 2650/2657 (99,7 %) trouvent une correspondance dans le bundle
+  Indel : 1223/1439 (85,0 %) trouvent une correspondance -- le reste (15 %)
+          se répartit en "absent" (79, 5,5 %) et surtout **"ni courant ni
+          périmé" (137, 9,5 %)** -- cette dernière catégorie est à **100 %
+          composée d'indels (0 SNV)**, confirmant précisément et
+          empiriquement la limite de normalisation documentée ci-dessus.
+
+TAUX DE PÉREMPTION PARMI LES VARIANTS EFFECTIVEMENT MATCHÉS (échantillon partiel) :
+                          Bundle 138 (2014)         Bundle 144 (juin 2015)
+SNV  -- périmé            219/2650 = 8,26 %          18/2627 = 0,69 %
+Indel -- périmé            14/1223 = 1,14 %          12/1205 = 1,00 %
+SNV  -- ambigu               0/2650 = 0,00 %          60/2627 = 2,28 %
+Indel -- ambigu             49/1223 = 4,01 %         140/1205 = 11,62 %
+
+CONCLUSION -- un vrai contraste, pas juste "les indels confirment pareil"
+----------------------------------------------------------------------------
+1. Les indels sont MOINS souvent périmés que les SNV (1,0-1,1 % vs 0,7-8,3 %)
+   -- direction plausible : les indels dans les régions difficiles sont
+   peut-être moins souvent des doublons de soumission (soumis moins souvent
+   par des pipelines automatisés en double), ou le "matching réussi" filtre
+   déjà les indels les plus simples/non-répétitifs, qui sont peut-être aussi
+   les moins sujets aux doublons -- pas encore élucidé, à creuser.
+2. Les indels sont BEAUCOUP plus souvent AMBIGUS (4-12 % vs 0-2,3 % pour les
+   SNV) -- cohérent avec l'idée que les indels dans des contextes répétés
+   sont plus difficiles à dédupliquer administrativement pour dbSNP lui-même,
+   pas seulement pour notre script de comparaison.
+3. Le taux de correspondance de 85 % (vs 99,7 % pour les SNV) confirme que la
+   limite de normalisation prefix/suffixe est réelle et non négligeable, mais
+   n'empêche pas d'obtenir un résultat exploitable sur la majorité des indels.
+
+STATUT : analyse exploratoire sur ÉCHANTILLON PARTIEL, pas la couverture
+complète (le refaire sur les 25,9M enregistrements est un travail futur
+possible mais coûteux ~1-2h de plus, décision à prendre si le papier avance).
+Intégré au manuscrit comme nouvelle sous-section 5.7 (supplémentaire),
+clairement étiquetée comme exploratoire.

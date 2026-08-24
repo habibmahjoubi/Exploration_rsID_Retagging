@@ -1,0 +1,46 @@
+Vérification ClinVar sur les 369 paires (courant, périmé) de dbSNP138 — résultat négatif honnête
+========================================================================================================
+
+CONTEXTE : suite à la relecture critique, tester si une fraction des 369 rsID
+périmés de dbSNP138 porte une classification de pathogénicité ClinVar qu'une
+recherche naïve par l'ancien ID manquerait -- transformerait le papier d'un
+"papier d'hygiène d'identifiants" en argument de sécurité clinique concret.
+
+MÉTHODE : requête NCBI E-utilities esearch (db=clinvar, term=rs{ID}) pour
+chacun des 369 rsID COURANTS et chacun des 369 rsID PÉRIMÉS correspondants
+(738 requêtes, ~0,7s/requête avec délai de politesse).
+
+VALIDATION DE LA MÉTHODE (sanity-check) :
+  rs334  (drépanocytose, pathogène connu)     -> 10 enregistrements ClinVar
+  rs6025 (Facteur V Leiden, pathogène connu)  ->  3 enregistrements ClinVar
+  rs202831 (un de nos "current")              ->  0 enregistrement
+=> La méthode fonctionne correctement (détecte bien les vrais positifs connus).
+
+RÉSULTAT
+--------
+Total paires testées                                   : 369
+ID courant avec >=1 enregistrement ClinVar             : 0
+ID périmé avec >=1 enregistrement ClinVar              : 0
+Aucune paire (ni courant ni périmé) n'a de donnée ClinVar : 369/369
+
+CONCLUSION HONNÊTE
+------------------
+Résultat négatif net : AUCUN des 369 candidats de ce panel spécifique n'a de
+classification clinique dans ClinVar, qu'on interroge l'ID courant ou l'ID
+périmé. Ce test ne permet donc PAS de transformer le papier en argument de
+sécurité clinique -- la question de la conséquence clinique réelle reste
+ouverte, pas confirmée.
+
+Explication plausible (pas établie) : ce panel spécifique (rsID courants
+anciens/bas, filtré sur "fusion la plus récente en 2014-2017") est
+probablement enrichi en polymorphismes communs et bien établis plutôt qu'en
+variants rares associés à une maladie -- les variants cliniquement
+pertinents ont typiquement des rsID plus récents/élevés ou sont rares (donc
+moins susceptibles d'avoir généré des soumissions dupliquées nécessitant une
+fusion administrative). Un panel construit spécifiquement à partir de
+variants ClinVar/pathogènes connus, puis vérifié pour un historique de
+fusion, serait le test correct pour répondre à la vraie question -- non fait
+ici, faute de temps, mais identifié comme piste concrète de travail futur.
+
+STATUT : intégré au manuscrit (Section 6.2 Limitations) comme résultat
+négatif rapporté honnêtement, pas comme "pas encore fait".

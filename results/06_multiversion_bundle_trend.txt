@@ -1,0 +1,52 @@
+Test "impact aval" #3 : comparaison multi-version de bundles réels (138 vs 144)
+==================================================================================
+
+Objectif : montrer une TENDANCE temporelle (pas un point isolé), comme les 13 bases
+Kraken2 de Papier B, en testant le même panel de 2 788 candidats (fusions 2014-2017)
+contre deux vrais bundles GRCh38 de vintages différents.
+
+Bundles testés :
+  - Homo_sapiens_assembly38.dbsnp138.vcf.gz (Broad, GATK best-practices, contenu
+    dbSNP build 138, ~2014) -- déjà testé dans results/05.
+  - dbsnp_144.hg38.vcf.gz (Broad, chemin "gdc/", utilisé par le NCI Genomic Data
+    Commons -- TCGA et autres cohortes cancer), fileDate=20150603, dbSNP_BUILD_ID=144.
+
+RÉSULTAT
+--------
+                                  dbSNP138 (2014)    dbSNP144 (juin 2015)
+Total testé                          2 788               2 788
+Position absente du bundle              8                  31
+ID courant (à jour)                 2 464 (88,4%)       2 632 (94,4%)
+ID PÉRIMÉ (stale)                     217 (7,78%)          19 (0,68%)
+ID différent (à investiguer)           99                 106
+
+=> Le taux d'identifiants périmés chute de 7,78 % à 0,68 % entre les deux bundles,
+   dans le sens attendu (un bundle plus récent a déjà absorbé la plupart des fusions
+   2014-2015 de ce panel). C'est une VRAIE tendance temporelle mesurée sur deux
+   artefacts réels et indépendamment publiés/déployés, pas un artefact d'un seul point.
+
+Exemples stables sur les deux versions (périmé dans les deux, fusion plus tardive
+que juin 2015) :
+  chr20:47829240  courant=rs440633  périmé (138 ET 144) = rs80132470 (fusion 2016-07-19)
+  chr20:13366886  courant=rs657719  périmé (138 ET 144) = rs77717214 (fusion 2015-07-02)
+
+INTERPRÉTATION
+--------------
+Ce résultat renforce directement le lien avec Papier B/KDCR : la "dérive de
+référence" n'est pas binaire (figé = mauvais, à jour = bon) mais graduelle et
+mesurable en fonction de l'âge du bundle par rapport à la date de fusion -- exactement
+le type de relation dose-réponse qu'un modèle de gouvernance calibré (comme KDCR)
+pourrait exploiter pour décider QUAND rafraîchir une référence plutôt que de la geler
+indéfiniment ou la rafraîchir à chaque changement.
+
+LIMITES
+-------
+- Seulement 2 points de comparaison (138, 144) -- un 3e point (151/152 ou courant)
+  renforcerait la courbe ; dbSNP151/156 ne sont disponibles dans le même bucket que
+  sous forme binaire propriétaire Illumina Nirvana (.nsa), pas en VCF standard --
+  nécessiterait soit l'outil Nirvana, soit une autre source pour un vrai 3e point VCF.
+- Panel toujours restreint aux candidats 2014-2017 issus de l'échantillon biaisé
+  (rsID anciens) -- couverture complète en cours (voir README.md).
+- Les catégories "position absente" et "ID différent" augmentent légèrement avec le
+  bundle plus récent (31 et 106 vs 8 et 99) -- pas encore expliqué, à creuser avant
+  de présenter le tableau comme définitif.

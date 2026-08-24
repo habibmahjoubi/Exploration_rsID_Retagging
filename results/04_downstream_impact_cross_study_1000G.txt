@@ -1,0 +1,50 @@
+Test "impact aval" #1 : ressource historique largement citée (1000 Genomes Phase 3)
+=====================================================================================
+
+Hypothèse testée : une ressource ancienne mais toujours activement utilisée/citée
+(1000 Genomes Phase 3, sortie 2013) porterait encore l'ANCIEN rsID (avant fusion)
+pour des positions où dbSNP a depuis fusionné l'identifiant — une jointure naïve
+par rsID entre cette ressource et une annotation moderne échouerait silencieusement.
+
+Source testée : ALL.chr20.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
+(NCBI mirror, 1000 Genomes Project, assembly **GRCh37/b37** confirmé dans l'en-tête —
+attention, différent de GRCh38 utilisé pour le reste de cette exploration).
+
+Méthode : recherche directe des 8 anciens rsID (fusions les plus récentes connues,
+2014-2016) par correspondance de chaîne sur la colonne ID du VCF (indépendant du
+système de coordonnées, contrairement à un matching par position).
+
+RÉSULTAT : NÉGATIF (honnête, pas caché)
+----------------------------------------
+Aucun des 8 anciens rsID recherchés (rs112456685, rs78807921, rs74969895,
+rs73608953, rs868251420, rs117776407, rs386421256, rs80132470) n'apparaît dans
+le fichier 1000G Phase 3. En revanche, 4 des rsID COURANTS correspondants
+(rs201556, rs200359, rs199784, rs238202) y apparaissent déjà, dès 2013.
+
+INTERPRÉTATION IMPORTANTE (affine l'hypothèse plutôt que de la confirmer telle quelle) :
+Par convention dbSNP, une fusion retire toujours le rsID le plus ÉLEVÉ dans le plus
+BAS ("rsHigh merged into rsLow"). Les candidats qu'on testait ont tous un rsID
+"ancien" numériquement plus élevé que le rsID courant survivant. Une ressource
+établie AVANT la création/soumission de ce rsID élevé (ou qui a simplement toujours
+utilisé le rsID bas dominant) n'a, par construction, jamais pu citer l'identifiant
+qui sera plus tard fusionné — elle n'a donc jamais été exposée au risque.
+
+=> Le risque de "jointure naïve cassée par un ancien rsID" n'est pas générique à
+   "toute vieille ressource" : il ne peut se manifester que pour une ressource qui a
+   RÉELLEMENT cité le rsID (plus élevé, plus récent) qui sera fusionné plus tard —
+   typiquement une publication/soumission proche dans le temps de la création de cet
+   identifiant, avant que dbSNP ne découvre le doublon et fusionne. Ce n'est PAS
+   le cas de 1000G Phase 3 pour les 8 candidats testés ici.
+
+Limite : n=8 candidats seulement, et système de coordonnées b37 (recherche faite par
+ID textuel, donc indépendante des coordonnées, mais la conversion position<->ID de
+1000G elle-même reste en b37 si jamais on veut vérifier au-delà de l'ID pur).
+
+PROCHAIN TEST À FAIRE si on veut confirmer/réfuter plus solidement : chercher des
+candidats où le rsID PLUS ANCIEN (numériquement plus bas, ou soumis tôt) a été
+fusionné DANS un rsID plus récent -- situation plus rare vu la convention "high->low",
+mais pas impossible (elle peut se produire quand deux clusters anciens fusionnent
+entre eux et dbSNP choisit de garder le second comme référence pour une raison
+technique) -- ou bien tester directement sur un panel de publications GWAS
+(gwas-catalog-associations, EBI) qui citent des rsID par nature plus jeunes/proches
+de leur date de fusion.

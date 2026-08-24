@@ -1,0 +1,72 @@
+Test "impact aval" #2 : bundle GATK figé, réellement déployé en production — CONFIRMÉ
+=========================================================================================
+
+Hypothèse testée : une ressource statique, figée, largement utilisée en production
+(le bundle "known-sites" dbSNP138 de GATK best-practices) porterait encore des
+rsID depuis fusionnés dans dbSNP, créant un vrai risque de jointure cassée quand
+un pipeline l'utilise pour annoter des variants aujourd'hui.
+
+Source testée : Homo_sapiens_assembly38.dbsnp138.vcf.gz (bucket public Broad/GCP,
+gcp-public-data--broad-references, 1,56 Go, GRCh38 natif, dbSNPBuildID=138 confirmé
+dans l'INFO de chaque ligne) — LE bundle de référence standard des pipelines
+GATK best-practices (variant calling, BQSR, annotation), encore massivement déployé
+tel quel aujourd'hui dans des pipelines de production/validés.
+
+Panel testé : les 2 788 candidats du panel de 48 217 dont au moins une fusion est
+datée 2014-2017 (fenêtre pertinente autour de la sortie du build 138).
+
+MÉTHODE : pour chaque candidat, comparaison entre l'ID rapporté par le bundle GATK
+à la position chr20 exacte et (a) le rsID COURANT attendu, (b) la liste des rsID
+ANCIENS (fusionnés) connus pour cette position.
+
+RÉSULTAT
+--------
+Total testé                                              : 2 788
+Position absente du bundle                               : 8
+Bundle affiche le rsID COURANT (post-fusion, à jour)      : 2 464 (88,4 %)
+Bundle affiche un rsID ANCIEN (périmé -- IMPACT RÉEL)     : 217   (7,78 %)
+Bundle affiche un ID différent des deux (à investiguer)   : 99
+
+=> **217 variants réels, à des positions chr20 réelles, pour lesquels un bundle de
+   référence encore couramment déployé en production aujourd'hui rapporte un
+   identifiant que dbSNP a depuis officiellement fusionné dans un autre.** Un pipeline
+   de variant calling utilisant ce bundle pour l'annotation produirait aujourd'hui un
+   VCF avec CET ancien rsID -- et toute jointure naïve de ce VCF contre une ressource
+   moderne (ClinVar, gnomAD, un rapport clinique tenu à jour) échouerait silencieusement
+   à faire le lien, exactement le mécanisme de "fausse absence" prédit.
+
+Exemples réels (position chr20, rsID courant attendu, ID réellement trouvé dans le bundle) :
+  chr20:21320295  courant=rs202831   bundle affiche rs74621691  (fusion du 2016-02-17)
+  chr20:50769575  courant=rs231572   bundle affiche rs117776407 (fusion du 2015-07-01)
+  chr20:47829244  courant=rs430553   bundle affiche rs73626311  (fusion du 2015-07-01)
+  chr20:47829240  courant=rs440633   bundle affiche rs80132470  (fusion du 2016-07-19)
+  chr20:38718192  courant=rs1075196  bundle affiche rs28570576  (fusion du 2014-08-21)
+  chr20:38718207  courant=rs1075197  bundle affiche rs28556269  (fusion du 2014-08-21)
+  chr20:13366886  courant=rs657719   bundle affiche rs77717214  (fusion du 2015-07-02)
+
+INTERPRÉTATION
+--------------
+Ce résultat confirme et affine le test négatif du fichier 04 (1000 Genomes) : le
+risque de "jointure naïve cassée" n'est pas générique à toute vieille ressource, mais
+il est BIEN RÉEL et MESURABLE (~8 % dans cet échantillon) pour une ressource qui a
+figé son contenu à un instant T où l'ancien identifiant était encore la référence
+"la plus fraîche" disponible -- exactement le cas du bundle GATK, qui n'a plus été
+mis à jour depuis (fichier daté 2021 mais contenu = snapshot build 138, ~2014).
+
+C'est le lien direct qui manquait avec Papier B/KDCR : ce bundle figé EST un exemple
+concret et déjà-en-production du phénomène de "dérive de référence gelée pour la
+stabilité de validation" que KDCR étudie théoriquement -- ici, la dérive a un coût
+mesurable et démontré (8 % des identifiants d'un panel réel sont déjà périmés).
+
+LIMITES
+-------
+- Panel encore issu de l'échantillon biaisé (rsID bas/anciens) -- le taux de 7,78 %
+  n'est pas encore un taux "vrai" sur l'ensemble du spectre dbSNP (couverture complète
+  du fichier chr20 en cours dans un autre job).
+- Les 99 cas "ID différent" ne sont pas encore expliqués (pourrait être un doublon
+  non lié, ou un autre historique de fusion plus complexe -- à creuser).
+- Test fait par POSITION (fiable pour SNV, pas encore vérifié allèle-exact).
+- Un seul bundle testé (dbSNP138) -- d'autres bundles GATK plus récents
+  (ex. dbsnp_146, dbsnp_151/152) existent et seraient moins périmés ; dbSNP138 est
+  cependant documenté comme encore largement utilisé par défaut dans de nombreux
+  workflows GATK best-practices publiés.

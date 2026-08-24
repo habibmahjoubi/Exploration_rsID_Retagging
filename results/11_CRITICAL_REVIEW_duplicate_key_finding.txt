@@ -1,0 +1,113 @@
+Relecture critique — défaut méthodologique trouvé et corrigé (pas juste du texte)
+====================================================================================
+
+CONTEXTE : lors d'une relecture critique volontaire du manuscrit (demandée
+explicitement pour stress-tester le travail avant tout ciblage de journal),
+vérification de l'hypothèse "le jeu 'périmé dans 144' devrait être un
+sous-ensemble du jeu 'périmé dans 138'" (propriété de monotonicité attendue).
+
+RÉSULTAT DU TEST DE COHÉRENCE
+------------------------------
+Périmés dans 138 : 369
+Périmés dans 144 : 105
+Périmés dans LES DEUX : 87
+Périmés dans 144 SEULEMENT (viole la monotonicité attendue) : 18  <-- ANOMALIE
+Périmés dans 138 SEULEMENT : 282
+
+DIAGNOSTIC (vérifié directement sur les fichiers bruts, pas supposé)
+----------------------------------------------------------------------
+awk -F'\t' '$1==49283799' gdc_dbsnp144_chr20_full.tsv donne DEUX lignes :
+  49283799  G  C  rs238202
+  49283799  G  C  rs386421256
+
+Le bundle dbSNP144 contient RÉELLEMENT deux enregistrements distincts à la
+MÊME position+allèle exacte : l'ID courant (rs238202) ET un doublon de
+soumission non encore résolu (rs386421256, qui sera fusionné dans rs238202
+le 2015-07-01, soit APRÈS la date du snapshot dbSNP144 utilisé, 2015-06-03).
+
+Mon script d'origine (dict Python `{(pos,ref,alt): id}`) écrasait silencieusement
+la première ligne par la seconde -- gardant arbitrairement l'un des deux ID
+selon l'ordre d'apparition dans le fichier, sans jamais signaler le conflit.
+Vérifié sur les deux bundles : **16 830 clés en conflit dans dbSNP138**,
+**33 994 dans dbSNP144** (sur l'ensemble du fichier, pas seulement le panel).
+
+CORRECTION APPLIQUÉE (scripts/check_bundle_staleness_FIXED.py)
+------------------------------------------------------------------
+Remplacement du dict par un `defaultdict(set)` qui conserve TOUS les ID vus
+à chaque clé (pos,ref,alt), puis classification à 4 issues : courant seul /
+périmé seul / LES DEUX à la fois (nouvelle catégorie "ambigu") / absent.
+
+RÉSULTAT CORRIGÉ (remplace définitivement les chiffres de results/10)
+--------------------------------------------------------------------------
+                                  dbSNP138 (2014)    dbSNP144 (juin 2015)
+Absent du bundle                       19                  31
+ID COURANT seul                    2 506 (86,6%)      2 725 (94,16%)
+ID PÉRIMÉ seul (stale)               369 (12,75%)        75 (2,59%)
+**AMBIGU (les deux présents)**            0             **63 (2,18%)**
+
+=> **dbSNP138 est totalement inchangé par la correction** (0 cas ambigus dans
+   ce bundle pour ce panel) -- le chiffre de 12,75 % était déjà correct et
+   robuste.
+=> **dbSNP144 est corrigé** : le taux de péremption "propre" descend de
+   3,63 % à 2,59 %, MAIS une nouvelle catégorie apparaît -- 2,18 % des
+   variants sont dans un état AMBIGU où le bundle liste SIMULTANÉMENT
+   l'identifiant courant ET un identifiant périmé pour la même position et
+   le même allèle exact. Si on combine périmé+ambigu comme "à risque pour un
+   consommateur naïf" (2,59%+2,18% = 4,77%), le risque réel du bundle 144
+   est en fait LÉGÈREMENT PLUS ÉLEVÉ que le chiffre "propre" ne le suggère.
+
+INTERPRÉTATION -- ceci renforce le papier, ne l'affaiblit pas
+------------------------------------------------------------------
+Ce n'est pas juste une correction de bug : c'est une découverte substantielle
+supplémentaire. Un bundle de référence peut être "périmé" de DEUX façons
+distinctes :
+  1. Classique : il ne connaît que l'ancien ID (le cas dbSNP138 à 12,75 %).
+  2. Ambigu : il liste les DEUX ID simultanément pour la même variante,
+     parce que le snapshot a été pris pendant la fenêtre de résolution du
+     doublon -- un consommateur naïf qui fait une jointure exacte sur
+     (position, allèle) → ID obtiendrait un résultat NON DÉTERMINISTE
+     (dépendant de l'ordre des lignes dans le fichier VCF, ou de
+     l'implémentation de l'outil en aval), ce qui est arguably PIRE que la
+     péremption simple puisque le comportement n'est même pas reproductible.
+
+Ce deuxième mode de défaillance est nouveau et n'était pas anticipé -- exactement
+le type de trouvaille qu'une relecture critique doit chercher, et exactement
+le type de résultat honnête (positif ET négatif) qui caractérise déjà Papier A/B.
+
+ACTIONS PRISES
+--------------
+- Manuscrit (Section 5.6, Figure 2) mis à jour avec la nouvelle catégorie
+  "Ambiguous (duplicate at site)" et les chiffres corrigés.
+- Section 4.4 (protocole) complétée pour documenter le traitement multi-ID.
+- Aucun changement pour la Section 5.5 (bundle 138) -- vérifié non affecté.
+
+AUTRES VÉRIFICATIONS DE LA RELECTURE CRITIQUE (mêmes données, checks positifs)
+-----------------------------------------------------------------------------
+1. **Significativité statistique** (absente jusqu'ici) : test exact de Fisher
+   sur le tableau 2x2 (369/2506 vs 75/2725) -> odds ratio 5,35,
+   **p = 1,07x10^-49**. La différence 138 vs 144 est extrêmement significative,
+   pas un effet du hasard. Ajouté en Section 5.6.
+
+2. **Regroupement génomique** (les 369 positions périmées de dbSNP138
+   pourraient-elles être concentrées dans une seule région répétitive/mal
+   curée, ce qui affaiblirait la généralité du résultat ?) : NON -- les 369
+   positions couvrent quasiment toute la longueur de chr20 (130 329 à
+   63 061 840), touchent 54 bins d'1 Mb sur ~64, le bin le plus dense n'en
+   contient que 31 (8,4 %). Résultat robuste, pas un artefact local. Ajouté
+   en Section 5.6.
+
+3. **Formulation "système d'identifiant indépendamment administré" corrigée** :
+   dbSNP ET NCBI Taxonomy sont tous deux maintenus par le NCBI -- ce n'est
+   PAS un test entre deux organisations indépendantes. Reformulé en Section
+   6.1 pour préciser que c'est la LOGIQUE de curation (modèles de données,
+   pipelines de soumission/déduplication, déclencheurs de fusion) qui est
+   indépendante, pas l'organisation -- évite une objection facile de reviewer.
+
+CONCLUSION DE LA RELECTURE CRITIQUE
+------------------------------------
+Une vraie faille méthodologique trouvée et corrigée (clés dupliquées dans les
+bundles), transformée en une découverte supplémentaire plutôt que cachée.
+Deux vérifications de robustesse ajoutées (significativité, dispersion
+spatiale) qui renforcent la solidité du résultat central. Une formulation
+surclamée corrigée avant qu'un reviewer ne la relève. C'est exactement le
+niveau de rigueur attendu avant un ciblage de journal.

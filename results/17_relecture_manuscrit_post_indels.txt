@@ -1,0 +1,71 @@
+Relecture critique du manuscrit (post-finalisation indels, avant le run sarek)
+================================================================================
+
+Relecture ligne par ligne de build_manuscript_docx.py (rendu PDF verifie visuellement
+page par page) + revérification numérique independante (CI Wilson, tests McNemar).
+
+VERIFICATIONS QUI PASSENT (rien a corriger)
+--------------------------------------------
+- Coherence arithmetique complete sur toutes les tables 5.2, 5.5, 5.6, 5.7 (sommes
+  exactes verifiees a la main : 2894=2506+369+19+0 ; 2894=2725+75+63+31 ; etc.)
+- CI de Wilson recalculees independamment (sans se fier au texte existant) :
+    369/2894 -> [11.58%, 14.02%]  (manuscrit : 11.58-14.02%)  EXACT
+    75/2894  -> [2.07%, 3.24%]    (manuscrit : 2.07-3.24%)    EXACT
+    138/2894 -> [4.05%, 5.61%]    (manuscrit : 4.05-5.61%)    EXACT
+- Tests de McNemar exacts recalcules via un test binomial sur les paires
+  discordantes :
+    strict (301 vs 7)   -> p=1.912e-79  (manuscrit : 1.9x10^-79)   EXACT
+    combine (256 vs 25) -> p=2.019e-49  (manuscrit : 2.0x10^-49)   EXACT
+- Le modele de prediction de derive (5.94%/0.77% predits vs 0.76%/0.15% observes,
+  Section 5.6) est logiquement coherent avec la construction du panel (verifie par
+  calcul : 2894/48746=5.94% ; 369/48746=0.76% ; 75/48746=0.15%).
+- Numerotation des tableaux et figures coherente, aucune reference croisee cassee
+  vers "Table N"/"Figure N".
+
+DEFAUTS TROUVES ET CORRIGES DANS CETTE PASSE
+----------------------------------------------
+1. REFERENCES JAMAIS CITEES DANS LE TEXTE : [4] (Sherry dbSNP 2001), [5] (Zook
+   GIAB), [6] (1000 Genomes), [7] (McKenna GATK), [8] (NCBI Insights) figuraient
+   dans la bibliographie mais n'etaient appeles NULLE PART dans le corps du texte
+   -- un defaut qu'un reviewer/editeur releve systematiquement ("uncited
+   references"). Corrige : citations inline ajoutees en Section 3 ([4], [8]),
+   Section 4.1 ([5], [6]) et Introduction ([7], premiere mention de GATK).
+
+2. "Papers A and B" EN TOUTES LETTRES (Section 3) : reste d'avant la conversion
+   vers les citations numerotees [1]/[2] demandee explicitement plus tot dans la
+   session pour eviter toute ressemblance stylistique avec Paper A. Corrige en
+   "[1] and [2]".
+
+3. RENVOI CROISE PERIME (Section 4.2) : le texte disait que le probleme de
+   normalisation indel/SPDI-vs-VCF n'etait pas resolu ("see Section 6.2",
+   Limitations) -- alors qu'il est en realite resolu et quantifie en Section 5.7
+   depuis la finalisation indels de cette session. Corrige : renvoi vers 5.7.
+
+4. "Article 2" MENTIONNE SANS CITATION (Section 4.1) : la technique de
+   telechargement par plage d'octets etait attribuee a "the companion Article 2
+   study" sans numero de reference ni entree bibliographique -- incoherent avec
+   le traitement de Article 1/Paper A/Paper B (tous cites [1]/[2]/[3]). Corrige :
+   ajout d'une reference [9] (Mahjoubi H, papier Article 2, soumis a
+   Biotechnology and Bioengineering, titre exact recupere depuis la memoire du
+   projet) et citation inline.
+
+5. RESULTAT CO-PRINCIPAL ABSENT DE L'ABSTRACT (Section Abstract) : la relecture
+   critique externe precedente demandait explicitement de promouvoir la
+   demonstration de non-determinisme (Section 5.8, 63/63 desaccords
+   avant/arriere) au rang de resultat co-principal. C'etait fait dans le corps
+   du texte (nouvelle Section 5.8) mais PAS dans l'abstract, qui n'en disait
+   rien. Corrige : une phrase ajoutee au 3e paragraphe de l'abstract.
+
+STATUT
+------
+5 defauts reels trouves et corriges (aucun n'affecte les chiffres/conclusions
+scientifiques -- tous sont des problemes d'appareil critique/coherence
+redactionnelle). Manuscrit reconstruit, reconverti en PDF, verifie visuellement
+page par page (page 0-1 abstract, page 12-13 section 5.7/limitations, page 16
+references), copie sur le Desktop.
+
+Aucun probleme numerique ou statistique nouveau trouve dans cette passe -- la
+relecture precedente (resultats/13) avait deja traite les incoherences
+substantielles ; celle-ci portait sur la coherence de l'appareil critique
+(citations, renvois) apres l'ajout des sections indels (5.7) et non-determinisme
+(5.8).

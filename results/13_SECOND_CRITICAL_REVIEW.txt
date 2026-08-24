@@ -1,0 +1,125 @@
+Deuxième relecture critique (externe, très détaillée) — vérifications empiriques réelles
+============================================================================================
+
+Suite à une relecture critique approfondie reçue de l'utilisateur, chaque point vérifiable
+a été vérifié directement sur les données (pas juste discuté). Résultats ci-dessous.
+
+1. ERREUR FACTUELLE RÉELLE TROUVÉE : date de dbSNP138
+------------------------------------------------------
+Le manuscrit affichait "dbSNP138 (2014)" partout (titre de tableaux, figures, texte).
+Vérifié via recherche : **le build dbSNP138 a été officiellement publié le 23 octobre
+2013**, pas en 2014 (confirmé par l'annonce UCSC Genome Browser de la même date).
+La date exacte de création du bundle GRCh38 spécifique de GATK (liftover de ce build)
+n'a pas pu être vérifiée précisément (le fichier VCF ne contient pas de champ
+fileDate ; le timestamp du bucket GCS, avril 2021, n'est qu'une date de recopie).
+=> À corriger partout : "dbSNP138" sans année assertée à tort, ou "dbSNP138
+   (build officiel 2013-10-23 ; date d'assemblage exacte du bundle GRCh38 non
+   vérifiée)".
+
+2. CLAIM "toujours" (merged_id > current_id) — 22 contre-exemples réels trouvés
+---------------------------------------------------------------------------------
+Vérifié sur la totalité des 81 963 événements de fusion (couverture complète) :
+**22 contre-exemples réels** (0,027 %) où l'ID fusionné n'est PAS numériquement
+supérieur à l'ID courant. Exemples : (current=73623650, merged_from=58444546),
+(current=78688553, merged_from=4284902), etc.
+=> Le manuscrit doit remplacer "always" par "in 99.97% of cases (22 documented
+   exceptions out of 81,963 merge events)" -- affaiblit légèrement mais n'invalide
+   pas l'argument structurel de la §5.4 (1000G négatif), qui reste valide à ce niveau
+   de confiance.
+
+3. RÉCONCILIATIONS NUMÉRIQUES -- toutes vérifiées cohérentes (pas des bugs, un
+   manque de clarté du texte)
+-------------------------------------------------------------------------------
+3.1 -- Les "33 cas manquants" (dbSNP144, §5.6) : PAS un bug. Vérifié précisément :
+  Original (naïf, écrasement simple) : current=2758, stale=105, absent=31
+  Corrigé (multi-ID par clé)         : current=2725, stale=75, both=63, absent=31
+  Des 63 cas "both/ambigu" : 33 provenaient de l'ancien "current", 30 de l'ancien
+  "stale" (33+30=63 exactement ; 2758-33=2725 ; 105-30=75). Cohérent à 100%, mais
+  cette décomposition n'était jamais montrée dans le texte -- à ajouter explicitement.
+
+3.2 -- Indels non-résolus (§5.7) : PAS un bug, catégorie manquante dans le texte.
+  Vérifié : indels 138 -- "neither"=137, "absent"=79, total non-résolu=216=1439-1223 (exact).
+  SNV 138 -- "neither"=0, "absent"=7, total non-résolu=7=2657-2650 (exact).
+  Le texte ne mentionnait que "neither", pas "absent" séparément -- à corriger en
+  présentant les 3 catégories (résolu / neither / absent) explicitement, jamais
+  seulement 2 sur 3.
+
+3.3 -- Affirmation "indels moins souvent stale" contredite pour dbSNP144 : VRAI défaut
+  de formulation. Chiffres exacts (déjà mesurés) : 138 -- SNV 8,26% vs indel 1,14%
+  (indel moins stale, confirmé) ; 144 -- SNV 0,69% vs indel 1,00% (indel PLUS stale,
+  inversion réelle). La formulation en intervalle masquait cette inversion.
+  => À reformuler par bundle, jamais en fourchette globale.
+
+3.4 -- Asymétrie 19 (absent 138) vs 31 (absent 144) : INVESTIGUÉE, confirmée réelle
+  et non un bug de matching. Exemple vérifié directement sur le fichier brut :
+  chr20:17,772,881 T>G (rs241136) est présent dans dbSNP138 mais ABSENT de dbSNP144
+  (aucune ligne à cette position dans le fichier, pas une histoire de représentation).
+  30 cas similaires trouvés. Interprétation : dbSNP138 (bundle GATK) et dbSNP144
+  (bundle GDC/NCI) sont deux pipelines d'export DIFFÉRENTS, pas la même chaîne de
+  production à deux dates -- une partie de la comparaison "138 vs 144" confond donc
+  le vieillissement temporel avec une différence de critères de curation/filtrage
+  entre GATK et GDC. À déclarer explicitement comme limite/confusion potentielle.
+
+4. STATISTIQUES CORRIGÉES
+--------------------------
+4.1 -- Fisher exact remplacé par McNemar (design apparié, mêmes 2 894 candidats
+  testés contre les 2 bundles) :
+  Table appariée stricte (stale seul) : [[68,301],[7,2518]] -- McNemar exact p=1,91x10^-79
+  Table appariée combinée (stale+ambigu) : [[113,256],[25,2500]] -- McNemar exact p=2,02x10^-49
+  Encore plus significatif que le Fisher (invalide) rapporté précédemment.
+
+4.2 -- Comparaison stale+ambigu vs courant (au lieu d'exclure l'ambigu) :
+  dbSNP138 : 369/2894 = 12,75 % (inchangé, 0 ambigu)
+  dbSNP144 : (75+63)/2894 = 138/2894 = **4,77 %** [IC95% Wilson 4,05%-5,61%]
+  (au lieu du 2,59% "propre" seul qui sous-estimait le risque réel)
+
+4.3 -- IC de Wilson à 95% ajoutés pour tous les pourcentages phares :
+  Taux de fusion global (exact-allèle, complet) : 66,44% [66,10%-66,78%]
+  dbSNP138 stale : 12,75% [11,58%-14,02%]
+  dbSNP144 stale (strict) : 2,59% [2,07%-3,24%]
+  dbSNP144 stale+ambigu : 4,77% [4,05%-5,61%]
+
+4.4 -- 1000G (n=8) : IC exact de Clopper-Pearson = [0%, 36,94%] (confirme le calcul
+  du relecteur, ~37%). Reformulation actée : l'argument structurel (convention
+  merge "high->low", point 2 ci-dessus) est la vraie démonstration, le n=8 devient
+  une illustration du raisonnement déductif plutôt qu'un "résultat n°3" à part entière.
+
+5. MODÈLE PRÉDICTIF DE DÉRIVE (§5.4/5.5 du retour) -- construit et testé,
+   RÉSULTAT NÉGATIF HONNÊTE
+----------------------------------------------------------------------------
+Modèle naïf proposé par le relecteur : taux périmé prédit(T) = fraction des
+candidats (population complète non biaisée, 48 746) dont la date de fusion LA
+PLUS RÉCENTE est postérieure à la date de gel T du bundle.
+
+Résultat (dates de gel : 138=2013-10-23 officiel, 144=2015-06-03 vérifié dans
+l'en-tête VCF) :
+                          PRÉDIT (modèle naïf)   OBSERVÉ (panel complet, 48 746)
+  dbSNP138                    5,94%                    0,76%
+  dbSNP144                    0,77%                    0,15%
+
+=> Le modèle naïf SURESTIME l'observé d'un facteur ~7-8x pour les deux bundles.
+   Interprétation honnête : soit (a) la date d'assemblage RÉELLE du bundle GATK
+   dbSNP138 est significativement postérieure à la date de publication officielle
+   du build (2013-10-23) -- cohérent avec l'incertitude du point 1 ci-dessus --,
+   soit (b) un modèle "avant/après" binaire est trop grossier pour capturer le
+   vrai processus de dérive (l'export d'un bundle n'est pas un instantané parfait
+   à une date unique). Résultat honnête à publier tel quel (négatif mais informatif),
+   pas caché -- cohérent avec le style déjà établi dans Papier A/B.
+
+STATUT GLOBAL DE CETTE RELECTURE
+----------------------------------
+Items vérifiés et corrigés dans cette passe : 1, 2, 3.1-3.4, 4.1-4.4, 5 (modèle testé).
+Items identifiés mais NON encore traités (portée trop large pour cette seule session) :
+  - A1 (distinction BQSR vs annotation dans l'intro) -- à faire, texte pur, coût faible.
+  - A2 (vrai run HaplotypeCaller -D) -- bloqué par la panne WSL/Hyper-V, en attente
+    du redémarrage Windows (voir sarek_validation/README.md).
+  - A3 (requête ClinVar/gnomAD sur les 369 rsID périmés) -- pas encore fait, prochaine
+    étape si le temps le permet.
+  - B1 (test multi-lecteurs VCF sur les 63 cas ambigus pour prouver le non-déterminisme)
+    -- pas encore fait.
+  - 5.1 (taux de fond sur les 25,9M enregistrements, pas seulement les positions GIAB)
+    -- nécessite un nouveau passage complet (~1-2h), pas encore lancé.
+  - 5.2 (clarifier le dénominateur "two in three" -> reformuler comme "parmi les SNV
+    GIAB avec un enregistrement dbSNP exact-allèle") -- texte pur, à faire.
+  - 6.1 (section travaux antérieurs, revue de littérature) -- recherche à mener.
+  - 6.2-6.5 (nettoyage des alias, abstract, cible éditoriale) -- travail rédactionnel.
