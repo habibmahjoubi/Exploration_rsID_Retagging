@@ -33,3 +33,29 @@ Thumbs.db
 *.fa
 *.fai
 *.dict
+
+# Kept locally for working purposes, deliberately NOT part of the public
+# reproducibility repo (out of scope: manuscript/figures, project-management
+# notes, superseded script iterations, and session-log/intermediate results).
+# Present on disk, untracked by git -- do not `git add -f` these back in.
+Manuscript_Draft.docx
+Manuscript_Draft.pdf
+figures/
+project_brief.md
+results/
+data/candidate_panel_with_indels.csv
+scripts/build_manuscript_docx.py
+scripts/make_figures.py
+scripts/build_candidate_panel.py
+scripts/build_candidate_panel_allele_exact.py
+scripts/build_candidate_panel_with_indels.py
+scripts/check_bundle_staleness_FIXED.py
+scripts/check_bundle_staleness_allele_exact.py
+scripts/check_bundle_staleness_generic.py
+scripts/check_bundle_staleness_with_indels.py
+scripts/check_gatk_bundle_staleness.py
+scripts/cross_reference.py
+scripts/verify_naive_vs_mergeaware.py
+sarek_validation/check_rg.sh
+sarek_validation/finish_5_6.sh
+sarek_validation/resume_from_stage3.sh
