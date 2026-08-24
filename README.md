@@ -1,8 +1,9 @@
 # Reference Bundle Staleness — rsID/dbSNP Merge Retagging Artifact
 
-Code and data for the study "Reference Bundle Staleness: Quantifying rsID
-Obsolescence and Its Impact on Clinical Variant Annotation" (manuscript:
-`Manuscript_Draft.docx` / `.pdf`).
+Code and data to reproduce the results of a study on dbSNP rsID
+merge-driven staleness in production variant-calling reference bundles.
+This repository covers reproducibility of the *results*; it does not
+include the manuscript.
 
 ## Idea
 
@@ -15,7 +16,7 @@ identifiers in a companion study, applied here to a second, independent
 identifier system (rsID/dbSNP) in a second domain (clinical germline variant
 calling rather than viral metagenomics).
 
-## Core results (see the manuscript for full methodology and figures)
+## Core results
 
 - Among real chr20 variants from the GIAB HG002 truth set with an
   allele-exact dbSNP match, **66.44%** sit on a historically-merged rsID —
@@ -42,10 +43,7 @@ calling rather than viral metagenomics).
 
 ## Repository contents
 
-- `Manuscript_Draft.docx` / `.pdf` — the manuscript.
-- `project_brief.md` — positioning and status summary.
-- `scripts/` — the final scripts that produce the manuscript's numbers and
-  figures:
+- `scripts/` — the analysis scripts that produce the results above:
   - `build_full_coverage_panel.py` — single full-coverage pass over
     `refsnp-chr20.json.bz2`, builds the allele-exact candidate panel.
   - `check_bundle_staleness_with_indels_SPLIT.py` — cross-references a
@@ -58,15 +56,11 @@ calling rather than viral metagenomics).
   - `check_clinvar.py` — ClinVar lookup for the 369 dbSNP138-stale pairs.
   - `demonstrate_nondeterminism.py` — forward/reverse VCF traversal test
     on the 63 ambiguous dbSNP144 sites.
-  - `make_figures.py` — generates the 3 manuscript figures.
-  - `build_manuscript_docx.py` — generates `Manuscript_Draft.docx`
-    (re-run after editing; never hand-edit the .docx).
 - `data/` — the data these scripts consume/produce: the GIAB HG002 chr20
   truth VCF, the GATK dbSNP138 and GDC dbSNP144 chr20 idmaps, the final
   full-coverage candidate panel (SNV-only, 48,746 candidates) and its
   2014-2017-merge, SNV+indel-extended subset (4,613 candidates), and the
   raw ClinVar check inputs/results (369 stale pairs).
-- `figures/` — the 3 figures embedded in the manuscript.
 - `sarek_validation/` — the real nf-core/sarek pipeline validation run:
   `README.md`/`RESULTS.md` document the run and its outcome,
   `run_full_pipeline.sh`/`rerun_native_dbsnp.sh` are the pipeline
@@ -89,11 +83,10 @@ needs into the same directory, renamed as shown:
 | Script | Expects (in its working directory) | Source in `data/` |
 |---|---|---|
 | `build_full_coverage_panel.py` | `chr20_giab.vcf` (uncompressed) + dbSNP records piped via stdin (`curl .../refsnp-chr20.json.bz2 \| bzip2 -dc \| python build_full_coverage_panel.py`) | `chr20_giab_HG002_v4.2.1_truth.vcf.gz` (gunzip) |
-| `check_bundle_staleness_with_indels_SPLIT.py` | two CLI args: a bundle idmap and a candidates file | `gatk_dbsnp138_chr20_idmap.tsv.gz` / `gdc_dbsnp144_chr20_idmap.tsv.gz` and `candidate_panel_with_indels.csv` (gunzip the idmap first) |
+| `check_bundle_staleness_with_indels_SPLIT.py` | two CLI args: a bundle idmap and a candidates file | `gatk_dbsnp138_chr20_idmap.tsv.gz` / `gdc_dbsnp144_chr20_idmap.tsv.gz` (gunzip) and `recent_candidates_2014_2017_with_indels_FULLCOV.txt` |
 | `verify_naive_vs_mergeaware_n100.py` | `candidate_panel_allele_exact.csv` | `candidate_panel_FULLCOV_allele_exact_48746.csv.gz` (gunzip, rename) |
 | `check_clinvar.py` | `stale_pairs_138.tsv` | `stale_pairs_138.tsv` (already uncompressed) |
 | `demonstrate_nondeterminism.py` | `gdc_dbsnp144_chr20_full.tsv` + `recent_candidates_2014_2017_FULLCOV.txt` | `gdc_dbsnp144_chr20_idmap.tsv.gz` (gunzip, rename) + `recent_candidates_2014_2017_FULLCOV.tsv.gz` (gunzip, rename) |
-| `make_figures.py`, `build_manuscript_docx.py` | run directly from `scripts/`; figures are read/written as bare filenames, so run from (or copy the three `figures/*.png` into) the same directory | — |
 
 `build_full_coverage_panel.py`, `check_clinvar.py`, and
 `verify_naive_vs_mergeaware_n100.py` also make live calls to NCBI (the
