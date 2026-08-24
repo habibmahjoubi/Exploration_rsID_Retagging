@@ -1,38 +1,39 @@
-Démonstration concrète du non-déterminisme (B1 de la relecture critique)
+Concrete demonstration of non-determinism (item B1 from the critical review)
 ============================================================================
 
-CONTEXTE : le relecteur demandait de promouvoir la découverte "ambigu" au
-rang de résultat co-principal, avec un vrai test : plusieurs lecteurs VCF
-(bcftools, pysam, GATK) renvoient-ils le même identifiant sur les 63 sites
-ambigus de dbSNP144 ?
+CONTEXT: the reviewer asked for the "ambiguous" finding to be promoted to a
+co-primary result, with a real test: do several VCF readers
+(bcftools, pysam, GATK) return the same identifier at the 63 ambiguous
+sites of dbSNP144?
 
-CONTRAINTE : un test littéral bcftools/pysam/GATK nécessite l'environnement
-WSL, actuellement hors service (panne Hyper-V/WSL documentée plus haut dans
-cette session, en attente d'un redémarrage Windows).
+CONSTRAINT: a literal bcftools/pysam/GATK test requires the WSL
+environment, currently down (Hyper-V/WSL outage documented earlier in
+this session, awaiting a Windows restart).
 
-TEST RÉALISÉ À LA PLACE (honnête sur la substitution) : le même fichier
-bundle a été parsé DEUX fois avec une simple collecte clé-valeur (le genre de
-code qu'un script d'annotation rapide écrirait naturellement) -- une fois en
-lisant le fichier dans l'ordre normal, une fois en ordre inverse. Le contenu
-du fichier ne change jamais, seul l'ordre de parcours change.
+TEST ACTUALLY RUN INSTEAD (honest about the substitution): the same bundle
+file was parsed TWICE with a simple key-value collection (the kind of
+code a quick annotation script would naturally write) -- once reading the
+file in normal order, once in reverse order. The file's content
+never changes, only the traversal order changes.
 
-RÉSULTAT
+RESULT
 --------
-**63 sites ambigus testés -> 63 désaccords (100%)** entre ordre normal et
-ordre inversé. Exemples réels :
-  chr20:49,283,799 G>C : ordre normal -> rs386421256 (périmé) ;
-                         ordre inversé -> rs238202 (courant)
-  chr20:47,829,244 G>C : ordre normal -> rs73626311 (périmé) ;
-                         ordre inversé -> rs430553 (courant)
-  (+ 6 autres exemples, tous différents selon l'ordre)
+**63 ambiguous sites tested -> 63 disagreements (100%)** between normal order
+and reversed order. Real examples:
+  chr20:49,283,799 G>C: normal order -> rs386421256 (stale);
+                         reversed order -> rs238202 (current)
+  chr20:47,829,244 G>C: normal order -> rs73626311 (stale);
+                         reversed order -> rs430553 (current)
+  (+ 6 more examples, all different depending on order)
 
 CONCLUSION
 ----------
-Ce n'est plus une hypothèse plausible : chaque site ambigu, sans exception,
-change de réponse selon l'ordre de traitement seul -- une démonstration
-concrète et reproductible du non-déterminisme, même si la comparaison
-littérale multi-outils (bcftools/pysam/GATK) reste bloquée par la panne WSL.
+This is no longer a plausible hypothesis: every ambiguous site, without
+exception, changes its answer based on processing order alone -- a
+concrete, reproducible demonstration of non-determinism, even though the
+literal multi-tool comparison (bcftools/pysam/GATK) remains blocked by the
+WSL outage.
 
-STATUT : promu en Section 5.8 des Résultats du manuscrit (pas laissé en
-simple limitation), avec la mention honnête de ce qui reste à faire (le vrai
-test multi-outils) une fois WSL de retour.
+STATUS: promoted to Section 5.8 of the manuscript's Results (not left as a
+plain limitation), with an honest note on what remains to be done (the real
+multi-tool test) once WSL is back.

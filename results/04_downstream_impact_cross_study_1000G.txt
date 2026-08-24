@@ -1,50 +1,50 @@
-Test "impact aval" #1 : ressource historique largement citée (1000 Genomes Phase 3)
+"Downstream impact" test #1: widely-cited historical resource (1000 Genomes Phase 3)
 =====================================================================================
 
-Hypothèse testée : une ressource ancienne mais toujours activement utilisée/citée
-(1000 Genomes Phase 3, sortie 2013) porterait encore l'ANCIEN rsID (avant fusion)
-pour des positions où dbSNP a depuis fusionné l'identifiant — une jointure naïve
-par rsID entre cette ressource et une annotation moderne échouerait silencieusement.
+Hypothesis tested: an old but still actively used/cited resource
+(1000 Genomes Phase 3, released 2013) would still carry the OLD rsID (pre-merge)
+for positions where dbSNP has since merged the identifier — a naive
+rsID join between this resource and a modern annotation would fail silently.
 
-Source testée : ALL.chr20.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
-(NCBI mirror, 1000 Genomes Project, assembly **GRCh37/b37** confirmé dans l'en-tête —
-attention, différent de GRCh38 utilisé pour le reste de cette exploration).
+Source tested: ALL.chr20.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
+(NCBI mirror, 1000 Genomes Project, assembly **GRCh37/b37** confirmed in the header —
+note, different from the GRCh38 used for the rest of this exploration).
 
-Méthode : recherche directe des 8 anciens rsID (fusions les plus récentes connues,
-2014-2016) par correspondance de chaîne sur la colonne ID du VCF (indépendant du
-système de coordonnées, contrairement à un matching par position).
+Method: direct search for the 8 old rsIDs (most recently known merges,
+2014-2016) via string match on the VCF's ID column (independent of the
+coordinate system, unlike position-based matching).
 
-RÉSULTAT : NÉGATIF (honnête, pas caché)
+RESULT: NEGATIVE (honest, not hidden)
 ----------------------------------------
-Aucun des 8 anciens rsID recherchés (rs112456685, rs78807921, rs74969895,
-rs73608953, rs868251420, rs117776407, rs386421256, rs80132470) n'apparaît dans
-le fichier 1000G Phase 3. En revanche, 4 des rsID COURANTS correspondants
-(rs201556, rs200359, rs199784, rs238202) y apparaissent déjà, dès 2013.
+None of the 8 searched-for old rsIDs (rs112456685, rs78807921, rs74969895,
+rs73608953, rs868251420, rs117776407, rs386421256, rs80132470) appear in
+the 1000G Phase 3 file. However, 4 of the corresponding CURRENT rsIDs
+(rs201556, rs200359, rs199784, rs238202) already appear there, as of 2013.
 
-INTERPRÉTATION IMPORTANTE (affine l'hypothèse plutôt que de la confirmer telle quelle) :
-Par convention dbSNP, une fusion retire toujours le rsID le plus ÉLEVÉ dans le plus
-BAS ("rsHigh merged into rsLow"). Les candidats qu'on testait ont tous un rsID
-"ancien" numériquement plus élevé que le rsID courant survivant. Une ressource
-établie AVANT la création/soumission de ce rsID élevé (ou qui a simplement toujours
-utilisé le rsID bas dominant) n'a, par construction, jamais pu citer l'identifiant
-qui sera plus tard fusionné — elle n'a donc jamais été exposée au risque.
+IMPORTANT INTERPRETATION (refines the hypothesis rather than confirming it as-is):
+By dbSNP convention, a merge always retires the HIGHER-numbered rsID into the
+LOWER one ("rsHigh merged into rsLow"). The candidates we tested all have an
+"old" rsID numerically higher than the surviving current rsID. A resource
+established BEFORE this high rsID was created/submitted (or that simply always
+used the dominant low rsID) could not, by construction, ever have cited the
+identifier that would later be merged — it was therefore never exposed to the risk.
 
-=> Le risque de "jointure naïve cassée par un ancien rsID" n'est pas générique à
-   "toute vieille ressource" : il ne peut se manifester que pour une ressource qui a
-   RÉELLEMENT cité le rsID (plus élevé, plus récent) qui sera fusionné plus tard —
-   typiquement une publication/soumission proche dans le temps de la création de cet
-   identifiant, avant que dbSNP ne découvre le doublon et fusionne. Ce n'est PAS
-   le cas de 1000G Phase 3 pour les 8 candidats testés ici.
+=> The "naive join broken by an old rsID" risk is not generic to
+   "any old resource": it can only manifest for a resource that actually
+   cited the (higher, more recent) rsID that will later be merged —
+   typically a publication/submission close in time to that identifier's
+   creation, before dbSNP discovers the duplicate and merges it. This is NOT
+   the case for 1000G Phase 3 for the 8 candidates tested here.
 
-Limite : n=8 candidats seulement, et système de coordonnées b37 (recherche faite par
-ID textuel, donc indépendante des coordonnées, mais la conversion position<->ID de
-1000G elle-même reste en b37 si jamais on veut vérifier au-delà de l'ID pur).
+Limitation: n=8 candidates only, and b37 coordinate system (search done by
+text ID, so independent of coordinates, but 1000G's own position<->ID mapping
+remains in b37 if one ever wants to verify beyond the raw ID).
 
-PROCHAIN TEST À FAIRE si on veut confirmer/réfuter plus solidement : chercher des
-candidats où le rsID PLUS ANCIEN (numériquement plus bas, ou soumis tôt) a été
-fusionné DANS un rsID plus récent -- situation plus rare vu la convention "high->low",
-mais pas impossible (elle peut se produire quand deux clusters anciens fusionnent
-entre eux et dbSNP choisit de garder le second comme référence pour une raison
-technique) -- ou bien tester directement sur un panel de publications GWAS
-(gwas-catalog-associations, EBI) qui citent des rsID par nature plus jeunes/proches
-de leur date de fusion.
+NEXT TEST TO RUN for a more solid confirmation/refutation: look for
+candidates where the OLDER rsID (numerically lower, or submitted early) was
+merged INTO a more recent rsID -- rarer given the "high->low" convention,
+but not impossible (can happen when two old clusters merge into each
+other and dbSNP chooses to keep the second one as the reference for some
+technical reason) -- or test directly on a panel of GWAS
+publications (gwas-catalog-associations, EBI) that cite rsIDs which are by nature younger/closer
+to their merge date.

@@ -1,37 +1,37 @@
-Croisement réel : variants GIAB HG002 chr20 x historique de fusion dbSNP — 2026-08-23
+Real cross-reference: GIAB HG002 chr20 variants x dbSNP merge history — 2026-08-23
 =======================================================================================
 
-Sources :
-  - VCF de vérité : NIST/GIAB HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz (public, complet,
-    téléchargé en entier — 156 Mo), filtré sur chr20 -> 85 951 positions de variants réels
-    (colonne ID = "." partout, comme attendu pour un jeu de vérité terrain — pas d'annotation
-    dbSNP native, d'où le croisement par POSITION plutôt que par ID).
-  - dbSNP : refsnp-chr20.json.bz2 (~9,0 Go compressé total), chunk de 400 Mo compressé pris
-    depuis le début du fichier (range-fetch HTTP, HTTP 206), décompressé en streaming
-    (~8 Go décompressés, sans écriture disque intermédiaire) -> 315 948 enregistrements
-    RefSNP parsés (1 ligne finale tronquée par la coupure du chunk, ignorée).
+Sources:
+  - Truth VCF: NIST/GIAB HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz (public, complete,
+    downloaded in full — 156MB), filtered to chr20 -> 85,951 real variant positions
+    (ID column = "." everywhere, as expected for a truth set — no native
+    dbSNP annotation, hence cross-referencing by POSITION rather than by ID).
+  - dbSNP: refsnp-chr20.json.bz2 (~9.0GB compressed total), 400MB compressed chunk taken
+    from the start of the file (HTTP range-fetch, HTTP 206), streamed decompression
+    (~8GB decompressed, no intermediate disk write) -> 315,948 RefSNP
+    records parsed (1 final line truncated by the chunk cut, ignored).
 
-Méthode de croisement : pour chaque enregistrement RefSNP ayant un placement sur
-NC_000020.11 (chr20), position(s) SPDI (0-based) converties en position VCF (1-based),
-puis intersectées avec les 85 951 positions réelles GIAB. Limite connue : matching par
-position seule, pas par allèle exact (approximatif pour les indels, fiable pour les SNV).
+Cross-reference method: for each RefSNP record with a placement on
+NC_000020.11 (chr20), SPDI position(s) (0-based) converted to VCF position (1-based),
+then intersected with the 85,951 real GIAB positions. Known limitation:
+position-only matching, not exact-allele (approximate for indels, reliable for SNVs).
 
-RÉSULTATS
----------
-Enregistrements RefSNP chr20 parsés (ce chunk)            : 315 939
-Positions GIAB touchées par ce chunk dbSNP                 : 65 347 / 85 951  (76,0 %)
-  -> AVEC historique de fusion (dbsnp1_merges non vide)    : 48 217
-  -> SANS historique de fusion                             : 17 130
-  -> Taux de fusion parmi les variants réels touchés       : 73,79 %
+RESULTS
+-------
+chr20 RefSNP records parsed (this chunk)                   : 315,939
+GIAB positions touched by this dbSNP chunk                 : 65,347 / 85,951  (76.0%)
+  -> WITH a merge history (non-empty dbsnp1_merges)         : 48,217
+  -> WITHOUT a merge history                                : 17,130
+  -> Merge rate among touched real variants                 : 73.79%
 
-=> Sur ce chunk (qui couvre déjà 76 % des positions HG002 chr20 réelles), près des
-   3/4 des variants réels du génome de référence HG002 reposent sur un rsID qui a
-   historiquement absorbé un ou plusieurs anciens identifiants fusionnés. C'est
-   l'équivalent, à l'échelle chr20, du ratio "39/56" du Papier A (taxid) — même
-   mécanisme, système d'identifiant différent (rsID vs taxid), domaine différent
-   (génomique clinique germinale vs métagénomique virale).
+=> On this chunk (which already covers 76% of real HG002 chr20 positions), nearly
+   3/4 of the real variants in the HG002 reference genome sit on an rsID that has
+   historically absorbed one or more merged former identifiers. This is
+   the equivalent, at chr20 scale, of Paper A's "39/56" ratio (taxid) — same
+   mechanism, different identifier system (rsID vs taxid), different domain
+   (clinical germline genomics vs. viral metagenomics).
 
-Exemples réels (variant GIAB réel, position chr20, rsID actuel, anciens rsID fusionnés) :
+Real examples (real GIAB variant, chr20 position, current rsID, merged former rsIDs):
   rs1156 @ chr20:41403389 <- rs17190369 (2004-10-08), rs59382982 (2009-02-27)
   rs1207 @ chr20:3250488  <- rs732922   (2001-01-18), rs58053668 (2008-05-24)
   rs1217 @ chr20:1181971  <- rs17778682 (2004-10-08), rs56636048 + rs61550862 (2008-05-27)
@@ -41,20 +41,20 @@ Exemples réels (variant GIAB réel, position chr20, rsID actuel, anciens rsID f
   rs1817 @ chr20:628339   <- rs59323526 (2008-05-25)
   rs1962 @ chr20:23045859 <- rs3176125  (2002-07-03), rs57888080 (2008-05-24)
 
-Exemples de variants réels SANS historique de fusion (contrôle négatif) :
+Examples of real variants WITHOUT a merge history (negative control):
   rs760  @ chr20:55827010
   rs1200 @ chr20:20391297
   rs2141 @ chr20:58627042
   rs2293 @ chr20:44263169
   rs2596 @ chr20:42072816
 
-LIMITES A GARDER EN TETE (voir aussi README.md) :
-  - Ce chunk ne couvre que les ~316k rsID les plus anciens (fichier trié par rsID croissant,
-    pas par position) -> les 24 % de positions GIAB non touchées ici le seraient
-    probablement par des rsID plus récents (build/numéro plus élevé) dans le reste du
-    fichier de 9 Go, non téléchargé dans cette session.
-  - Biais de composition : ces rsID anciens (pré-~2010) sont surreprésentés par des variants
-    communs/bien étudiés -> le taux de 73,79 % pourrait ne pas se généraliser tel quel aux
-    24 % de positions restantes (probablement des variants plus rares/récemment catalogués,
-    a priori moins fusionnés puisque plus jeunes dans l'historique dbSNP).
-  - Matching par position seule, pas encore vérifié allèle par allèle (REF/ALT).
+LIMITATIONS TO KEEP IN MIND (see also README.md):
+  - This chunk only covers the ~316k oldest rsIDs (file sorted by increasing rsID,
+    not by position) -> the 24% of GIAB positions not touched here would probably
+    be covered by more recent rsIDs (higher build/number) in the rest of the
+    9GB file, not downloaded in this session.
+  - Composition bias: these old (pre-~2010) rsIDs are over-represented by common/
+    well-studied variants -> the 73.79% rate might not generalize as-is to the
+    remaining 24% of positions (likely rarer/more recently cataloged variants,
+    presumably less often merged since younger in dbSNP's history).
+  - Position-only matching, not yet verified allele-by-allele (REF/ALT).

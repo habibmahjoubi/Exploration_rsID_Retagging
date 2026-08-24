@@ -1,66 +1,66 @@
-Résultats DÉFINITIFS : taux de péremption sur couverture complète (25,9M enregistrements)
+DEFINITIVE results: stale-identifier rate on full coverage (25.9M records)
 =============================================================================================
 
-Ce fichier remplace/finalise results/05, 06 et 07 -- premier test du panel
-"impact en aval" construit sur la couverture COMPLÈTE de dbSNP chr20
-(candidate_panel_FULLCOV_allele_exact.csv, 48 746 candidats, exact-allèle,
-tous historiques de fusion confondus), et non plus sur l'échantillon partiel
-biaisé (315 939 enregistrements) utilisé jusqu'ici.
+This file supersedes/finalizes results/05, 06 and 07 -- the first "downstream
+impact" panel test built on FULL coverage of dbSNP chr20
+(candidate_panel_FULLCOV_allele_exact.csv, 48,746 candidates, exact-allele,
+all merge histories combined), rather than the biased partial sample
+(315,939 records) used until now.
 
-MÉTHODE
+METHOD
 -------
-Panel complet reconstruit en un seul passage (scripts/build_full_coverage_panel.py,
-~1h10 de calcul, flux curl|bzip2|python sans stockage intermédiaire) : pour
-CHAQUE enregistrement RefSNP chr20 (25 938 655 au total), extraction des
-allèles SPDI réels (SNV uniquement) et matching exact contre les 73 404
-allèles SNV du VCF GIAB HG002 chr20. Sous-ensemble "fusion 2014-2017" extrait :
-**2 894 candidats** (contre 2 657 sur l'échantillon partiel).
+Full panel rebuilt in a single pass (scripts/build_full_coverage_panel.py,
+~1h10 of compute, curl|bzip2|python stream with no intermediate storage): for
+EVERY chr20 RefSNP record (25,938,655 total), extraction of the real
+SPDI alleles (SNV only) and exact matching against the 73,404
+SNV alleles of the GIAB HG002 chr20 VCF. "2014-2017 merge" subset extracted:
+**2,894 candidates** (versus 2,657 on the partial sample).
 
-RÉSULTAT 1 -- taux de fusion global, exact-allèle, couverture complète
+RESULT 1 -- overall merge rate, exact-allele, full coverage
 -------------------------------------------------------------------------
-Enregistrements dbSNP chr20 parsés (TOTALITÉ)     : 25 938 655
-Matches exact-allèle GIAB (tout statut de fusion) : 73 370
-  -> AVEC historique de fusion                     : 48 746
-  -> SANS historique de fusion                      : 24 624
+chr20 dbSNP records parsed (ENTIRE file)          : 25,938,655
+Exact-allele GIAB matches (any merge status)      : 73,370
+  -> WITH a merge history                          : 48,746
+  -> WITHOUT a merge history                        : 24,624
 
-**TAUX DE FUSION FINAL (exact-allèle, couverture complète) : 66,44 %**
+**FINAL MERGE RATE (exact-allele, full coverage): 66.44%**
 
-Ce chiffre remplace le 47,78 % précédent (qui utilisait un matching par
-POSITION seule, donc plus bruité -- une position peut porter plusieurs
-allèles différents, certains fusionnés et d'autres non, ce qui diluait le
-taux réel). Le 66,44 % exact-allèle est le chiffre le plus rigoureux obtenu
-à ce jour et se rapproche davantage de l'estimation initiale (73,79 %,
-elle-même biaisée par l'échantillonnage) que le chiffre intermédiaire de
-47,78 %. Historique complet des 3 estimations :
-  73,79 % (échantillon partiel, position seule)     -- dépassé
-  47,78 % (couverture complète, position seule)      -- dépassé
-  66,44 % (couverture complète, EXACT-ALLÈLE)        -- DÉFINITIF
+This figure supersedes the previous 47.78% (which used POSITION-only
+matching, hence noisier -- a position can carry several different
+alleles, some merged and some not, which diluted the real rate). The
+66.44% exact-allele figure is the most rigorous obtained to
+date, and is closer to the initial estimate (73.79%, itself
+biased by sampling) than the intermediate 47.78% figure. Full history
+of the 3 estimates:
+  73.79% (partial sample, position-only)             -- superseded
+  47.78% (full coverage, position-only)               -- superseded
+  66.44% (full coverage, EXACT-ALLELE)                 -- DEFINITIVE
 
-RÉSULTAT 2 -- taux de péremption des bundles, panel complet non biaisé (n=2 894)
+RESULT 2 -- bundle stale-identifier rate, full unbiased panel (n=2,894)
 ------------------------------------------------------------------------------------
-                                  dbSNP138 (2014)    dbSNP144 (juin 2015)
-Position+allèle absente du bundle      19                  31
-ID courant (à jour)                2 506 (86,6%)       2 758 (95,3%)
-ID PÉRIMÉ (stale)                    369 (12,75%)        105 (3,63%)
-ID différent (même allèle)              0                   0
+                                  dbSNP138 (2014)    dbSNP144 (June 2015)
+Position+allele absent from bundle    19                  31
+Current ID (up to date)            2,506 (86.6%)       2,758 (95.3%)
+STALE ID                              369 (12.75%)        105 (3.63%)
+Different ID (same allele)              0                   0
 
-=> Les taux augmentent par rapport à l'échantillon partiel (8,24%->12,75% et
-   1,73%->3,63%) -- l'échantillon biaisé (rsID anciens) SOUS-ESTIMAIT en fait
-   légèrement le risque réel. La tendance temporelle reste nette et dans le
-   même sens (baisse ~3,5x entre les deux bundles, contre ~4,8x avant --
-   même conclusion qualitative, magnitude légèrement différente).
-=> La catégorie "identifiant différent" reste à 0 pour les deux bundles,
-   confirmant que le matching exact-allèle explique totalement cette
-   catégorie auparavant mystérieuse.
+=> The rates increase relative to the partial sample (8.24%->12.75% and
+   1.73%->3.63%) -- the biased sample (old rsIDs) was actually slightly
+   UNDER-estimating the real risk. The temporal trend remains clear and in the
+   same direction (~3.5x drop between the two bundles, versus ~4.8x before --
+   same qualitative conclusion, slightly different magnitude).
+=> The "different identifier" category stays at 0 for both bundles,
+   confirming that exact-allele matching fully explains this
+   previously mysterious category.
 
 CONCLUSION
 ----------
-Le panel "impact en aval" est maintenant construit sur la couverture COMPLÈTE
-de dbSNP chr20, plus sur un échantillon partiel. C'est le résultat définitif
-à citer dans le manuscrit : **12,75 % des variants réels à fusion 2014-2017
-sont rapportés avec un identifiant périmé par le bundle GATK dbSNP138**,
-contre 3,63 % pour le bundle dbSNP144 plus récent.
+The "downstream impact" panel is now built on FULL coverage
+of dbSNP chr20, no longer a partial sample. This is the definitive result
+to cite in the manuscript: **12.75% of real variants with a 2014-2017 merge
+are reported with a stale identifier by the GATK dbSNP138 bundle**,
+versus 3.63% for the more recent dbSNP144 bundle.
 
-Reste ouvert : un 3e point de version (dbSNP151/152/courant) bloqué par le
-format propriétaire Illumina Nirvana (.nsa) ; le vrai run du pipeline sarek
-d'Article 1 à la place du VCF de vérité GIAB.
+Still open: a 3rd version point (dbSNP151/152/current) blocked by the
+proprietary Illumina Nirvana (.nsa) format; the real run of Article 1's
+sarek pipeline in place of the GIAB truth VCF.

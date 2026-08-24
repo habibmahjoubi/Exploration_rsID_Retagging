@@ -1,46 +1,46 @@
-Vérification ClinVar sur les 369 paires (courant, périmé) de dbSNP138 — résultat négatif honnête
+ClinVar check on the 369 dbSNP138 (current, stale) pairs — honest negative result
 ========================================================================================================
 
-CONTEXTE : suite à la relecture critique, tester si une fraction des 369 rsID
-périmés de dbSNP138 porte une classification de pathogénicité ClinVar qu'une
-recherche naïve par l'ancien ID manquerait -- transformerait le papier d'un
-"papier d'hygiène d'identifiants" en argument de sécurité clinique concret.
+CONTEXT: following the critical review, testing whether a fraction of the 369
+dbSNP138-stale rsIDs carry a ClinVar pathogenicity classification that a
+naive search by the old ID would miss -- would turn the paper from a
+"identifier-hygiene paper" into a concrete clinical-safety argument.
 
-MÉTHODE : requête NCBI E-utilities esearch (db=clinvar, term=rs{ID}) pour
-chacun des 369 rsID COURANTS et chacun des 369 rsID PÉRIMÉS correspondants
-(738 requêtes, ~0,7s/requête avec délai de politesse).
+METHOD: NCBI E-utilities esearch query (db=clinvar, term=rs{ID}) for
+each of the 369 CURRENT rsIDs and each of the 369 corresponding STALE rsIDs
+(738 queries, ~0.7s/query with a politeness delay).
 
-VALIDATION DE LA MÉTHODE (sanity-check) :
-  rs334  (drépanocytose, pathogène connu)     -> 10 enregistrements ClinVar
-  rs6025 (Facteur V Leiden, pathogène connu)  ->  3 enregistrements ClinVar
-  rs202831 (un de nos "current")              ->  0 enregistrement
-=> La méthode fonctionne correctement (détecte bien les vrais positifs connus).
+METHOD VALIDATION (sanity check):
+  rs334  (sickle cell disease, known pathogenic)   -> 10 ClinVar records
+  rs6025 (Factor V Leiden, known pathogenic)       ->  3 ClinVar records
+  rs202831 (one of our "current" IDs)              ->  0 records
+=> The method works correctly (correctly detects known true positives).
 
-RÉSULTAT
+RESULT
 --------
-Total paires testées                                   : 369
-ID courant avec >=1 enregistrement ClinVar             : 0
-ID périmé avec >=1 enregistrement ClinVar              : 0
-Aucune paire (ni courant ni périmé) n'a de donnée ClinVar : 369/369
+Total pairs tested                                     : 369
+Current ID with >=1 ClinVar record                     : 0
+Stale ID with >=1 ClinVar record                        : 0
+No pair (neither current nor stale) has ClinVar data    : 369/369
 
-CONCLUSION HONNÊTE
+HONEST CONCLUSION
 ------------------
-Résultat négatif net : AUCUN des 369 candidats de ce panel spécifique n'a de
-classification clinique dans ClinVar, qu'on interroge l'ID courant ou l'ID
-périmé. Ce test ne permet donc PAS de transformer le papier en argument de
-sécurité clinique -- la question de la conséquence clinique réelle reste
-ouverte, pas confirmée.
+Clean negative result: NONE of the 369 candidates in this specific panel have a
+clinical classification in ClinVar, whether querying the current ID or the
+stale ID. This test therefore does NOT allow the paper to be turned into a
+clinical-safety argument -- the question of real clinical
+consequence remains open, not confirmed.
 
-Explication plausible (pas établie) : ce panel spécifique (rsID courants
-anciens/bas, filtré sur "fusion la plus récente en 2014-2017") est
-probablement enrichi en polymorphismes communs et bien établis plutôt qu'en
-variants rares associés à une maladie -- les variants cliniquement
-pertinents ont typiquement des rsID plus récents/élevés ou sont rares (donc
-moins susceptibles d'avoir généré des soumissions dupliquées nécessitant une
-fusion administrative). Un panel construit spécifiquement à partir de
-variants ClinVar/pathogènes connus, puis vérifié pour un historique de
-fusion, serait le test correct pour répondre à la vraie question -- non fait
-ici, faute de temps, mais identifié comme piste concrète de travail futur.
+Plausible explanation (not established): this specific panel (old/low
+current rsIDs, filtered on "most recent merge in 2014-2017") is
+probably enriched for common, well-established polymorphisms rather than
+rare disease-associated variants -- clinically relevant variants
+typically have more recent/higher rsIDs or are rare (hence
+less likely to have generated duplicate submissions requiring administrative
+merging). A panel built specifically from known ClinVar/pathogenic
+variants, then checked for a merge history, would be the correct test
+to answer the real question -- not done here for lack of time, but identified
+as a concrete direction for future work.
 
-STATUT : intégré au manuscrit (Section 6.2 Limitations) comme résultat
-négatif rapporté honnêtement, pas comme "pas encore fait".
+STATUS: integrated into the manuscript (Section 6.2 Limitations) as an
+honestly-reported negative result, not as "not yet done".

@@ -1,29 +1,29 @@
-Échantillon initial (biaisé, non représentatif) — 2026-08-23
+Initial sample (biased, not representative) — 2026-08-23
 ============================================================
 
-Source : https://ftp.ncbi.nlm.nih.gov/snp/latest_release/JSON/refsnp-chr20.json.bz2
-Méthode : range-fetch HTTP (0-30 000 000 octets sur ~9.0 Go), décompression bzip2 en streaming
-          (le flux tronqué en fin de chunk produit une erreur bzip2 attendue — les blocs déjà
-          décodés avant la coupure restent valides).
+Source: https://ftp.ncbi.nlm.nih.gov/snp/latest_release/JSON/refsnp-chr20.json.bz2
+Method: HTTP range-fetch (0-30,000,000 bytes out of ~9.0GB), streaming bzip2 decompression
+        (the stream truncated at the end of the chunk produces an expected bzip2 error —
+        blocks already decoded before the cut remain valid).
 
-ATTENTION — biais de sélection : le fichier dbSNP est trié par refsnp_id (numéro de rsID)
-croissant, PAS par position génomique. Ce premier échantillon ne contient donc que les rsID
-les plus anciens (rs754 à ~rs20000), c'est-à-dire des variants soumis très tôt (~2000-2001),
-disproportionnellement bien étudiés. Ce n'est PAS un taux de fusion représentatif d'un
-génome NGS moderne — voir results/02 pour le chiffre pertinent (croisé avec de vrais variants
-GIAB HG002).
+WARNING — selection bias: the dbSNP file is sorted by increasing refsnp_id
+(rsID number), NOT by genomic position. This first sample therefore only contains the
+oldest rsIDs (rs754 to ~rs20000), i.e. variants submitted very early (~2000-2001),
+disproportionately well-studied. This is NOT a merge rate representative of a
+modern NGS genome — see results/02 for the relevant figure (cross-referenced with real
+GIAB HG002 variants).
 
-Résultats bruts :
-  Total enregistrements RefSNP parsés : 15 333
-  Erreurs de parsing (hors dernière ligne tronquée) : 0
-  Enregistrements AVEC historique de fusion (dbsnp1_merges non vide) : 11 308 (73,75 %)
-  Nombre total d'événements de fusion individuels : 22 755
-  Fusions moyennes par rsID fusionné : 2,01
-  Plage de dates de fusion observées : 2000-09-19 -> 2016-12-20
+Raw results:
+  Total RefSNP records parsed: 15,333
+  Parsing errors (excluding the last truncated line): 0
+  Records WITH a merge history (non-empty dbsnp1_merges): 11,308 (73.75%)
+  Total individual merge events: 22,755
+  Average merges per merged rsID: 2.01
+  Observed merge date range: 2000-09-19 -> 2016-12-20
 
-Exemples réels :
-  rs754  -> fusionné depuis rs60641885 (2008, build 130)
-  rs1100 -> fusionné depuis rs3177294 et rs117187480
-  rs1101 -> fusionné depuis rs3171335
-  rs1156 -> fusionné depuis rs17190369 et rs59382982
-  rs1207 -> fusionné depuis rs732922 et rs58053668
+Real examples:
+  rs754  -> merged from rs60641885 (2008, build 130)
+  rs1100 -> merged from rs3177294 and rs117187480
+  rs1101 -> merged from rs3171335
+  rs1156 -> merged from rs17190369 and rs59382982
+  rs1207 -> merged from rs732922 and rs58053668

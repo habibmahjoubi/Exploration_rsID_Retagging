@@ -1,52 +1,52 @@
-Test "impact aval" #3 : comparaison multi-version de bundles réels (138 vs 144)
+"Downstream impact" test #3: multi-version comparison of real bundles (138 vs 144)
 ==================================================================================
 
-Objectif : montrer une TENDANCE temporelle (pas un point isolé), comme les 13 bases
-Kraken2 de Papier B, en testant le même panel de 2 788 candidats (fusions 2014-2017)
-contre deux vrais bundles GRCh38 de vintages différents.
+Goal: show a temporal TREND (not an isolated point), like Paper B's 13
+Kraken2 databases, by testing the same panel of 2,788 candidates (2014-2017 merges)
+against two real GRCh38 bundles of different vintages.
 
-Bundles testés :
-  - Homo_sapiens_assembly38.dbsnp138.vcf.gz (Broad, GATK best-practices, contenu
-    dbSNP build 138, ~2014) -- déjà testé dans results/05.
-  - dbsnp_144.hg38.vcf.gz (Broad, chemin "gdc/", utilisé par le NCI Genomic Data
-    Commons -- TCGA et autres cohortes cancer), fileDate=20150603, dbSNP_BUILD_ID=144.
+Bundles tested:
+  - Homo_sapiens_assembly38.dbsnp138.vcf.gz (Broad, GATK best-practices, content
+    dbSNP build 138, ~2014) -- already tested in results/05.
+  - dbsnp_144.hg38.vcf.gz (Broad, "gdc/" path, used by the NCI Genomic Data
+    Commons -- TCGA and other cancer cohorts), fileDate=20150603, dbSNP_BUILD_ID=144.
 
-RÉSULTAT
+RESULT
 --------
-                                  dbSNP138 (2014)    dbSNP144 (juin 2015)
-Total testé                          2 788               2 788
-Position absente du bundle              8                  31
-ID courant (à jour)                 2 464 (88,4%)       2 632 (94,4%)
-ID PÉRIMÉ (stale)                     217 (7,78%)          19 (0,68%)
-ID différent (à investiguer)           99                 106
+                                  dbSNP138 (2014)    dbSNP144 (June 2015)
+Total tested                         2,788               2,788
+Position absent from the bundle         8                  31
+Current ID (up to date)             2,464 (88.4%)       2,632 (94.4%)
+STALE ID                              217 (7.78%)          19 (0.68%)
+Different ID (to investigate)          99                 106
 
-=> Le taux d'identifiants périmés chute de 7,78 % à 0,68 % entre les deux bundles,
-   dans le sens attendu (un bundle plus récent a déjà absorbé la plupart des fusions
-   2014-2015 de ce panel). C'est une VRAIE tendance temporelle mesurée sur deux
-   artefacts réels et indépendamment publiés/déployés, pas un artefact d'un seul point.
+=> The stale-identifier rate drops from 7.78% to 0.68% between the two bundles,
+   in the expected direction (a more recent bundle has already absorbed most of the
+   2014-2015 merges in this panel). This is a REAL temporal trend measured on two
+   real, independently published/deployed artifacts, not a single-point artifact.
 
-Exemples stables sur les deux versions (périmé dans les deux, fusion plus tardive
-que juin 2015) :
-  chr20:47829240  courant=rs440633  périmé (138 ET 144) = rs80132470 (fusion 2016-07-19)
-  chr20:13366886  courant=rs657719  périmé (138 ET 144) = rs77717214 (fusion 2015-07-02)
+Examples stable across both versions (stale in both, merge later than
+June 2015):
+  chr20:47829240  current=rs440633  stale (BOTH 138 AND 144) = rs80132470 (merged 2016-07-19)
+  chr20:13366886  current=rs657719  stale (BOTH 138 AND 144) = rs77717214 (merged 2015-07-02)
 
-INTERPRÉTATION
+INTERPRETATION
 --------------
-Ce résultat renforce directement le lien avec Papier B/KDCR : la "dérive de
-référence" n'est pas binaire (figé = mauvais, à jour = bon) mais graduelle et
-mesurable en fonction de l'âge du bundle par rapport à la date de fusion -- exactement
-le type de relation dose-réponse qu'un modèle de gouvernance calibré (comme KDCR)
-pourrait exploiter pour décider QUAND rafraîchir une référence plutôt que de la geler
-indéfiniment ou la rafraîchir à chaque changement.
+This result directly reinforces the link with Paper B/KDCR: "reference
+drift" is not binary (frozen = bad, up to date = good) but gradual and
+measurable as a function of the bundle's age relative to the merge date -- exactly
+the kind of dose-response relationship a calibrated governance model (like KDCR)
+could exploit to decide WHEN to refresh a reference rather than freezing it
+indefinitely or refreshing it on every change.
 
-LIMITES
+LIMITATIONS
 -------
-- Seulement 2 points de comparaison (138, 144) -- un 3e point (151/152 ou courant)
-  renforcerait la courbe ; dbSNP151/156 ne sont disponibles dans le même bucket que
-  sous forme binaire propriétaire Illumina Nirvana (.nsa), pas en VCF standard --
-  nécessiterait soit l'outil Nirvana, soit une autre source pour un vrai 3e point VCF.
-- Panel toujours restreint aux candidats 2014-2017 issus de l'échantillon biaisé
-  (rsID anciens) -- couverture complète en cours (voir README.md).
-- Les catégories "position absente" et "ID différent" augmentent légèrement avec le
-  bundle plus récent (31 et 106 vs 8 et 99) -- pas encore expliqué, à creuser avant
-  de présenter le tableau comme définitif.
+- Only 2 comparison points (138, 144) -- a 3rd point (151/152 or current)
+  would strengthen the curve; dbSNP151/156 are only available in the same bucket
+  as a proprietary Illumina Nirvana (.nsa) binary format, not standard VCF --
+  would require either the Nirvana tool or another source for a real 3rd VCF point.
+- Panel still restricted to the 2014-2017 candidates from the biased sample
+  (old rsIDs) -- full coverage in progress (see README.md).
+- The "position absent" and "different ID" categories increase slightly with the
+  more recent bundle (31 and 106 vs 8 and 99) -- not yet explained, to investigate before
+  presenting the table as definitive.

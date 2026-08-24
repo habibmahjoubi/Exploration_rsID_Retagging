@@ -1,65 +1,65 @@
-Extension aux indels (exploratoire, échantillon partiel) — suite à la demande "continue sur les indels"
+Extension to indels (exploratory, partial sample) — following the "continue with indels" request
 ================================================================================================================
 
-MÉTHODE
+METHOD
 -------
-Jusqu'ici, le matching exact-allèle excluait totalement les indels (limite
-documentée dès le début : la convention d'ancrage SPDI de dbSNP ne correspond
-pas directement à la convention avec base d'ancrage de VCF).
+Until now, exact-allele matching completely excluded indels (a limitation
+documented from the start: dbSNP's SPDI anchoring convention does not
+correspond directly to VCF's base-anchored convention).
 
-Implémentation d'une fonction de normalisation (scripts/normalize.py) : trim
-du suffixe partagé puis du préfixe partagé entre REF et ALT (VCF), pour
-obtenir une forme minimale comparable directement au format SPDI de dbSNP
-(vérifié : idempotente sur une entrée déjà minimale de type SPDI). Auto-tests
-inclus dans le script, tous passent.
+Implemented a normalization function (scripts/normalize.py): trim the
+shared suffix then the shared prefix between REF and ALT (VCF), to
+obtain a minimal form directly comparable to dbSNP's SPDI format
+(verified: idempotent on an already-minimal SPDI-style input). Self-tests
+included in the script, all pass.
 
-Limite assumée et maintenant QUANTIFIÉE (pas juste supposée) : ceci est un
-trim préfixe/suffixe simple, pas un réalignement complet contre la séquence
-de référence dans les régions homopolymères/répétitions courtes -- deux
-outils peuvent choisir des ancrages différents mais équivalents pour le même
-indel dans un tel contexte, et ce script ne les fera pas correspondre.
+Accepted and now QUANTIFIED (not just assumed) limitation: this is a
+simple prefix/suffix trim, not a full realignment against the reference
+sequence in homopolymer/short-repeat regions -- two tools may choose
+different but equivalent anchorings for the same indel in such a
+context, and this script will not make them match.
 
-RÉSULTAT SUR L'ÉCHANTILLON PARTIEL (400 Mo, pas la couverture complète)
+RESULT ON THE PARTIAL SAMPLE (400MB, not full coverage)
 --------------------------------------------------------------------------
-Panel de candidats étendu aux indels : 55 299 (dont 7 451 indels), contre
-47 841 SNV seules -- soit +13,5 % de candidats supplémentaires réels.
+Candidate panel extended to indels: 55,299 (of which 7,451 indels), versus
+47,841 SNVs alone -- i.e. +13.5% additional real candidates.
 
-Sous-ensemble fusion 2014-2017 étendu : 4 096 candidats (1 439 indels, 2 657
-SNV) contre 2 657 avant (SNV seules).
+Extended 2014-2017-merge subset: 4,096 candidates (1,439 indels, 2,657
+SNVs) versus 2,657 before (SNVs only).
 
-TAUX DE MATCHING RÉUSSI, indels vs SNV (bundle dbSNP138) :
-  SNV   : 2650/2657 (99,7 %) trouvent une correspondance dans le bundle
-  Indel : 1223/1439 (85,0 %) trouvent une correspondance -- le reste (15 %)
-          se répartit en "absent" (79, 5,5 %) et surtout **"ni courant ni
-          périmé" (137, 9,5 %)** -- cette dernière catégorie est à **100 %
-          composée d'indels (0 SNV)**, confirmant précisément et
-          empiriquement la limite de normalisation documentée ci-dessus.
+MATCH SUCCESS RATE, indels vs SNVs (dbSNP138 bundle):
+  SNV   : 2650/2657 (99.7%) find a match in the bundle
+  Indel : 1223/1439 (85.0%) find a match -- the remainder (15%)
+          splits into "absent" (79, 5.5%) and mostly **"neither current nor
+          stale" (137, 9.5%)** -- this last category is **100%
+          composed of indels (0 SNVs)**, precisely and
+          empirically confirming the normalization limitation documented above.
 
-TAUX DE PÉREMPTION PARMI LES VARIANTS EFFECTIVEMENT MATCHÉS (échantillon partiel) :
-                          Bundle 138 (2014)         Bundle 144 (juin 2015)
-SNV  -- périmé            219/2650 = 8,26 %          18/2627 = 0,69 %
-Indel -- périmé            14/1223 = 1,14 %          12/1205 = 1,00 %
-SNV  -- ambigu               0/2650 = 0,00 %          60/2627 = 2,28 %
-Indel -- ambigu             49/1223 = 4,01 %         140/1205 = 11,62 %
+STALE RATE AMONG ACTUALLY-MATCHED VARIANTS (partial sample):
+                          Bundle 138 (2014)         Bundle 144 (June 2015)
+SNV  -- stale              219/2650 = 8.26%          18/2627 = 0.69%
+Indel -- stale               14/1223 = 1.14%          12/1205 = 1.00%
+SNV  -- ambiguous             0/2650 = 0.00%          60/2627 = 2.28%
+Indel -- ambiguous           49/1223 = 4.01%         140/1205 = 11.62%
 
-CONCLUSION -- un vrai contraste, pas juste "les indels confirment pareil"
+CONCLUSION -- a real contrast, not just "indels confirm the same thing"
 ----------------------------------------------------------------------------
-1. Les indels sont MOINS souvent périmés que les SNV (1,0-1,1 % vs 0,7-8,3 %)
-   -- direction plausible : les indels dans les régions difficiles sont
-   peut-être moins souvent des doublons de soumission (soumis moins souvent
-   par des pipelines automatisés en double), ou le "matching réussi" filtre
-   déjà les indels les plus simples/non-répétitifs, qui sont peut-être aussi
-   les moins sujets aux doublons -- pas encore élucidé, à creuser.
-2. Les indels sont BEAUCOUP plus souvent AMBIGUS (4-12 % vs 0-2,3 % pour les
-   SNV) -- cohérent avec l'idée que les indels dans des contextes répétés
-   sont plus difficiles à dédupliquer administrativement pour dbSNP lui-même,
-   pas seulement pour notre script de comparaison.
-3. Le taux de correspondance de 85 % (vs 99,7 % pour les SNV) confirme que la
-   limite de normalisation prefix/suffixe est réelle et non négligeable, mais
-   n'empêche pas d'obtenir un résultat exploitable sur la majorité des indels.
+1. Indels are LESS often stale than SNVs (1.0-1.1% vs 0.7-8.3%)
+   -- plausible direction: indels in difficult regions are
+   perhaps less often duplicate submissions (submitted less often
+   in duplicate by automated pipelines), or "successful matching" already
+   filters for the simplest/non-repetitive indels, which may also be
+   the least prone to duplicates -- not yet elucidated, to investigate.
+2. Indels are MUCH more often AMBIGUOUS (4-12% vs 0-2.3% for
+   SNVs) -- consistent with the idea that indels in repeated
+   contexts are harder for dbSNP itself to deduplicate administratively,
+   not just for our comparison script.
+3. The 85% match rate (vs 99.7% for SNVs) confirms that the
+   prefix/suffix normalization limitation is real and non-negligible, but
+   does not prevent obtaining a usable result on the majority of indels.
 
-STATUT : analyse exploratoire sur ÉCHANTILLON PARTIEL, pas la couverture
-complète (le refaire sur les 25,9M enregistrements est un travail futur
-possible mais coûteux ~1-2h de plus, décision à prendre si le papier avance).
-Intégré au manuscrit comme nouvelle sous-section 5.7 (supplémentaire),
-clairement étiquetée comme exploratoire.
+STATUS: exploratory analysis on a PARTIAL SAMPLE, not full
+coverage (redoing it on the 25.9M records is possible future work but
+costly, ~1-2h more, decision to be made if the paper moves forward).
+Integrated into the manuscript as a new subsection 5.7 (supplementary),
+clearly labeled as exploratory.
