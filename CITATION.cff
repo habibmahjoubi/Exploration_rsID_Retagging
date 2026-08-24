@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+type: software
+title: "Code and data: Reference Bundle Staleness -- Quantifying rsID Obsolescence and Its Impact on Clinical Variant Annotation"
+authors:
+  - family-names: Mahjoubi
+    given-names: Habib
+    orcid: "https://orcid.org/0000-0003-2521-7938"
+repository-code: "https://github.com/habibmahjoubi/Exploration_rsID_Retagging"
+license: MIT
+keywords:
+  - dbSNP
+  - rsID
+  - reference bundle staleness
+  - clinical variant annotation
+  - molecular diagnostics
+  - germline variant calling
+  - reference database curation
+date-released: 2026-08-24
