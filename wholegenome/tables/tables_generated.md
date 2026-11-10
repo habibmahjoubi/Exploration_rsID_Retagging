@@ -73,7 +73,7 @@ Counts per genome, HG001 / HG002 / HG005: entries reached only after converting 
 
 ## Table S5. Sample-independent check: ClinVar, GWAS Catalog and PharmGKB entries that a file holds only under a retired rsID
 
-Denominator: entries whose rsID the file holds in current or retired form (identifier level). Retired only: the file holds a retired rsID that merges into the entry's rsID, but not the entry's own rsID or its current rsID. Same allele: that retired rsID is listed by the file at the allele of the ClinVar entry, so a genome carrying this variant would miss the entry in a plain rsID join. Allele verification was run for dbSNP138, 144 and 146 (verify_s5_alleles.py). PharmGKB: clinical annotations of levels 1A-2B, retired only of entries held.
+Denominator: entries whose rsID the file holds in current or retired form (identifier level). Retired only: the file holds a retired rsID that merges into the entry's rsID, but not the entry's own rsID or its current rsID. Same allele: that retired rsID is listed by the file at the allele of the ClinVar entry, so a genome carrying this variant would miss the entry in a plain rsID join. Allele verification was run for dbSNP138, 144 and 146. PharmGKB: clinical annotations of levels 1A-2B, retired only of entries held.
 
 | dbSNP file | ClinVar P/LP >=1 star: retired only | of which same allele | ClinVar B/LB >=1 star: retired only | of which same allele | GWAS p < 5x10^-8: retired only | GWAS p < 5x10^-8 filed under a retired rsID by the Catalog | PharmGKB clinical 1A-2B: retired only |
 |---|---|---|---|---|---|---|---|
@@ -84,7 +84,7 @@ Denominator: entries whose rsID the file holds in current or retired form (ident
 
 ## Table S6. ClinVar P/LP (>=1 star) entries attached by a plain rsID join to a different allele (HG002, dbSNP146)
 
-n = 30; all at the same position as the HG002 variant. Genotype of HG002: 0/1, heterozygous; 1/1, homozygous for the alternate allele (source: other_allele_PLP_HG002_d146.tsv).
+n = 30; all at the same position as the HG002 variant. Genotype of HG002: 0/1, heterozygous; 1/1, homozygous for the alternate allele.
 
 | HG002 variant (HGVS, GRCh38) | Genotype | rsID | ClinVar P/LP variant (HGVS) | Gene | ClinVar classification |
 |---|---|---|---|---|---|
