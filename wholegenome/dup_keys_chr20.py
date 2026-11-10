@@ -1,4 +1,4 @@
-"""Same as dup_keys.py, chromosome 20 only (to trace the counts of an earlier version).
+"""Same as dup_keys.py, chromosome 20 only (per-chromosome check of the whole-file counts).
 Keys with two or more distinct rsIDs, and how many mix a retired and a current rsID (b157 ledger).
 Usage: python dup_keys.py <bundle.vcf.gz> [...]"""
 import bz2, gzip, re, sys

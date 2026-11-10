@@ -65,7 +65,7 @@ graphical_abstract.tiff
 abstract graphique.jfif
 scripts/make_highlights_docx.py
 scripts/make_cover_letter_docx.py
-submission_JBI/
+submission_*/
 
 # Manuscript drafts and submission files (not part of the reproducibility repo)
 manuscript_v2/
