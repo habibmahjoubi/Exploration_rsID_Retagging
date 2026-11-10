@@ -33,25 +33,8 @@ Retirement is judged against the complete dbSNP build 157 merge ledger
 | `wholegenome/downstream/` | ClinVar, GWAS Catalog and PharmGKB test, locus check, live checks |
 | `wholegenome/sarek_chr20/` | Real nf-core/sarek run (HG002 chromosome 20), its output VCF and ledger check |
 | `wholegenome/tables/` | `make_tables.py` (every number of the tables), `make_figures.py`, HGVS validation |
-| `scripts/`, `data/`, `sarek_validation/` | Earlier version of the study (see below) |
-
-## Earlier version
-
-Release V1 (Zenodo 10.5281/zenodo.22084275) archived an earlier version that measured
-retired rsIDs on a chromosome 20 panel of variants selected for a 2014-2017 merge history, using
-the legacy `dbsnp1_merges` field of RefSNP records. That version was superseded. Its scripts and
-data stay in `scripts/`, `data/` and `sarek_validation/` for the record, but the following results
-are withdrawn:
-
-- "no merges after 2017": the legacy field omits every later merge; the build 157 ledger shows
-  9.0 million retirements in build 152 (2018) and 0.59 million in build 157;
-- the panel-based rates (for example 12.75%), which apply to a merge-selected panel and are not
-  comparable with whole-genome rates;
-- the forward-versus-reverse parsing test and the gnomAD/ClinVar identifier-resolution checks,
-  replaced by the downstream test in `wholegenome/downstream/`.
-
-The real sarek run of `sarek_validation/` is still used (now re-analysed in
-`wholegenome/sarek_chr20/`).
+| `sarek_validation/` | Scripts of the real nf-core/sarek run, re-analysed in `wholegenome/sarek_chr20/` |
+| `scripts/`, `data/` | Exploratory chromosome 20 analyses, not used in the article |
 
 ## Licence and citation
 
