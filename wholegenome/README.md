@@ -41,6 +41,7 @@ a newer build will differ from the build 157 file used here (md5 in `download_in
 | `sarek_chr20/` | real nf-core/sarek 3.9.0 run, HG002 chr20 30x: output VCF, ledger check, live checks, pipeline defaults | Table S10, M2, M4, M7 |
 | `tables/make_tables.py` -> `tables/tables_generated.md` | every table number, read from the files above | Tables 1-2, S2-S8, S11 |
 | `tables/check_hgvs.py` -> `tables/hgvs_validation.tsv` | VariantValidator check of all 60 HGVS descriptions | Table S6, Related Manuscript File |
+| `tables/fetch_transcripts.py` -> `tables/hgvs_transcripts.tsv` | MANE Select transcript and protein descriptions (VariantValidator) | Related Manuscript File |
 
 `sarek_chr20/ledger_check.py` also needs the chromosome 20 extracts of the four dbSNP files
 (`d138.tsv`, `d144.tsv`, `d146_chr20_idmap.tsv`, `b156_chr20_idmap.tsv`), made with
