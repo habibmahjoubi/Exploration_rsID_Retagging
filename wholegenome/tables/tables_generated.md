@@ -84,40 +84,40 @@ Denominator: entries whose rsID the file holds in current or retired form (ident
 
 ## Table S6. ClinVar P/LP (>=1 star) entries attached by a plain rsID join to a different allele (HG002, dbSNP146)
 
-n = 30; all at the same position as the HG002 variant. Genotype of HG002: 0/1, heterozygous; 1/1, homozygous for the alternate allele.
+n = 30; all at the same position as the HG002 variant. Genotype of HG002: 0/1, heterozygous; 1/1, homozygous for the alternate allele. Protein: predicted consequence on the MANE Select transcript (VariantValidator); '=' synonymous, Ter stop codon, ? intronic.
 
-| HG002 variant (HGVS, GRCh38) | Genotype | rsID | ClinVar P/LP variant (HGVS) | Gene | ClinVar classification |
-|---|---|---|---|---|---|
-| NC_000001.11:g.42930743G>A | 0/1 | rs11537641 | NC_000001.11:g.42930743G>T | *SLC2A1* | Pathogenic |
-| NC_000002.12:g.26232259G>A | 0/1 | rs11552518 | NC_000002.12:g.26232259G>T | *HADHA* | Likely pathogenic |
-| NC_000002.12:g.55656182G>T | 0/1 | rs2627765 | NC_000002.12:g.55656182G>A | *PNPT1* | Pathogenic |
-| NC_000002.12:g.61839792A>G | 1/1 | rs4672457 | NC_000002.12:g.61839792A>T | *FAM161A* | Pathogenic/Likely pathogenic |
-| NC_000002.12:g.151619514C>G | 0/1 | rs10172023 | NC_000002.12:g.151619514C>T | *NEB* | Pathogenic |
-| NC_000002.12:g.173263785C>T | 1/1 | rs3769148 | NC_000002.12:g.173263785C>A | *MAP3K20* | Pathogenic |
-| NC_000002.12:g.208124313A>G | 1/1 | rs2242074 | NC_000002.12:g.208124313A>C | *CRYGD* | Likely pathogenic |
-| NC_000003.12:g.49510575C>G | 1/1 | rs2131107 | NC_000003.12:g.49510575C>A | *DAG1* | Pathogenic |
-| NC_000003.12:g.128895342A>C | 0/1 | rs1680778 | NC_000003.12:g.128895342A>T | *ACAD9* | Likely pathogenic |
-| NC_000004.12:g.3493171C>T | 0/1 | rs6850908 | NC_000004.12:g.3493171C>G | *DOK7* | Likely pathogenic |
-| NC_000005.10:g.112827157T>C | 0/1 | rs2229992 | NC_000005.10:g.112827157T>G | *APC* | Pathogenic |
-| NC_000006.12:g.32039081C>A | 1/0 | rs6467 | NC_000006.12:g.32039081C>G | *CYP21A2* | Pathogenic/Likely pathogenic |
-| NC_000006.12:g.42698426G>C | 0/1 | rs390659 | NC_000006.12:g.42698426G>A | *PRPH2* | Likely pathogenic |
-| NC_000007.14:g.150951110A>G | 0/1 | rs1137617 | NC_000007.14:g.150951110A>C | *KCNH2* | Pathogenic |
-| NC_000007.14:g.150951110A>G | 0/1 | rs1137617 | NC_000007.14:g.150951110A>T | *KCNH2* | Pathogenic |
-| NC_000008.11:g.117835543G>A | 0/1 | rs11546829 | NC_000008.11:g.117835543G>T | *EXT1* | Pathogenic |
-| NC_000008.11:g.133131869C>T | 0/1 | rs2294024 | NC_000008.11:g.133131869C>A | *TG* | Pathogenic |
-| NC_000008.11:g.142913286G>T | 0/1 | rs4538 | NC_000008.11:g.142913286G>C | *CYP11B2* | Likely pathogenic |
-| NC_000010.11:g.49470323T>C | 0/1 | rs2228527 | NC_000010.11:g.49470323T>A | *ERCC6* | Likely pathogenic |
-| NC_000011.10:g.71441415A>G | 1/1 | rs949177 | NC_000011.10:g.71441415A>C | *DHCR7* | Pathogenic/Likely pathogenic |
-| NC_000012.12:g.6058030A>G | 0/1 | rs1800379 | NC_000012.12:g.6058030A>T | *VWF* | Pathogenic |
-| NC_000013.11:g.102875499G>C | 1/1 | rs9514066 | NC_000013.11:g.102875499G>T | *ERCC5* | Likely pathogenic |
-| NC_000014.9:g.87941544A>G | 1/1 | rs398607 | NC_000014.9:g.87941544A>T | *GALC* | Likely pathogenic |
-| NC_000015.10:g.92978374A>G | 1/1 | rs11074121 | NC_000015.10:g.92978374A>C | *CHD2* | Likely pathogenic |
-| NC_000016.10:g.23630140C>G | 0/1 | rs45532440 | NC_000016.10:g.23630140C>A | *PALB2* | Pathogenic |
-| NC_000017.11:g.3494408C>T | 0/1 | rs12948217 | NC_000017.11:g.3494408C>A | *ASPA* | Pathogenic |
-| NC_000018.10:g.57695300T>G | 1/1 | rs319443 | NC_000018.10:g.57695300T>A | *ATP8B1* | Pathogenic |
-| NC_000019.10:g.11100236C>T | 0/1 | rs2228671 | NC_000019.10:g.11100236C>A | *LDLR* | Pathogenic/Likely pathogenic |
-| NC_000019.10:g.11100236C>T | 0/1 | rs2228671 | NC_000019.10:g.11100236C>G | *LDLR* | Pathogenic |
-| NC_000020.11:g.10652589G>A | 1/1 | rs1131695 | NC_000020.11:g.10652589G>C | *JAG1* | Pathogenic |
+| HG002 variant (HGVS, GRCh38) | Genotype | HG002 protein | rsID | ClinVar P/LP variant (HGVS) | ClinVar protein | Gene | ClinVar classification |
+|---|---|---|---|---|---|---|---|
+| NC_000001.11:g.42930743G>A | 0/1 | p.(Cys133=) | rs11537641 | NC_000001.11:g.42930743G>T | p.(Cys133Ter) | *SLC2A1* | Pathogenic |
+| NC_000002.12:g.26232259G>A | 0/1 | p.(Tyr158=) | rs11552518 | NC_000002.12:g.26232259G>T | p.(Tyr158Ter) | *HADHA* | Likely pathogenic |
+| NC_000002.12:g.55656182G>T | 0/1 | p.(Arg464=) | rs2627765 | NC_000002.12:g.55656182G>A | p.(Arg464Ter) | *PNPT1* | Pathogenic |
+| NC_000002.12:g.61839792A>G | 1/1 | p.(Cys404=) | rs4672457 | NC_000002.12:g.61839792A>T | p.(Cys404Ter) | *FAM161A* | Pathogenic/Likely pathogenic |
+| NC_000002.12:g.151619514C>G | 0/1 | p.(Trp3603Cys) | rs10172023 | NC_000002.12:g.151619514C>T | p.(Trp3603Ter) | *NEB* | Pathogenic |
+| NC_000002.12:g.173263785C>T | 1/1 | p.(Ser531Leu) | rs3769148 | NC_000002.12:g.173263785C>A | p.(Ser531Ter) | *MAP3K20* | Pathogenic |
+| NC_000002.12:g.208124313A>G | 1/1 | p.(Tyr17=) | rs2242074 | NC_000002.12:g.208124313A>C | p.(Tyr17Ter) | *CRYGD* | Likely pathogenic |
+| NC_000003.12:g.49510575C>G | 1/1 | p.(Ser14Trp) | rs2131107 | NC_000003.12:g.49510575C>A | p.(Ser14Ter) | *DAG1* | Pathogenic |
+| NC_000003.12:g.128895342A>C | 0/1 | p.(Arg127=) | rs1680778 | NC_000003.12:g.128895342A>T | p.(Arg127Ter) | *ACAD9* | Likely pathogenic |
+| NC_000004.12:g.3493171C>T | 0/1 | p.(Tyr395=) | rs6850908 | NC_000004.12:g.3493171C>G | p.(Tyr395Ter) | *DOK7* | Likely pathogenic |
+| NC_000005.10:g.112827157T>C | 0/1 | p.(Tyr486=) | rs2229992 | NC_000005.10:g.112827157T>G | p.(Tyr486Ter) | *APC* | Pathogenic |
+| NC_000006.12:g.32039081C>A | 1/0 | p.? | rs6467 | NC_000006.12:g.32039081C>G | p.? | *CYP21A2* | Pathogenic/Likely pathogenic |
+| NC_000006.12:g.42698426G>C | 0/1 | p.(Gln304Glu) | rs390659 | NC_000006.12:g.42698426G>A | p.(Gln304Ter) | *PRPH2* | Likely pathogenic |
+| NC_000007.14:g.150951110A>G | 0/1 | p.(Tyr652=) | rs1137617 | NC_000007.14:g.150951110A>C | p.(Tyr652Ter) | *KCNH2* | Pathogenic |
+| NC_000007.14:g.150951110A>G | 0/1 | p.(Tyr652=) | rs1137617 | NC_000007.14:g.150951110A>T | p.(Tyr652Ter) | *KCNH2* | Pathogenic |
+| NC_000008.11:g.117835543G>A | 0/1 | p.(Cys355=) | rs11546829 | NC_000008.11:g.117835543G>T | p.(Cys355Ter) | *EXT1* | Pathogenic |
+| NC_000008.11:g.133131869C>T | 0/1 | p.(Tyr2640=) | rs2294024 | NC_000008.11:g.133131869C>A | p.(Tyr2640Ter) | *TG* | Pathogenic |
+| NC_000008.11:g.142913286G>T | 0/1 | p.(Arg374=) | rs4538 | NC_000008.11:g.142913286G>C | p.(Arg374Gly) | *CYP11B2* | Likely pathogenic |
+| NC_000010.11:g.49470323T>C | 0/1 | p.(Arg1213Gly) | rs2228527 | NC_000010.11:g.49470323T>A | p.(Arg1213Ter) | *ERCC6* | Likely pathogenic |
+| NC_000011.10:g.71441415A>G | 1/1 | p.(Asn146=) | rs949177 | NC_000011.10:g.71441415A>C | p.(Asn146Lys) | *DHCR7* | Pathogenic/Likely pathogenic |
+| NC_000012.12:g.6058030A>G | 0/1 | p.(Tyr516=) | rs1800379 | NC_000012.12:g.6058030A>T | p.(Tyr516Ter) | *VWF* | Pathogenic |
+| NC_000013.11:g.102875499G>C | 1/1 | p.(Gly1053Arg) | rs9514066 | NC_000013.11:g.102875499G>T | p.(Gly1053Ter) | *ERCC5* | Likely pathogenic |
+| NC_000014.9:g.87941544A>G | 1/1 | p.(Ile562Thr) | rs398607 | NC_000014.9:g.87941544A>T | p.(Ile562Lys) | *GALC* | Likely pathogenic |
+| NC_000015.10:g.92978374A>G | 1/1 | p.(Gln906=) | rs11074121 | NC_000015.10:g.92978374A>C | p.(Gln906His) | *CHD2* | Likely pathogenic |
+| NC_000016.10:g.23630140C>G | 0/1 | p.(Glu672Gln) | rs45532440 | NC_000016.10:g.23630140C>A | p.(Glu672Ter) | *PALB2* | Pathogenic |
+| NC_000017.11:g.3494408C>T | 0/1 | p.(Tyr231=) | rs12948217 | NC_000017.11:g.3494408C>A | p.(Tyr231Ter) | *ASPA* | Pathogenic |
+| NC_000018.10:g.57695300T>G | 1/1 | p.(Arg271=) | rs319443 | NC_000018.10:g.57695300T>A | p.(Arg271Ter) | *ATP8B1* | Pathogenic |
+| NC_000019.10:g.11100236C>T | 0/1 | p.(Cys27=) | rs2228671 | NC_000019.10:g.11100236C>A | p.(Cys27Ter) | *LDLR* | Pathogenic/Likely pathogenic |
+| NC_000019.10:g.11100236C>T | 0/1 | p.(Cys27=) | rs2228671 | NC_000019.10:g.11100236C>G | p.(Cys27Trp) | *LDLR* | Pathogenic |
+| NC_000020.11:g.10652589G>A | 1/1 | p.(Tyr255=) | rs1131695 | NC_000020.11:g.10652589G>C | p.(Tyr255Ter) | *JAG1* | Pathogenic |
 
 ## Table S3. Live RefSNP check of 30 retired rsIDs whose current rsID is not at the same position in dbSNP156 (HG002, dbSNP146)
 

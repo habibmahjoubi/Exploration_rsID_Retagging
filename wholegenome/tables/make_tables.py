@@ -208,13 +208,20 @@ P("")
 # ---------------------------------------------------------------- Table S6: other-allele P/LP (HG002, dbSNP146)
 P("## Table S6. ClinVar P/LP (>=1 star) entries attached by a plain rsID join to a different allele (HG002, dbSNP146)\n")
 rows = [l.rstrip("\n").split("\t") for l in open(os.path.join(WG, "downstream", "other_allele_PLP_HG002_d146.tsv"))][1:]
+# protein consequences on the MANE Select transcript (VariantValidator; fetch_transcripts.py)
+prot = {}
+for ln in open(os.path.join(HERE, "hgvs_transcripts.tsv"), encoding="utf-8").read().splitlines()[1:]:
+    f_ = (ln.split("\t") + [""] * 5)[:5]
+    prot[f_[0]] = f_[3].split(":")[-1] if f_[3] else "-"
 P(f"n = {len(rows)}; all at the same position as the HG002 variant. Genotype of HG002: 0/1, "
-  "heterozygous; 1/1, homozygous for the alternate allele.\n")
-P("| HG002 variant (HGVS, GRCh38) | Genotype | rsID | ClinVar P/LP variant (HGVS) | Gene | ClinVar classification |")
-P("|---|---|---|---|---|---|")
+  "heterozygous; 1/1, homozygous for the alternate allele. Protein: predicted consequence on the MANE "
+  "Select transcript (VariantValidator); '=' synonymous, Ter stop codon, ? intronic.\n")
+P("| HG002 variant (HGVS, GRCh38) | Genotype | HG002 protein | rsID | ClinVar P/LP variant (HGVS) | ClinVar protein | Gene | ClinVar classification |")
+P("|---|---|---|---|---|---|---|---|")
 for r in rows:
     c, rest = r[0].split(":"); pos, ra = rest.split(" "); ref, alt = ra.split(">")
-    P(f"| {ACC[c]}:g.{pos}{ref}>{alt} | {r[1]} | {r[3]} | {r[8]} | *{r[7]}* | {r[9].replace('_', ' ')} |")
+    hg = f"{ACC[c]}:g.{pos}{ref}>{alt}"
+    P(f"| {hg} | {r[1]} | {prot[hg]} | {r[3]} | {r[8]} | {prot[r[8]]} | *{r[7]}* | {r[9].replace('_', ' ')} |")
 P("")
 
 # ---------------------------------------------------------------- Table S3: live check of 'elsewhere' targets
