@@ -59,3 +59,16 @@ scripts/verify_naive_vs_mergeaware.py
 sarek_validation/check_rg.sh
 sarek_validation/finish_5_6.sh
 sarek_validation/resume_from_stage3.sh
+scripts/make_graphical_abstract.py
+graphical_abstract.pdf
+graphical_abstract.tiff
+abstract graphique.jfif
+scripts/make_highlights_docx.py
+scripts/make_cover_letter_docx.py
+submission_JBI/
+
+# Manuscript drafts and submission files (not part of the reproducibility repo)
+manuscript_v2/
+manuscript_v3_brief/
+scripts/make_coi_docx.py
+scripts/make_significance_docx.py

@@ -1,0 +1,37 @@
+HG001_wg.vcf.gz chr1-22 benchmark variants: 3,893,341 (SNV 3,356,762)
+
+== dbSNP138 (GATK/WARP)
+  annotations: 3,994,677; retired: 199,660 (5.00%)
+  annotated variants: 3,804,744 (97.7% of calls); carrying >=1 retired ID: 181,273 = 4.76% [95% CI 4.74-4.79]
+  ONLY retired ID(s) (no current ID at all): 75,909 (2.00%)
+  SNVs: 46,874/3,315,569 = 1.41%; indels: 134,399/489,175 = 27.47%
+  per-chromosome rate range: 4.03%-5.09% (median 4.82%)
+  chr20: 3,274/81,172 = 4.03%
+  retiring build: {136: 394, 142: 32113, 144: 14513, 146: 172, 147: 3553, 149: 509, 150: 59, 151: 23, 152: 148318, 156: 1, 157: 5}
+
+== dbSNP144 (GDC)
+  annotations: 4,216,284; retired: 428,666 (10.17%)
+  annotated variants: 3,771,866 (96.9% of calls); carrying >=1 retired ID: 312,528 = 8.29% [95% CI 8.26-8.31]
+  ONLY retired ID(s) (no current ID at all): 44,029 (1.17%)
+  SNVs: 23,881/3,268,106 = 0.73%; indels: 288,647/503,760 = 57.30%
+  per-chromosome rate range: 7.17%-9.22% (median 8.37%)
+  chr20: 6,825/81,419 = 8.38%
+  retiring build: {136: 599, 144: 27644, 146: 181, 147: 4100, 149: 543, 150: 69, 151: 35, 152: 395486, 153: 3, 155: 2, 156: 1, 157: 3}
+
+== dbSNP146 (sarek default)
+  annotations: 4,313,517; retired: 447,835 (10.38%)
+  annotated variants: 3,856,884 (99.1% of calls); carrying >=1 retired ID: 324,616 = 8.42% [95% CI 8.39-8.44]
+  ONLY retired ID(s) (no current ID at all): 51,857 (1.34%)
+  SNVs: 4,958/3,342,245 = 0.15%; indels: 319,658/514,639 = 62.11%
+  per-chromosome rate range: 7.64%-9.44% (median 8.47%)
+  chr20: 7,202/82,142 = 8.77%
+  retiring build: {136: 628, 147: 4360, 149: 646, 150: 72, 151: 1912, 152: 440206, 153: 3, 155: 2, 156: 1, 157: 5}
+
+== dbSNP156 (NCBI, Nov 2022)
+  annotations: 3,913,673; retired: 18,339 (0.47%)
+  annotated variants: 3,891,814 (100.0% of calls); carrying >=1 retired ID: 5,448 = 0.14% [95% CI 0.14-0.14]
+  ONLY retired ID(s) (no current ID at all): 0 (0.00%)
+  SNVs: 4,769/3,356,070 = 0.14%; indels: 679/535,744 = 0.13%
+  per-chromosome rate range: 0.04%-0.29% (median 0.18%)
+  chr20: 160/82,806 = 0.19%
+  retiring build: {157: 18339}

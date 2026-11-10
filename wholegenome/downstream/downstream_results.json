@@ -1,0 +1,1210 @@
+{
+ "dbSNP138 (GATK/WARP)": {
+  "sample": {
+   "ClinVar | B/LB 0*": {
+    "reconciled": 972,
+    "naive": 958,
+    "missed": 14,
+    "missed_pipeline_side": 14,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 8
+   },
+   "ClinVar | B/LB >=1*": {
+    "reconciled": 41076,
+    "naive": 40197,
+    "missed": 879,
+    "missed_pipeline_side": 879,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 437
+   },
+   "ClinVar | P/LP 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "reconciled": 34,
+    "naive": 31,
+    "missed": 3,
+    "missed_pipeline_side": 3,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 3
+   },
+   "ClinVar | VUS 0*": {
+    "reconciled": 53,
+    "naive": 50,
+    "missed": 3,
+    "missed_pipeline_side": 3,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 3
+   },
+   "ClinVar | VUS >=1*": {
+    "reconciled": 514,
+    "naive": 473,
+    "missed": 41,
+    "missed_pipeline_side": 41,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 30
+   },
+   "ClinVar | conflicting 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "reconciled": 269,
+    "naive": 258,
+    "missed": 11,
+    "missed_pipeline_side": 11,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 7
+   },
+   "ClinVar | drug_response 0*": {
+    "reconciled": 58,
+    "naive": 57,
+    "missed": 1,
+    "missed_pipeline_side": 1,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "ClinVar | drug_response >=1*": {
+    "reconciled": 12,
+    "naive": 12,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | other 0*": {
+    "reconciled": 287,
+    "naive": 284,
+    "missed": 3,
+    "missed_pipeline_side": 3,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 2
+   },
+   "ClinVar | other >=1*": {
+    "reconciled": 15,
+    "naive": 15,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "reconciled": 49,
+    "naive": 49,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "GWAS | p<5e-8": {
+    "reconciled": 377834,
+    "naive": 373935,
+    "missed": 3899,
+    "missed_pipeline_side": 1709,
+    "missed_resource_side": 2190,
+    "hg002_variants_losing": 2047
+   },
+   "GWAS | p>=5e-8": {
+    "reconciled": 59447,
+    "naive": 59072,
+    "missed": 375,
+    "missed_pipeline_side": 179,
+    "missed_resource_side": 196,
+    "hg002_variants_losing": 329
+   },
+   "PharmGKB-clinical | level 1A": {
+    "reconciled": 4,
+    "naive": 4,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "reconciled": 3,
+    "naive": 3,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "reconciled": 9,
+    "naive": 9,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "reconciled": 6,
+    "naive": 6,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "reconciled": 1843,
+    "naive": 1837,
+    "missed": 6,
+    "missed_pipeline_side": 6,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 5
+   },
+   "PharmGKB-clinical | level 4": {
+    "reconciled": 147,
+    "naive": 147,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-variant | variant annotation": {
+    "reconciled": 9556,
+    "naive": 9542,
+    "missed": 14,
+    "missed_pipeline_side": 14,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 10
+   }
+  },
+  "clinvar_pos": {
+   "pos": 45267,
+   "pos&naive": 39189,
+   "pos&recon": 39650
+  },
+  "resource_centric": {
+   "ClinVar | B/LB 0*": {
+    "in_bundle": 13680,
+    "retired_only": 27,
+    "resource_stale": 0
+   },
+   "ClinVar | B/LB >=1*": {
+    "in_bundle": 377644,
+    "retired_only": 844,
+    "resource_stale": 0
+   },
+   "ClinVar | P/LP 0*": {
+    "in_bundle": 3855,
+    "retired_only": 3,
+    "resource_stale": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "in_bundle": 24032,
+    "retired_only": 41,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS 0*": {
+    "in_bundle": 1749,
+    "retired_only": 5,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS >=1*": {
+    "in_bundle": 231875,
+    "retired_only": 114,
+    "resource_stale": 0
+   },
+   "ClinVar | conflicting 0*": {
+    "in_bundle": 106,
+    "retired_only": 1,
+    "resource_stale": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "in_bundle": 68865,
+    "retired_only": 60,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response 0*": {
+    "in_bundle": 234,
+    "retired_only": 5,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response >=1*": {
+    "in_bundle": 98,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | other 0*": {
+    "in_bundle": 5886,
+    "retired_only": 8,
+    "resource_stale": 0
+   },
+   "ClinVar | other >=1*": {
+    "in_bundle": 390,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "in_bundle": 185,
+    "retired_only": 2,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor >=1*": {
+    "in_bundle": 2,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "GWAS | p<5e-8": {
+    "in_bundle": 828710,
+    "retired_only": 3287,
+    "resource_stale": 5021
+   },
+   "GWAS | p>=5e-8": {
+    "in_bundle": 157376,
+    "retired_only": 346,
+    "resource_stale": 562
+   },
+   "PharmGKB-clinical | level 1A": {
+    "in_bundle": 157,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "in_bundle": 7,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "in_bundle": 24,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "in_bundle": 17,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "in_bundle": 3899,
+    "retired_only": 16,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 4": {
+    "in_bundle": 255,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-variant | variant annotation": {
+    "in_bundle": 21446,
+    "retired_only": 45,
+    "resource_stale": 1
+   }
+  }
+ },
+ "dbSNP144 (GDC)": {
+  "sample": {
+   "ClinVar | B/LB 0*": {
+    "reconciled": 948,
+    "naive": 930,
+    "missed": 18,
+    "missed_pipeline_side": 18,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 11
+   },
+   "ClinVar | B/LB >=1*": {
+    "reconciled": 40767,
+    "naive": 39689,
+    "missed": 1078,
+    "missed_pipeline_side": 1078,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 390
+   },
+   "ClinVar | P/LP 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "reconciled": 34,
+    "naive": 31,
+    "missed": 3,
+    "missed_pipeline_side": 3,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 3
+   },
+   "ClinVar | VUS 0*": {
+    "reconciled": 54,
+    "naive": 50,
+    "missed": 4,
+    "missed_pipeline_side": 4,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 4
+   },
+   "ClinVar | VUS >=1*": {
+    "reconciled": 547,
+    "naive": 493,
+    "missed": 54,
+    "missed_pipeline_side": 54,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 40
+   },
+   "ClinVar | conflicting 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "reconciled": 271,
+    "naive": 254,
+    "missed": 17,
+    "missed_pipeline_side": 17,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 10
+   },
+   "ClinVar | drug_response 0*": {
+    "reconciled": 51,
+    "naive": 51,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | drug_response >=1*": {
+    "reconciled": 12,
+    "naive": 12,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | other 0*": {
+    "reconciled": 283,
+    "naive": 281,
+    "missed": 2,
+    "missed_pipeline_side": 2,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "ClinVar | other >=1*": {
+    "reconciled": 16,
+    "naive": 16,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "reconciled": 46,
+    "naive": 45,
+    "missed": 1,
+    "missed_pipeline_side": 1,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "GWAS | p<5e-8": {
+    "reconciled": 364467,
+    "naive": 362849,
+    "missed": 1618,
+    "missed_pipeline_side": 334,
+    "missed_resource_side": 1284,
+    "hg002_variants_losing": 771
+   },
+   "GWAS | p>=5e-8": {
+    "reconciled": 57945,
+    "naive": 57755,
+    "missed": 190,
+    "missed_pipeline_side": 34,
+    "missed_resource_side": 156,
+    "hg002_variants_losing": 171
+   },
+   "PharmGKB-clinical | level 1A": {
+    "reconciled": 4,
+    "naive": 4,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "reconciled": 3,
+    "naive": 3,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "reconciled": 9,
+    "naive": 9,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "reconciled": 6,
+    "naive": 6,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "reconciled": 1826,
+    "naive": 1820,
+    "missed": 6,
+    "missed_pipeline_side": 6,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "PharmGKB-clinical | level 4": {
+    "reconciled": 152,
+    "naive": 151,
+    "missed": 1,
+    "missed_pipeline_side": 1,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "PharmGKB-variant | variant annotation": {
+    "reconciled": 9828,
+    "naive": 9733,
+    "missed": 95,
+    "missed_pipeline_side": 95,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   }
+  },
+  "clinvar_pos": {
+   "pos": 45267,
+   "pos&naive": 38561,
+   "pos&recon": 38979
+  },
+  "resource_centric": {
+   "ClinVar | B/LB 0*": {
+    "in_bundle": 18902,
+    "retired_only": 14,
+    "resource_stale": 0
+   },
+   "ClinVar | B/LB >=1*": {
+    "in_bundle": 616941,
+    "retired_only": 468,
+    "resource_stale": 1
+   },
+   "ClinVar | P/LP 0*": {
+    "in_bundle": 7885,
+    "retired_only": 12,
+    "resource_stale": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "in_bundle": 56334,
+    "retired_only": 189,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS 0*": {
+    "in_bundle": 4393,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS >=1*": {
+    "in_bundle": 593039,
+    "retired_only": 132,
+    "resource_stale": 1
+   },
+   "ClinVar | conflicting 0*": {
+    "in_bundle": 183,
+    "retired_only": 1,
+    "resource_stale": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "in_bundle": 121106,
+    "retired_only": 115,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response 0*": {
+    "in_bundle": 336,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response >=1*": {
+    "in_bundle": 116,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | other 0*": {
+    "in_bundle": 7214,
+    "retired_only": 14,
+    "resource_stale": 0
+   },
+   "ClinVar | other >=1*": {
+    "in_bundle": 667,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "in_bundle": 241,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor >=1*": {
+    "in_bundle": 5,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "GWAS | p<5e-8": {
+    "in_bundle": 809757,
+    "retired_only": 336,
+    "resource_stale": 757
+   },
+   "GWAS | p>=5e-8": {
+    "in_bundle": 155792,
+    "retired_only": 30,
+    "resource_stale": 349
+   },
+   "PharmGKB-clinical | level 1A": {
+    "in_bundle": 191,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "in_bundle": 7,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "in_bundle": 24,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "in_bundle": 15,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "in_bundle": 3900,
+    "retired_only": 9,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 4": {
+    "in_bundle": 260,
+    "retired_only": 1,
+    "resource_stale": 0
+   },
+   "PharmGKB-variant | variant annotation": {
+    "in_bundle": 21864,
+    "retired_only": 100,
+    "resource_stale": 1
+   }
+  }
+ },
+ "dbSNP146 (sarek default)": {
+  "sample": {
+   "ClinVar | B/LB 0*": {
+    "reconciled": 987,
+    "naive": 967,
+    "missed": 20,
+    "missed_pipeline_side": 20,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 13
+   },
+   "ClinVar | B/LB >=1*": {
+    "reconciled": 41914,
+    "naive": 40810,
+    "missed": 1104,
+    "missed_pipeline_side": 1104,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 405
+   },
+   "ClinVar | P/LP 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "reconciled": 34,
+    "naive": 31,
+    "missed": 3,
+    "missed_pipeline_side": 3,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 3
+   },
+   "ClinVar | VUS 0*": {
+    "reconciled": 57,
+    "naive": 53,
+    "missed": 4,
+    "missed_pipeline_side": 4,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 4
+   },
+   "ClinVar | VUS >=1*": {
+    "reconciled": 564,
+    "naive": 514,
+    "missed": 50,
+    "missed_pipeline_side": 50,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 36
+   },
+   "ClinVar | conflicting 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "reconciled": 278,
+    "naive": 262,
+    "missed": 16,
+    "missed_pipeline_side": 16,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 9
+   },
+   "ClinVar | drug_response 0*": {
+    "reconciled": 60,
+    "naive": 60,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | drug_response >=1*": {
+    "reconciled": 12,
+    "naive": 12,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | other 0*": {
+    "reconciled": 289,
+    "naive": 287,
+    "missed": 2,
+    "missed_pipeline_side": 2,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "ClinVar | other >=1*": {
+    "reconciled": 16,
+    "naive": 16,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "reconciled": 49,
+    "naive": 48,
+    "missed": 1,
+    "missed_pipeline_side": 1,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "GWAS | p<5e-8": {
+    "reconciled": 381741,
+    "naive": 379865,
+    "missed": 1876,
+    "missed_pipeline_side": 370,
+    "missed_resource_side": 1506,
+    "hg002_variants_losing": 987
+   },
+   "GWAS | p>=5e-8": {
+    "reconciled": 59778,
+    "naive": 59508,
+    "missed": 270,
+    "missed_pipeline_side": 40,
+    "missed_resource_side": 230,
+    "hg002_variants_losing": 243
+   },
+   "PharmGKB-clinical | level 1A": {
+    "reconciled": 4,
+    "naive": 4,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "reconciled": 3,
+    "naive": 3,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "reconciled": 9,
+    "naive": 9,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "reconciled": 6,
+    "naive": 6,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "reconciled": 1881,
+    "naive": 1874,
+    "missed": 7,
+    "missed_pipeline_side": 7,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 2
+   },
+   "PharmGKB-clinical | level 4": {
+    "reconciled": 154,
+    "naive": 153,
+    "missed": 1,
+    "missed_pipeline_side": 1,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 1
+   },
+   "PharmGKB-variant | variant annotation": {
+    "reconciled": 10142,
+    "naive": 10042,
+    "missed": 100,
+    "missed_pipeline_side": 100,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 2
+   }
+  },
+  "clinvar_pos": {
+   "pos": 45267,
+   "pos&naive": 39657,
+   "pos&recon": 40084
+  },
+  "resource_centric": {
+   "ClinVar | B/LB 0*": {
+    "in_bundle": 20212,
+    "retired_only": 17,
+    "resource_stale": 0
+   },
+   "ClinVar | B/LB >=1*": {
+    "in_bundle": 645970,
+    "retired_only": 588,
+    "resource_stale": 1
+   },
+   "ClinVar | P/LP 0*": {
+    "in_bundle": 8465,
+    "retired_only": 9,
+    "resource_stale": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "in_bundle": 61329,
+    "retired_only": 92,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS 0*": {
+    "in_bundle": 4634,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS >=1*": {
+    "in_bundle": 626554,
+    "retired_only": 122,
+    "resource_stale": 0
+   },
+   "ClinVar | conflicting 0*": {
+    "in_bundle": 195,
+    "retired_only": 1,
+    "resource_stale": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "in_bundle": 127810,
+    "retired_only": 87,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response 0*": {
+    "in_bundle": 390,
+    "retired_only": 3,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response >=1*": {
+    "in_bundle": 118,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | other 0*": {
+    "in_bundle": 7359,
+    "retired_only": 3,
+    "resource_stale": 0
+   },
+   "ClinVar | other >=1*": {
+    "in_bundle": 702,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "in_bundle": 253,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor >=1*": {
+    "in_bundle": 5,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "GWAS | p<5e-8": {
+    "in_bundle": 850722,
+    "retired_only": 321,
+    "resource_stale": 1313
+   },
+   "GWAS | p>=5e-8": {
+    "in_bundle": 160955,
+    "retired_only": 63,
+    "resource_stale": 512
+   },
+   "PharmGKB-clinical | level 1A": {
+    "in_bundle": 191,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "in_bundle": 7,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "in_bundle": 24,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "in_bundle": 18,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "in_bundle": 4051,
+    "retired_only": 10,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 4": {
+    "in_bundle": 262,
+    "retired_only": 1,
+    "resource_stale": 0
+   },
+   "PharmGKB-variant | variant annotation": {
+    "in_bundle": 22585,
+    "retired_only": 104,
+    "resource_stale": 1
+   }
+  }
+ },
+ "dbSNP156 (NCBI, Nov 2022)": {
+  "sample": {
+   "ClinVar | B/LB 0*": {
+    "reconciled": 995,
+    "naive": 995,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | B/LB >=1*": {
+    "reconciled": 42538,
+    "naive": 42538,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | P/LP 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "reconciled": 34,
+    "naive": 34,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | VUS 0*": {
+    "reconciled": 61,
+    "naive": 61,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | VUS >=1*": {
+    "reconciled": 606,
+    "naive": 606,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | conflicting 0*": {
+    "reconciled": 5,
+    "naive": 5,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "reconciled": 294,
+    "naive": 294,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | drug_response 0*": {
+    "reconciled": 60,
+    "naive": 60,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | drug_response >=1*": {
+    "reconciled": 12,
+    "naive": 12,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | other 0*": {
+    "reconciled": 293,
+    "naive": 293,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | other >=1*": {
+    "reconciled": 16,
+    "naive": 16,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "reconciled": 50,
+    "naive": 50,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "GWAS | p<5e-8": {
+    "reconciled": 382640,
+    "naive": 378198,
+    "missed": 4442,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 4442,
+    "hg002_variants_losing": 2288
+   },
+   "GWAS | p>=5e-8": {
+    "reconciled": 59789,
+    "naive": 59293,
+    "missed": 496,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 496,
+    "hg002_variants_losing": 441
+   },
+   "PharmGKB-clinical | level 1A": {
+    "reconciled": 4,
+    "naive": 4,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "reconciled": 3,
+    "naive": 3,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "reconciled": 9,
+    "naive": 9,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "reconciled": 6,
+    "naive": 6,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "reconciled": 1882,
+    "naive": 1882,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-clinical | level 4": {
+    "reconciled": 154,
+    "naive": 154,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   },
+   "PharmGKB-variant | variant annotation": {
+    "reconciled": 10150,
+    "naive": 10150,
+    "missed": 0,
+    "missed_pipeline_side": 0,
+    "missed_resource_side": 0,
+    "hg002_variants_losing": 0
+   }
+  },
+  "clinvar_pos": {
+   "pos": 45267,
+   "pos&naive": 40338,
+   "pos&recon": 40338
+  },
+  "resource_centric": {
+   "ClinVar | B/LB 0*": {
+    "in_bundle": 24499,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | B/LB >=1*": {
+    "in_bundle": 957042,
+    "retired_only": 0,
+    "resource_stale": 2
+   },
+   "ClinVar | P/LP 0*": {
+    "in_bundle": 21147,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | P/LP >=1*": {
+    "in_bundle": 175257,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS 0*": {
+    "in_bundle": 12008,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | VUS >=1*": {
+    "in_bundle": 1114155,
+    "retired_only": 0,
+    "resource_stale": 1
+   },
+   "ClinVar | conflicting 0*": {
+    "in_bundle": 296,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | conflicting >=1*": {
+    "in_bundle": 167201,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response 0*": {
+    "in_bundle": 1715,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | drug_response >=1*": {
+    "in_bundle": 125,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | other 0*": {
+    "in_bundle": 8473,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | other >=1*": {
+    "in_bundle": 2448,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor 0*": {
+    "in_bundle": 316,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "ClinVar | risk_factor >=1*": {
+    "in_bundle": 11,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "GWAS | p<5e-8": {
+    "in_bundle": 854345,
+    "retired_only": 0,
+    "resource_stale": 9912
+   },
+   "GWAS | p>=5e-8": {
+    "in_bundle": 161448,
+    "retired_only": 0,
+    "resource_stale": 1255
+   },
+   "PharmGKB-clinical | level 1A": {
+    "in_bundle": 191,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "in_bundle": 7,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "in_bundle": 24,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "in_bundle": 18,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-clinical | level 3": {
+    "in_bundle": 4083,
+    "retired_only": 0,
+    "resource_stale": 1
+   },
+   "PharmGKB-clinical | level 4": {
+    "in_bundle": 263,
+    "retired_only": 0,
+    "resource_stale": 0
+   },
+   "PharmGKB-variant | variant annotation": {
+    "in_bundle": 22719,
+    "retired_only": 0,
+    "resource_stale": 6
+   }
+  }
+ }
+}

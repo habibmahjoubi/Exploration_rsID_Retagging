@@ -1,0 +1,3 @@
+dbsnp138.vcf.gz: keys 59,465,664; keys with >=2 rsIDs 587,068; of which retired + current 361,835
+dbsnp144.vcf.gz: keys 140,369,191; keys with >=2 rsIDs 1,229,020; of which retired + current 992,267
+dbsnp146.vcf.gz: keys 145,421,777; keys with >=2 rsIDs 1,265,212; of which retired + current 1,006,128

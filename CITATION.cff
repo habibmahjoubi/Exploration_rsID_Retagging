@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
 type: software
-title: "Code and data: Reference Bundle Staleness -- Quantifying rsID Obsolescence and Its Impact on Clinical Variant Annotation"
+title: "Code and data: Retired dbSNP identifiers in the default reference files of germline variant-calling pipelines"
+version: "V2"
 authors:
   - family-names: Mahjoubi
     given-names: Habib
@@ -11,9 +12,9 @@ license: MIT
 keywords:
   - dbSNP
   - rsID
-  - reference bundle staleness
-  - clinical variant annotation
-  - molecular diagnostics
+  - variant annotation
+  - ClinVar
+  - pharmacogenomics
   - germline variant calling
-  - reference database curation
-date-released: 2026-08-24
+  - reproducibility
+date-released: 2026-11-10

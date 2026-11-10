@@ -1,0 +1,27 @@
+{
+ "dbSNP138 (GATK/WARP)": {
+  "B/LB >=1* | same allele": 671,
+  "P/LP >=1* | same allele": 33,
+  "B/LB >=1* | same position, other allele": 141,
+  "B/LB >=1* | other locus or not found": 31,
+  "P/LP >=1* | same position, other allele": 8,
+  "B/LB >=1* | ClinVar entry without usable allele": 1
+ },
+ "dbSNP144 (GDC)": {
+  "B/LB >=1* | same position, other allele": 86,
+  "B/LB >=1* | same allele": 376,
+  "P/LP >=1* | same allele": 159,
+  "P/LP >=1* | same position, other allele": 29,
+  "B/LB >=1* | ClinVar entry without usable allele": 4,
+  "B/LB >=1* | other locus or not found": 2,
+  "P/LP >=1* | other locus or not found": 1
+ },
+ "dbSNP146 (sarek default)": {
+  "B/LB >=1* | same position, other allele": 130,
+  "B/LB >=1* | same allele": 440,
+  "B/LB >=1* | other locus or not found": 12,
+  "P/LP >=1* | same allele": 70,
+  "B/LB >=1* | ClinVar entry without usable allele": 6,
+  "P/LP >=1* | same position, other allele": 22
+ }
+}

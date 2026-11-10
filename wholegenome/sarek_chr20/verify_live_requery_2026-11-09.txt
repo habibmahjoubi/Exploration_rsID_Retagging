@@ -1,0 +1,12 @@
+398038038 -> ['11482738'] | old still live: False | target on chr20: True | 
+34177647 -> ['11472916'] | old still live: False | target on chr20: True | 
+572559614 -> ['58775689'] | old still live: False | target on chr20: True | 
+371442895 -> ['56258834'] | old still live: False | target on chr20: True | 
+398088199 -> ['11478296'] | old still live: False | target on chr20: True | 
+551959449 -> ['398040812'] | old still live: False | target on chr20: True | 
+750821896 -> ['11472123'] | old still live: False | target on chr20: True | 
+374170569 -> ['11468230'] | old still live: False | target on chr20: True | 
+397805746 -> ['35486906'] | old still live: False | target on chr20: True | 
+373683575 -> ['34863991'] | old still live: False | target on chr20: True | 
+
+re-query 2026-11-09 of the 10 first-pass failures: merged 10/10; target on chr20 10/10

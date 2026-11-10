@@ -1,0 +1,3 @@
+ec61d76ad725d808e3a9e1c8acec402a *HG001_wg.vcf.gz
+dc750b3807d4af1f7ffec852e9c2f771 *HG002_wg.vcf.gz
+35fe853b7e8d979daa91033ed6863e98 *HG005_wg.vcf.gz

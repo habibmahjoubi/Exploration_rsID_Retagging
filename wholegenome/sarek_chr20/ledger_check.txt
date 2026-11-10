@@ -1,0 +1,20 @@
+sarek calls: 122,183; with native (dbSNP138 -D) ID: 89,676
+dbSNP138 (GATK): 1,390,830 distinct chr20 rsIDs; sarek calls annotated: 89,760
+dbSNP144 (GDC): 3,225,118 distinct chr20 rsIDs; sarek calls annotated: 91,232
+dbSNP146 (sarek default): 3,292,422 distinct chr20 rsIDs; sarek calls annotated: 92,300
+dbSNP156 (NCBI 2022): 24,194,354 distinct chr20 rsIDs; sarek calls annotated: 121,783
+
+retired IDs among all IDs of interest: 76,692
+
+A. Bundle-intrinsic: share of a bundle's chr20 rsIDs that are retired in b157
+  dbSNP138 (GATK): 19,834 / 1,390,830 = 1.426%
+  dbSNP144 (GDC): 49,745 / 3,225,118 = 1.542%
+  dbSNP146 (sarek default): 53,372 / 3,292,422 = 1.621%
+  dbSNP156 (NCBI 2022): 18,998 / 24,194,354 = 0.079%
+
+B. Real sarek calls (HG002 chr20 30x), rsIDs assigned per bundle
+  native GATK -D (dbSNP138): 4,342 / 94,467 annotations retired = 4.596%
+  re-annotated dbSNP138 (GATK): 4,423 / 95,397 annotations retired = 4.636% (3,990 call records)
+  re-annotated dbSNP144 (GDC): 10,925 / 102,630 annotations retired = 10.645% (8,071 call records)
+  re-annotated dbSNP146 (sarek default): 11,461 / 104,069 annotations retired = 11.013% (8,482 call records)
+  re-annotated dbSNP156 (NCBI 2022): 647 / 122,609 annotations retired = 0.528% (220 call records)

@@ -1,0 +1,201 @@
+retired-labelled variants: 346,980 (indels 341,502, SNVs 5,478); sampling 25 indels + 5 SNVs, seed 7
+
+INDEL chr8:6333100 CGTGTGT>CGT  (normalized 6333100,GTGT,-)
+   bundle dbSNP146 at this allele: retired ['rs199511368', 'rs753538295']  current []
+      bundle record: chr8:6333100 CGTGT>C rs199511368
+      bundle record: chr8:6333100 CGTGT>C rs753538295
+   rs199511368: retired=True, merged_into=['rs113720734'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+   rs753538295: retired=True, merged_into=['rs113720734'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+INDEL chr3:187648099 TAAAAAA>T  (normalized 187648099,AAAAAA,-)
+   bundle dbSNP146 at this allele: retired ['rs778618472']  current []
+      bundle record: chr3:187648099 TAAAAAA>T rs778618472
+   rs778618472: retired=True, merged_into=['rs3055526'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+INDEL chr10:51756484 C>CAA  (normalized 51756484,-,AA)
+   bundle dbSNP146 at this allele: retired ['rs778757448']  current ['rs55967411']
+      bundle record: chr10:51756484 C>CAA,CAAA rs778757448
+      bundle record: chr10:51756484 C>CAA rs55967411
+   rs778757448: retired=True, merged_into=['rs55967411'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr22:48938694 TTTTC>T  (normalized 48938694,TTTC,-)
+   bundle dbSNP146 at this allele: retired ['rs149333131']  current ['rs66926609']
+      bundle record: chr22:48938694 TTTTC>T rs149333131
+      bundle record: chr22:48938694 TTTTC>T rs66926609
+   rs149333131: retired=True, merged_into=['rs66926609'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr1:231868892 GAAA>G  (normalized 231868892,AAA,-)
+   bundle dbSNP146 at this allele: retired ['rs138480222', 'rs768495057']  current ['rs60622045']
+      bundle record: chr1:231868892 GAAA>G rs138480222
+      bundle record: chr1:231868892 GAAA>G rs768495057
+      bundle record: chr1:231868892 GAAA>G rs60622045
+   rs138480222: retired=True, merged_into=['rs60622045'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+   rs768495057: retired=True, merged_into=['rs60622045'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr2:82223853 A>ATTTGT  (normalized 82223853,-,TTTGT)
+   bundle dbSNP146 at this allele: retired ['rs56234449', 'rs142369619']  current []
+      bundle record: chr2:82223853 A>ATTTGT rs142369619
+      bundle record: chr2:82223853 A>ATTTGT rs56234449
+   rs56234449: retired=True, merged_into=['rs35703425'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+   rs142369619: retired=True, merged_into=['rs35703425'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+INDEL chr15:57738997 AT>A  (normalized 57738997,T,-)
+   bundle dbSNP146 at this allele: retired ['rs398027471']  current ['rs11330804']
+      bundle record: chr15:57738997 AT>A rs11330804
+      bundle record: chr15:57738997 AT>A rs398027471
+   rs398027471: retired=True, merged_into=['rs11330804'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr2:189580159 GGTTT>G  (normalized 189580159,GTTT,-)
+   bundle dbSNP146 at this allele: retired ['rs551777547']  current ['rs5837154']
+      bundle record: chr2:189580159 GGTTT>G rs5837154
+      bundle record: chr2:189580159 GGTTT>G rs551777547
+   rs551777547: retired=True, merged_into=['rs5837154'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr9:38406791 A>ATTAT  (normalized 38406791,-,TTAT)
+   bundle dbSNP146 at this allele: retired ['rs3045137']  current ['rs16402']
+      bundle record: chr9:38406791 A>ATTAT rs16402
+      bundle record: chr9:38406791 A>ATTAT rs3045137
+   rs3045137: retired=True, merged_into=['rs16402'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr17:77152535 CA>C  (normalized 77152535,A,-)
+   bundle dbSNP146 at this allele: retired ['rs769810606', 'rs796254950']  current []
+      bundle record: chr17:77152535 CA>C rs769810606
+      bundle record: chr17:77152535 CA>C rs796254950
+   rs769810606: retired=True, merged_into=['rs11295576'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+   rs796254950: retired=True, merged_into=['rs11295576'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+INDEL chr2:19331324 T>TCA  (normalized 19331324,-,CA)
+   bundle dbSNP146 at this allele: retired ['rs749017947']  current ['rs56333910', 'rs397933645']
+      bundle record: chr2:19331324 T>TCA,TCACA rs56333910
+      bundle record: chr2:19331324 T>TCA rs749017947
+      bundle record: chr2:19331324 T>TCA rs397933645
+   rs749017947: retired=True, merged_into=['rs56333910'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr14:27562941 AT>A  (normalized 27562941,T,-)
+   bundle dbSNP146 at this allele: retired ['rs397745288']  current ['rs67442200']
+      bundle record: chr14:27562941 AT>A rs67442200
+      bundle record: chr14:27562941 AT>A rs397745288
+   rs397745288: retired=True, merged_into=['rs67442200'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr5:57901403 CA>C  (normalized 57901403,A,-)
+   bundle dbSNP146 at this allele: retired ['rs397997858', 'rs570721734']  current ['rs11285033']
+      bundle record: chr5:57901403 CA>C rs11285033
+      bundle record: chr5:57901403 CA>C rs570721734
+      bundle record: chr5:57901403 CA>C rs397997858
+   rs397997858: retired=True, merged_into=['rs11285033'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+   rs570721734: retired=True, merged_into=['rs11285033'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr1:188156883 T>TA  (normalized 188156883,-,A)
+   bundle dbSNP146 at this allele: retired ['rs397705656']  current ['rs34792784']
+      bundle record: chr1:188156883 T>TA rs34792784
+      bundle record: chr1:188156883 T>TA rs397705656
+   rs397705656: retired=True, merged_into=['rs34792784'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr2:155823013 TACACACAAAC>T  (normalized 155823013,ACACACAAAC,-)
+   bundle dbSNP146 at this allele: retired ['rs72024193']  current ['rs56694577']
+      bundle record: chr2:155823013 TACACACAAAC>T rs72024193
+      bundle record: chr2:155823013 TACACACAAAC>T rs56694577
+   rs72024193: retired=True, merged_into=['rs56694577'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr11:77054649 GA>G  (normalized 77054649,A,-)
+   bundle dbSNP146 at this allele: retired ['rs551292752']  current ['rs35747658']
+      bundle record: chr11:77054649 GA>G rs35747658
+      bundle record: chr11:77054649 GA>G rs551292752
+   rs551292752: retired=True, merged_into=['rs35747658'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr11:9551850 TG>T  (normalized 9551850,G,-)
+   bundle dbSNP146 at this allele: retired ['rs397847951']  current ['rs11309849']
+      bundle record: chr11:9551850 TG>T rs11309849
+      bundle record: chr11:9551850 TG>T rs397847951
+   rs397847951: retired=True, merged_into=['rs11309849'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr2:70328737 CA>C  (normalized 70328737,A,-)
+   bundle dbSNP146 at this allele: retired ['rs397870673', 'rs532466008', 'rs796681191']  current ['rs34533051']
+      bundle record: chr2:70328737 CA>C rs34533051
+      bundle record: chr2:70328737 CA>C rs532466008
+      bundle record: chr2:70328737 CA>C rs397870673
+      bundle record: chr2:70328737 CA>C rs796681191
+   rs397870673: retired=True, merged_into=['rs34533051'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+   rs532466008: retired=True, merged_into=['rs34533051'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+   rs796681191: retired=True, merged_into=['rs34533051'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr5:172864268 CT>C  (normalized 172864268,T,-)
+   bundle dbSNP146 at this allele: retired ['rs569526428', 'rs754205884']  current ['rs60390189']
+      bundle record: chr5:172864268 CT>C rs569526428
+      bundle record: chr5:172864268 CT>C rs754205884
+      bundle record: chr5:172864268 CT>C rs60390189
+   rs569526428: retired=True, merged_into=['rs60390189'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+   rs754205884: retired=True, merged_into=['rs60390189'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr2:174725375 GT>G  (normalized 174725375,T,-)
+   bundle dbSNP146 at this allele: retired ['rs397986743']  current ['rs5836470']
+      bundle record: chr2:174725375 GT>G rs5836470
+      bundle record: chr2:174725375 GT>G rs397986743
+   rs397986743: retired=True, merged_into=['rs5836470'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr16:13770660 GAGA>G  (normalized 13770660,AGA,-)
+   bundle dbSNP146 at this allele: retired ['rs66629966', 'rs778375329']  current ['rs3081958']
+      bundle record: chr16:13770660 GAGA>G rs66629966
+      bundle record: chr16:13770660 GAGA>G rs778375329
+      bundle record: chr16:13770660 GAGA>G rs3081958
+   rs66629966: retired=True, merged_into=['rs3081958'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+   rs778375329: retired=True, merged_into=['rs3081958'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr11:31865971 G>GA  (normalized 31865971,-,A)
+   bundle dbSNP146 at this allele: retired ['rs142565234']  current ['rs11454247']
+      bundle record: chr11:31865971 G>GA rs142565234
+      bundle record: chr11:31865971 G>GA rs11454247
+   rs142565234: retired=True, merged_into=['rs11454247'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr2:24287215 C>CT  (normalized 24287215,-,T)
+   bundle dbSNP146 at this allele: retired ['rs398080103']  current ['rs75128281']
+      bundle record: chr2:24287215 C>CT rs75128281
+      bundle record: chr2:24287215 C>CT rs398080103
+   rs398080103: retired=True, merged_into=['rs75128281'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr17:1184667 C>CT  (normalized 1184667,-,T)
+   bundle dbSNP146 at this allele: retired ['rs113771906', 'rs397825916']  current ['rs35617329']
+      bundle record: chr17:1184667 C>CT,CTT rs113771906
+      bundle record: chr17:1184667 C>CT rs35617329
+      bundle record: chr17:1184667 C>CT rs397825916
+   rs113771906: retired=True, merged_into=['rs35617329'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+   rs397825916: retired=True, merged_into=['rs35617329'], target placed at the same normalized allele=True  -> MERGED into an rsID also in the bundle annotation
+
+INDEL chr3:70542560 GAA>G  (normalized 70542560,AA,-)
+   bundle dbSNP146 at this allele: retired ['rs144103359', 'rs574136105', 'rs772638433']  current []
+      bundle record: chr3:70542560 GAA>G rs144103359
+      bundle record: chr3:70542560 GAA>G rs772638433
+      bundle record: chr3:70542560 GAA>G rs574136105
+   rs144103359: retired=True, merged_into=['rs56911686'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+   rs574136105: retired=True, merged_into=['rs56911686'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+   rs772638433: retired=True, merged_into=['rs56911686'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+SNV   chr4:184139870 T>C  (normalized 184139869,T,C)
+   bundle dbSNP146 at this allele: retired ['rs191899771']  current []
+      bundle record: chr4:184139870 T>C rs191899771
+   rs191899771: retired=True, merged_into=['rs76497952'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+SNV   chr18:49719019 A>T  (normalized 49719018,A,T)
+   bundle dbSNP146 at this allele: retired ['rs112748087']  current []
+      bundle record: chr18:49719019 A>T rs112748087
+   rs112748087: retired=True, merged_into=['rs75752567'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+SNV   chr18:27822100 G>A  (normalized 27822099,G,A)
+   bundle dbSNP146 at this allele: retired ['rs200295897']  current []
+      bundle record: chr18:27822100 G>A rs200295897
+   rs200295897: retired=True, merged_into=['rs78684025'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+SNV   chr16:18761570 A>C  (normalized 18761569,A,C)
+   bundle dbSNP146 at this allele: retired ['rs149637150']  current []
+      bundle record: chr16:18761570 A>C rs149637150
+   rs149637150: retired=True, merged_into=['rs2263808'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+SNV   chr2:29673373 T>A  (normalized 29673372,T,A)
+   bundle dbSNP146 at this allele: retired ['rs200763569']  current []
+      bundle record: chr2:29673373 T>A rs200763569
+   rs200763569: retired=True, merged_into=['rs79834525'], target placed at the same normalized allele=True  -> MERGED into an rsID NOT in the bundle annotation
+
+SUMMARY (type, verdict, target at same allele): count
+  ('INDEL', 'MERGED into an rsID NOT in the bundle annotation', True): 10
+  ('INDEL', 'MERGED into an rsID also in the bundle annotation', True): 27
+  ('SNV', 'MERGED into an rsID NOT in the bundle annotation', True): 5

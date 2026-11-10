@@ -1,0 +1,27 @@
+
+-- dbSNP138 (GATK/WARP): retired-only entries 885
+   B/LB >=1*  ClinVar entry without usable allele       1
+   B/LB >=1*  other locus or not found                 31
+   B/LB >=1*  same allele                             671
+   B/LB >=1*  same position, other allele             141
+   P/LP >=1*  same allele                              33
+   P/LP >=1*  same position, other allele               8
+
+-- dbSNP144 (GDC): retired-only entries 657
+   B/LB >=1*  ClinVar entry without usable allele       4
+   B/LB >=1*  other locus or not found                  2
+   B/LB >=1*  same allele                             376
+   B/LB >=1*  same position, other allele              86
+   P/LP >=1*  other locus or not found                  1
+   P/LP >=1*  same allele                             159
+   P/LP >=1*  same position, other allele              29
+
+-- dbSNP146 (sarek default): retired-only entries 680
+   B/LB >=1*  ClinVar entry without usable allele       6
+   B/LB >=1*  other locus or not found                 12
+   B/LB >=1*  same allele                             440
+   B/LB >=1*  same position, other allele             130
+   P/LP >=1*  same allele                              70
+   P/LP >=1*  same position, other allele              22
+
+done

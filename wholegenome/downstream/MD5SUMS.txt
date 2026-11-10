@@ -1,0 +1,5 @@
+c290b8698d55e1a6996281429f1828dd *clinvar_GRCh38.vcf.gz
+d2bb73808fcfbcc1f17ac243f5ef994d *variant_summary.txt.gz
+59f2933b32692a1c59a741e327595eb1 *gwas-catalog-associations-full.zip
+24253b5f3d0317df906475072ed2c983 *clinicalAnnotations.zip
+e6e0d2519f2d4888a5e57960f8d17af2 *variantAnnotations.zip

@@ -1,0 +1,20 @@
+Pipeline defaults and file dates, re-checked 2026-11-09 (supersedes the 2026-10-05 check in REVISION_NOTES.md)
+
+WARP (github.com/broadinstitute/warp), branch develop, commit 43d386b6a137 (2026-11-09T14:48:57Z)
+  WholeGenomeGermlineSingleSample changelog: "# 3.3.9 / 2026-11-04 (Date of Last Commit)"
+  Earlier commit aca5a0119518 (2026-10-01T19:39:58Z) confirmed to exist.
+  Scan of all 539 *.json files in the repository tree (0 fetch failures), dbSNP VCF filenames referenced:
+    121 dbsnp_138.b37.vcf.gz
+     71 Homo_sapiens_assembly38.dbsnp138.vcf
+     11 dbsnp_144.hg38.vcf.gz
+  No newer dbSNP build referenced. (The Oct check counted 67/11 with a different file filter.)
+  WGS default input: pipelines/wdl/dna_seq/germline/single_sample/wgs/input_files/WholeGenomeGermlineSingleSample.inputs.plumbing.masked_reference.json -> dbsnp138
+
+nf-core/sarek: latest release 3.11.0 (published 2026-10-26T17:13:29Z)
+  conf/igenomes.config @3.11.0, GATK.GRCh38: dbsnp = .../GATK/GRCh38/Annotation/GATKBundle/dbsnp_146.hg38.vcf.gz
+  Same default in 3.10.0 (checked) and 3.9.0 (Oct check).
+
+Bundle file headers (local copies, md5 verified where published):
+  dbsnp146.vcf.gz : ##fileDate=20151104  ##dbSNP_BUILD_ID=146  ##reference=GRCh38.p2
+  dbsnp144.vcf.gz : ##fileDate=20150603  ##dbSNP_BUILD_ID=144  ##reference=GRCh38.p2
+  dbsnp138.vcf.gz : GATK LeftAlignAndTrimVariants run dated Mon Nov 04 2013 on dbSNP 138 00-All.vcf

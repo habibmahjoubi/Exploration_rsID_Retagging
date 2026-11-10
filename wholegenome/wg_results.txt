@@ -1,0 +1,37 @@
+HG002_wg.vcf.gz chr1-22 benchmark variants: 4,048,342 (SNV 3,460,251)
+
+== dbSNP138 (GATK/WARP)
+  annotations: 4,106,821; retired: 212,768 (5.18%)
+  annotated variants: 3,904,565 (96.4% of calls); carrying >=1 retired ID: 193,468 = 4.95% [95% CI 4.93-4.98]
+  ONLY retired ID(s) (no current ID at all): 81,826 (2.10%)
+  SNVs: 49,932/3,378,509 = 1.48%; indels: 143,536/526,056 = 27.29%
+  per-chromosome rate range: 4.18%-5.33% (median 5.00%)
+  chr20: 3,471/82,973 = 4.18%
+  retiring build: {136: 395, 142: 34209, 144: 15386, 146: 178, 147: 3898, 149: 607, 150: 56, 151: 18, 152: 158017, 157: 4}
+
+== dbSNP144 (GDC)
+  annotations: 4,363,309; retired: 458,955 (10.52%)
+  annotated variants: 3,889,678 (96.1% of calls); carrying >=1 retired ID: 335,229 = 8.62% [95% CI 8.59-8.65]
+  ONLY retired ID(s) (no current ID at all): 49,695 (1.28%)
+  SNVs: 25,192/3,343,727 = 0.75%; indels: 310,037/545,951 = 56.79%
+  per-chromosome rate range: 7.69%-9.65% (median 8.68%)
+  chr20: 7,273/83,736 = 8.69%
+  retiring build: {136: 596, 144: 29044, 146: 203, 147: 4475, 149: 649, 150: 69, 151: 29, 152: 423881, 153: 4, 155: 2, 157: 3}
+
+== dbSNP146 (sarek default)
+  annotations: 4,469,077; retired: 478,782 (10.71%)
+  annotated variants: 3,982,795 (98.4% of calls); carrying >=1 retired ID: 347,490 = 8.72% [95% CI 8.70-8.75]
+  ONLY retired ID(s) (no current ID at all): 57,846 (1.45%)
+  SNVs: 5,471/3,424,569 = 0.16%; indels: 342,019/558,226 = 61.27%
+  per-chromosome rate range: 8.11%-9.74% (median 8.79%)
+  chr20: 7,648/84,636 = 9.04%
+  retiring build: {136: 633, 147: 4774, 149: 779, 150: 70, 151: 2073, 152: 470444, 153: 4, 155: 2, 157: 3}
+
+== dbSNP156 (NCBI, Nov 2022)
+  annotations: 4,069,954; retired: 18,825 (0.46%)
+  annotated variants: 4,046,834 (100.0% of calls); carrying >=1 retired ID: 5,695 = 0.14% [95% CI 0.14-0.14]
+  ONLY retired ID(s) (no current ID at all): 1 (0.00%)
+  SNVs: 4,982/3,459,278 = 0.14%; indels: 713/587,556 = 0.12%
+  per-chromosome rate range: 0.03%-0.29% (median 0.17%)
+  chr20: 210/85,926 = 0.24%
+  retiring build: {157: 18825}

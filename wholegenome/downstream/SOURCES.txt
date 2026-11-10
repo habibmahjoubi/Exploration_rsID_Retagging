@@ -1,0 +1,7 @@
+Downstream-test sources, downloaded 2026-11-09 (md5 in MD5SUMS.txt)
+ClinVar GRCh38 VCF   https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz = clinvar_20261108.vcf.gz (md5 c290b8698d55e1a6996281429f1828dd, matches NCBI .md5)
+ClinVar summary      https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz (Last-Modified 2026-11-09, md5 d2bb73808fcfbcc1f17ac243f5ef994d, matches NCBI .md5)
+GWAS Catalog         https://ftp.ebi.ac.uk/pub/databases/gwas/releases/2026/11/02/gwas-catalog-associations-full.zip (v1.0 full; 1,205,644 associations)
+PharmGKB/ClinPGx     https://api.clinpgx.org/v1/download/file/data/clinicalAnnotations.zip (CREATED_2025-07-05)
+                     https://api.clinpgx.org/v1/download/file/data/variantAnnotations.zip (CREATED_2026-11-05)
+Merge ledger         ../refsnp-merged.json.bz2 (dbSNP b157, md5 to be checked vs 5d9c56c9b8c3412eb0195a63f12e1ebf)

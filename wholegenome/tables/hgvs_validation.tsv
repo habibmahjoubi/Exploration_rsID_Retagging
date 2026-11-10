@@ -1,0 +1,61 @@
+hgvs	result	details
+NC_000001.11:g.42930743G>A	VALID	flag=gene_variant; gene=SLC2A1; 
+NC_000001.11:g.42930743G>T	VALID	flag=gene_variant; gene=SLC2A1; 
+NC_000002.12:g.151619514C>G	VALID	flag=gene_variant; gene=NEB; 
+NC_000002.12:g.151619514C>T	VALID	flag=gene_variant; gene=NEB; 
+NC_000002.12:g.173263785C>A	VALID	flag=gene_variant; gene=MAP3K20; 
+NC_000002.12:g.173263785C>T	VALID	flag=gene_variant; gene=MAP3K20; 
+NC_000002.12:g.208124313A>C	VALID	flag=gene_variant; gene=CRYGD; 
+NC_000002.12:g.208124313A>G	VALID	flag=gene_variant; gene=CRYGD; 
+NC_000002.12:g.26232259G>A	VALID	flag=gene_variant; gene=HADHA; 
+NC_000002.12:g.26232259G>T	VALID	flag=gene_variant; gene=HADHA; 
+NC_000002.12:g.55656182G>A	VALID	flag=gene_variant; gene=PNPT1; 
+NC_000002.12:g.55656182G>T	VALID	flag=gene_variant; gene=PNPT1; 
+NC_000002.12:g.61839792A>G	VALID	flag=gene_variant; gene=FAM161A; 
+NC_000002.12:g.61839792A>T	VALID	flag=gene_variant; gene=FAM161A; 
+NC_000003.12:g.128895342A>C	VALID	flag=gene_variant; gene=ACAD9; 
+NC_000003.12:g.128895342A>T	VALID	flag=gene_variant; gene=ACAD9; 
+NC_000003.12:g.49510575C>A	VALID	flag=gene_variant; gene=DAG1; 
+NC_000003.12:g.49510575C>G	VALID	flag=gene_variant; gene=DAG1; 
+NC_000004.12:g.3493171C>G	VALID	flag=gene_variant; gene=DOK7; The current status of LRG_869 is pending therefore changes may be made to the LRG reference sequence
+NC_000004.12:g.3493171C>T	VALID	flag=gene_variant; gene=DOK7; The current status of LRG_869 is pending therefore changes may be made to the LRG reference sequence
+NC_000005.10:g.112827157T>C	VALID	flag=gene_variant; gene=APC; 
+NC_000005.10:g.112827157T>G	VALID	flag=gene_variant; gene=APC; 
+NC_000006.12:g.32039081C>A	VALID	flag=gene_variant; gene=CYP21A2; The current status of LRG_829 is pending therefore changes may be made to the LRG reference sequence
+NC_000006.12:g.32039081C>G	VALID	flag=gene_variant; gene=CYP21A2; The current status of LRG_829 is pending therefore changes may be made to the LRG reference sequence
+NC_000006.12:g.42698426G>A	VALID	flag=gene_variant; gene=PRPH2; 
+NC_000006.12:g.42698426G>C	VALID	flag=gene_variant; gene=PRPH2; 
+NC_000007.14:g.150951110A>C	VALID	flag=gene_variant; gene=KCNH2; 
+NC_000007.14:g.150951110A>G	VALID	flag=gene_variant; gene=KCNH2; 
+NC_000007.14:g.150951110A>T	VALID	flag=gene_variant; gene=KCNH2; 
+NC_000008.11:g.117835543G>A	VALID	flag=gene_variant; gene=EXT1; 
+NC_000008.11:g.117835543G>T	VALID	flag=gene_variant; gene=EXT1; 
+NC_000008.11:g.133131869C>A	VALID	flag=gene_variant; gene=TG; 
+NC_000008.11:g.133131869C>T	VALID	flag=gene_variant; gene=TG; 
+NC_000008.11:g.142913286G>C	VALID	flag=gene_variant; gene=CYP11B2; 
+NC_000008.11:g.142913286G>T	VALID	flag=gene_variant; gene=CYP11B2; 
+NC_000010.11:g.49470323T>A	VALID	flag=gene_variant; gene=ERCC6; 
+NC_000010.11:g.49470323T>C	VALID	flag=gene_variant; gene=ERCC6; 
+NC_000011.10:g.71441415A>C	VALID	flag=gene_variant; gene=DHCR7; 
+NC_000011.10:g.71441415A>G	VALID	flag=gene_variant; gene=DHCR7; 
+NC_000012.12:g.6058030A>G	VALID	flag=gene_variant; gene=VWF; 
+NC_000012.12:g.6058030A>T	VALID	flag=gene_variant; gene=VWF; 
+NC_000013.11:g.102875499G>C	VALID	flag=gene_variant; gene=ERCC5; 
+NC_000013.11:g.102875499G>T	VALID	flag=gene_variant; gene=ERCC5; 
+NC_000013.11:g.60275658A>G	VALID	flag=intergenic; gene=-; No individual transcripts have been identified that fully overlap the described variation in the genomic sequence. Large variants might span one or more genes and are currently only described at the genome (g.) level.
+NC_000014.9:g.87941544A>G	VALID	flag=gene_variant; gene=GALC; 
+NC_000014.9:g.87941544A>T	VALID	flag=gene_variant; gene=GALC; 
+NC_000015.10:g.92978374A>C	VALID	flag=gene_variant; gene=CHD2; The current status of LRG_1425 is pending therefore changes may be made to the LRG reference sequence
+NC_000015.10:g.92978374A>G	VALID	flag=gene_variant; gene=CHD2; The current status of LRG_1425 is pending therefore changes may be made to the LRG reference sequence
+NC_000016.10:g.23630140C>A	VALID	flag=gene_variant; gene=PALB2; 
+NC_000016.10:g.23630140C>G	VALID	flag=gene_variant; gene=PALB2; 
+NC_000017.11:g.3494408C>A	VALID	flag=gene_variant; gene=ASPA; 
+NC_000017.11:g.3494408C>T	VALID	flag=gene_variant; gene=ASPA; 
+NC_000018.10:g.57695300T>A	VALID	flag=gene_variant; gene=ATP8B1; 
+NC_000018.10:g.57695300T>G	VALID	flag=gene_variant; gene=ATP8B1; 
+NC_000019.10:g.11100236C>A	VALID	flag=gene_variant; gene=LDLR; 
+NC_000019.10:g.11100236C>G	VALID	flag=gene_variant; gene=LDLR; 
+NC_000019.10:g.11100236C>T	VALID	flag=gene_variant; gene=LDLR; 
+NC_000020.11:g.10652589G>A	VALID	flag=gene_variant; gene=JAG1; 
+NC_000020.11:g.10652589G>C	VALID	flag=gene_variant; gene=JAG1; 
+NC_000020.11:g.49283799G>C	VALID	flag=intergenic; gene=-; Transcripts were found but the current transcript type limitation (of mane_select) removed all transcripts that overlap the described variation in the genomic sequence. You may want to try selecting less restrictive setting for this variant.

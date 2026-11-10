@@ -1,0 +1,758 @@
+{
+ "dbSNP138 (GATK/WARP)": {
+  "locus": {
+   "same allele": 183430,
+   "same position, other allele": 95,
+   "elsewhere or absent in dbSNP156": 449
+  },
+  "locus_distinct": {
+   "same allele": 183430,
+   "same position, other allele": 95,
+   "elsewhere or absent in dbSNP156": 449
+  },
+  "clinvar": {
+   "B/LB >=1*": {
+    "position-matched": 37151,
+    "found by plain join": 36012,
+    "missed by plain join": 1139,
+    "missed, recovered by validated join (retired rsID)": 403,
+    "missed, ClinVar entry has no rsID": 598,
+    "false via blind join: same position, other allele": 2238,
+    "plain-join entry not matching allele: same position, other allele": 1882,
+    "false via blind join: other locus": 160,
+    "plain-join entry not matching allele: other locus": 159
+   },
+   "VUS >=1*": {
+    "false via blind join: same position, other allele": 361,
+    "plain-join entry not matching allele: same position, other allele": 331,
+    "position-matched": 84,
+    "found by plain join": 60,
+    "missed by plain join": 24,
+    "missed, recovered by validated join (retired rsID)": 10,
+    "missed, ClinVar entry has no rsID": 11,
+    "false via blind join: other locus": 2,
+    "plain-join entry not matching allele: other locus": 1
+   },
+   "other >=1*": {
+    "position-matched": 4012,
+    "found by plain join": 16,
+    "missed by plain join": 3996,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 3996
+   },
+   "conflicting >=1*": {
+    "position-matched": 93,
+    "found by plain join": 88,
+    "missed by plain join": 5,
+    "missed, recovered by validated join (retired rsID)": 4,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: same position, other allele": 100,
+    "plain-join entry not matching allele: same position, other allele": 94,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "other 0*": {
+    "position-matched": 316,
+    "found by plain join": 314,
+    "missed by plain join": 2,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 2,
+    "false via blind join: same position, other allele": 21,
+    "plain-join entry not matching allele: same position, other allele": 21,
+    "false via blind join: other locus": 29,
+    "plain-join entry not matching allele: other locus": 28
+   },
+   "B/LB 0*": {
+    "position-matched": 818,
+    "found by plain join": 810,
+    "missed by plain join": 8,
+    "missed, recovered by validated join (retired rsID)": 4,
+    "missed, ClinVar entry has no rsID": 3,
+    "false via blind join: same position, other allele": 61,
+    "plain-join entry not matching allele: same position, other allele": 56,
+    "false via blind join: other locus": 7,
+    "plain-join entry not matching allele: other locus": 7
+   },
+   "VUS 0*": {
+    "position-matched": 42,
+    "found by plain join": 41,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1,
+    "false via blind join: other locus": 3,
+    "plain-join entry not matching allele: other locus": 3,
+    "false via blind join: same position, other allele": 9,
+    "plain-join entry not matching allele: same position, other allele": 9
+   },
+   "drug_response >=1*": {
+    "false via blind join: other locus": 1,
+    "plain-join entry not matching allele: other locus": 1,
+    "position-matched": 7,
+    "found by plain join": 7,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0
+   },
+   "risk_factor 0*": {
+    "position-matched": 43,
+    "found by plain join": 43,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4,
+    "false via blind join: same position, other allele": 1
+   },
+   "P/LP 0*": {
+    "false via blind join: other locus": 3,
+    "plain-join entry not matching allele: other locus": 3,
+    "position-matched": 1,
+    "found by plain join": 1,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: same position, other allele": 3,
+    "plain-join entry not matching allele: same position, other allele": 2
+   },
+   "drug_response 0*": {
+    "position-matched": 42,
+    "found by plain join": 38,
+    "missed by plain join": 4,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 4,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "P/LP >=1*": {
+    "false via blind join: same position, other allele": 31,
+    "plain-join entry not matching allele: same position, other allele": 31,
+    "false via blind join: other locus": 1,
+    "position-matched": 1,
+    "found by plain join": 0,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1
+   },
+   "conflicting 0*": {
+    "position-matched": 3,
+    "found by plain join": 3,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0
+   }
+  },
+  "other": {
+   "GWAS | p>=5e-8": {
+    "validated": 56909,
+    "plain": 56578,
+    "missed by plain, recovered by validated": 331
+   },
+   "GWAS | p<5e-8": {
+    "validated": 349065,
+    "plain": 345834,
+    "missed by plain, recovered by validated": 3241
+   },
+   "PharmGKB-variant | variant annotation": {
+    "validated": 9837,
+    "plain": 9832,
+    "missed by plain, recovered by validated": 7
+   },
+   "PharmGKB-clinical | level 3": {
+    "validated": 1894,
+    "plain": 1892,
+    "missed by plain, recovered by validated": 3
+   },
+   "PharmGKB-clinical | level 4": {
+    "validated": 157,
+    "plain": 157,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "validated": 4,
+    "plain": 4,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1A": {
+    "validated": 5,
+    "plain": 5,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "validated": 3,
+    "plain": 3,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "validated": 6,
+    "plain": 6,
+    "missed by plain, recovered by validated": 0
+   }
+  }
+ },
+ "dbSNP144 (GDC)": {
+  "locus": {
+   "same allele": 357688,
+   "same position, other allele": 151,
+   "elsewhere or absent in dbSNP156": 463
+  },
+  "locus_distinct": {
+   "same allele": 357688,
+   "same position, other allele": 151,
+   "elsewhere or absent in dbSNP156": 463
+  },
+  "clinvar": {
+   "B/LB >=1*": {
+    "position-matched": 36424,
+    "found by plain join": 35440,
+    "missed by plain join": 984,
+    "missed, recovered by validated join (retired rsID)": 314,
+    "missed, ClinVar entry has no rsID": 586,
+    "false via blind join: same position, other allele": 2397,
+    "plain-join entry not matching allele: same position, other allele": 1892,
+    "false via blind join: other locus": 201,
+    "plain-join entry not matching allele: other locus": 200
+   },
+   "VUS >=1*": {
+    "false via blind join: same position, other allele": 374,
+    "plain-join entry not matching allele: same position, other allele": 337,
+    "position-matched": 147,
+    "found by plain join": 106,
+    "missed by plain join": 41,
+    "missed, recovered by validated join (retired rsID)": 12,
+    "missed, ClinVar entry has no rsID": 27,
+    "false via blind join: other locus": 1
+   },
+   "other >=1*": {
+    "position-matched": 3883,
+    "found by plain join": 16,
+    "missed by plain join": 3867,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 3867
+   },
+   "conflicting >=1*": {
+    "position-matched": 101,
+    "found by plain join": 98,
+    "missed by plain join": 3,
+    "missed, recovered by validated join (retired rsID)": 2,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: same position, other allele": 109,
+    "plain-join entry not matching allele: same position, other allele": 98,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "P/LP 0*": {
+    "position-matched": 2,
+    "found by plain join": 2,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 3,
+    "plain-join entry not matching allele: other locus": 3,
+    "false via blind join: same position, other allele": 3,
+    "plain-join entry not matching allele: same position, other allele": 3
+   },
+   "other 0*": {
+    "position-matched": 312,
+    "found by plain join": 310,
+    "missed by plain join": 2,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 2,
+    "false via blind join: same position, other allele": 20,
+    "plain-join entry not matching allele: same position, other allele": 20,
+    "false via blind join: other locus": 29,
+    "plain-join entry not matching allele: other locus": 29
+   },
+   "B/LB 0*": {
+    "position-matched": 799,
+    "found by plain join": 791,
+    "missed by plain join": 8,
+    "missed, recovered by validated join (retired rsID)": 3,
+    "missed, ClinVar entry has no rsID": 3,
+    "false via blind join: same position, other allele": 71,
+    "plain-join entry not matching allele: same position, other allele": 56,
+    "false via blind join: other locus": 7,
+    "plain-join entry not matching allele: other locus": 7
+   },
+   "VUS 0*": {
+    "position-matched": 44,
+    "found by plain join": 43,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4,
+    "false via blind join: same position, other allele": 9,
+    "plain-join entry not matching allele: same position, other allele": 7
+   },
+   "drug_response >=1*": {
+    "position-matched": 8,
+    "found by plain join": 8,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 1,
+    "plain-join entry not matching allele: other locus": 1
+   },
+   "risk_factor 0*": {
+    "position-matched": 42,
+    "found by plain join": 40,
+    "missed by plain join": 2,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 3,
+    "plain-join entry not matching allele: other locus": 3,
+    "false via blind join: same position, other allele": 1
+   },
+   "drug_response 0*": {
+    "position-matched": 43,
+    "found by plain join": 39,
+    "missed by plain join": 4,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 4,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "P/LP >=1*": {
+    "false via blind join: same position, other allele": 31,
+    "plain-join entry not matching allele: same position, other allele": 31,
+    "position-matched": 3,
+    "found by plain join": 2,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1,
+    "false via blind join: other locus": 1
+   },
+   "conflicting 0*": {
+    "position-matched": 3,
+    "found by plain join": 3,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0
+   }
+  },
+  "other": {
+   "GWAS | p>=5e-8": {
+    "validated": 55490,
+    "plain": 55313,
+    "missed by plain, recovered by validated": 177
+   },
+   "GWAS | p<5e-8": {
+    "validated": 338480,
+    "plain": 337226,
+    "missed by plain, recovered by validated": 1256
+   },
+   "PharmGKB-variant | variant annotation": {
+    "validated": 10115,
+    "plain": 10106,
+    "missed by plain, recovered by validated": 9
+   },
+   "PharmGKB-clinical | level 3": {
+    "validated": 1875,
+    "plain": 1872,
+    "missed by plain, recovered by validated": 3
+   },
+   "PharmGKB-clinical | level 4": {
+    "validated": 162,
+    "plain": 162,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1A": {
+    "validated": 7,
+    "plain": 7,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "validated": 4,
+    "plain": 4,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "validated": 3,
+    "plain": 3,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "validated": 6,
+    "plain": 6,
+    "missed by plain, recovered by validated": 0
+   }
+  }
+ },
+ "dbSNP146 (sarek default)": {
+  "locus": {
+   "same allele": 370965,
+   "same position, other allele": 199,
+   "elsewhere or absent in dbSNP156": 1452
+  },
+  "locus_distinct": {
+   "same allele": 370965,
+   "same position, other allele": 199,
+   "elsewhere or absent in dbSNP156": 1452
+  },
+  "clinvar": {
+   "B/LB >=1*": {
+    "position-matched": 37352,
+    "found by plain join": 36345,
+    "missed by plain join": 1007,
+    "missed, recovered by validated join (retired rsID)": 311,
+    "missed, ClinVar entry has no rsID": 612,
+    "false via blind join: same position, other allele": 2455,
+    "plain-join entry not matching allele: same position, other allele": 1939,
+    "false via blind join: other locus": 236,
+    "plain-join entry not matching allele: other locus": 231
+   },
+   "VUS >=1*": {
+    "false via blind join: same position, other allele": 386,
+    "plain-join entry not matching allele: same position, other allele": 349,
+    "position-matched": 151,
+    "found by plain join": 109,
+    "missed by plain join": 42,
+    "missed, recovered by validated join (retired rsID)": 11,
+    "missed, ClinVar entry has no rsID": 29,
+    "false via blind join: other locus": 1
+   },
+   "other >=1*": {
+    "position-matched": 4024,
+    "found by plain join": 16,
+    "missed by plain join": 4008,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 4008
+   },
+   "conflicting >=1*": {
+    "position-matched": 103,
+    "found by plain join": 100,
+    "missed by plain join": 3,
+    "missed, recovered by validated join (retired rsID)": 2,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: same position, other allele": 111,
+    "plain-join entry not matching allele: same position, other allele": 101,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "P/LP 0*": {
+    "position-matched": 2,
+    "found by plain join": 2,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 3,
+    "plain-join entry not matching allele: other locus": 3,
+    "false via blind join: same position, other allele": 3,
+    "plain-join entry not matching allele: same position, other allele": 3
+   },
+   "other 0*": {
+    "position-matched": 316,
+    "found by plain join": 314,
+    "missed by plain join": 2,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 2,
+    "false via blind join: same position, other allele": 21,
+    "plain-join entry not matching allele: same position, other allele": 21,
+    "false via blind join: other locus": 30,
+    "plain-join entry not matching allele: other locus": 30
+   },
+   "B/LB 0*": {
+    "position-matched": 826,
+    "found by plain join": 817,
+    "missed by plain join": 9,
+    "missed, recovered by validated join (retired rsID)": 3,
+    "missed, ClinVar entry has no rsID": 4,
+    "false via blind join: same position, other allele": 71,
+    "plain-join entry not matching allele: same position, other allele": 56,
+    "false via blind join: other locus": 7,
+    "plain-join entry not matching allele: other locus": 7
+   },
+   "VUS 0*": {
+    "position-matched": 45,
+    "found by plain join": 43,
+    "missed by plain join": 2,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4,
+    "false via blind join: same position, other allele": 10,
+    "plain-join entry not matching allele: same position, other allele": 8
+   },
+   "drug_response >=1*": {
+    "position-matched": 8,
+    "found by plain join": 8,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 1,
+    "plain-join entry not matching allele: other locus": 1
+   },
+   "risk_factor 0*": {
+    "position-matched": 43,
+    "found by plain join": 42,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4,
+    "false via blind join: same position, other allele": 1
+   },
+   "drug_response 0*": {
+    "position-matched": 43,
+    "found by plain join": 39,
+    "missed by plain join": 4,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 4,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "P/LP >=1*": {
+    "false via blind join: same position, other allele": 31,
+    "plain-join entry not matching allele: same position, other allele": 31,
+    "position-matched": 3,
+    "found by plain join": 2,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1,
+    "false via blind join: other locus": 1
+   },
+   "conflicting 0*": {
+    "position-matched": 3,
+    "found by plain join": 3,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0
+   }
+  },
+  "other": {
+   "GWAS | p>=5e-8": {
+    "validated": 57214,
+    "plain": 56946,
+    "missed by plain, recovered by validated": 268
+   },
+   "GWAS | p<5e-8": {
+    "validated": 352230,
+    "plain": 350727,
+    "missed by plain, recovered by validated": 1505
+   },
+   "PharmGKB-variant | variant annotation": {
+    "validated": 10365,
+    "plain": 10356,
+    "missed by plain, recovered by validated": 9
+   },
+   "PharmGKB-clinical | level 3": {
+    "validated": 1924,
+    "plain": 1921,
+    "missed by plain, recovered by validated": 3
+   },
+   "PharmGKB-clinical | level 4": {
+    "validated": 163,
+    "plain": 163,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1A": {
+    "validated": 7,
+    "plain": 7,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "validated": 4,
+    "plain": 4,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "validated": 3,
+    "plain": 3,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "validated": 6,
+    "plain": 6,
+    "missed by plain, recovered by validated": 0
+   }
+  }
+ },
+ "dbSNP156 (NCBI, Nov 2022)": {
+  "locus": {
+   "same allele": 18962,
+   "elsewhere or absent in dbSNP156": 4
+  },
+  "locus_distinct": {
+   "same allele": 18962,
+   "elsewhere or absent in dbSNP156": 4
+  },
+  "clinvar": {
+   "B/LB >=1*": {
+    "position-matched": 37439,
+    "found by plain join": 36820,
+    "missed by plain join": 619,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 619,
+    "false via blind join: same position, other allele": 2796,
+    "plain-join entry not matching allele: same position, other allele": 2796,
+    "false via blind join: other locus": 226,
+    "plain-join entry not matching allele: other locus": 226
+   },
+   "VUS >=1*": {
+    "false via blind join: same position, other allele": 406,
+    "plain-join entry not matching allele: same position, other allele": 406,
+    "position-matched": 173,
+    "found by plain join": 140,
+    "missed by plain join": 33,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 33
+   },
+   "other >=1*": {
+    "position-matched": 4026,
+    "found by plain join": 16,
+    "missed by plain join": 4010,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 4010
+   },
+   "conflicting >=1*": {
+    "position-matched": 105,
+    "found by plain join": 105,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: same position, other allele": 132,
+    "plain-join entry not matching allele: same position, other allele": 132,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "P/LP 0*": {
+    "position-matched": 2,
+    "found by plain join": 2,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 3,
+    "plain-join entry not matching allele: other locus": 3,
+    "false via blind join: same position, other allele": 3,
+    "plain-join entry not matching allele: same position, other allele": 3
+   },
+   "other 0*": {
+    "position-matched": 319,
+    "found by plain join": 317,
+    "missed by plain join": 2,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 2,
+    "false via blind join: same position, other allele": 21,
+    "plain-join entry not matching allele: same position, other allele": 21,
+    "false via blind join: other locus": 30,
+    "plain-join entry not matching allele: other locus": 30
+   },
+   "B/LB 0*": {
+    "position-matched": 828,
+    "found by plain join": 824,
+    "missed by plain join": 4,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 4,
+    "false via blind join: same position, other allele": 78,
+    "plain-join entry not matching allele: same position, other allele": 78,
+    "false via blind join: other locus": 7,
+    "plain-join entry not matching allele: other locus": 7
+   },
+   "VUS 0*": {
+    "position-matched": 45,
+    "found by plain join": 44,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1,
+    "false via blind join: same position, other allele": 12,
+    "plain-join entry not matching allele: same position, other allele": 12,
+    "false via blind join: other locus": 3,
+    "plain-join entry not matching allele: other locus": 3
+   },
+   "drug_response >=1*": {
+    "position-matched": 8,
+    "found by plain join": 8,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 1,
+    "plain-join entry not matching allele: other locus": 1
+   },
+   "risk_factor 0*": {
+    "position-matched": 43,
+    "found by plain join": 43,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4,
+    "false via blind join: same position, other allele": 1,
+    "plain-join entry not matching allele: same position, other allele": 1
+   },
+   "drug_response 0*": {
+    "position-matched": 43,
+    "found by plain join": 39,
+    "missed by plain join": 4,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 4,
+    "false via blind join: other locus": 4,
+    "plain-join entry not matching allele: other locus": 4
+   },
+   "P/LP >=1*": {
+    "false via blind join: same position, other allele": 33,
+    "plain-join entry not matching allele: same position, other allele": 33,
+    "position-matched": 3,
+    "found by plain join": 2,
+    "missed by plain join": 1,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 1
+   },
+   "conflicting 0*": {
+    "position-matched": 3,
+    "found by plain join": 3,
+    "missed by plain join": 0,
+    "missed, recovered by validated join (retired rsID)": 0,
+    "missed, ClinVar entry has no rsID": 0,
+    "false via blind join: same position, other allele": 1,
+    "plain-join entry not matching allele: same position, other allele": 1
+   }
+  },
+  "other": {
+   "GWAS | p>=5e-8": {
+    "validated": 57209,
+    "plain": 56766,
+    "missed by plain, recovered by validated": 443
+   },
+   "GWAS | p<5e-8": {
+    "validated": 353165,
+    "plain": 349746,
+    "missed by plain, recovered by validated": 3419
+   },
+   "PharmGKB-variant | variant annotation": {
+    "validated": 10371,
+    "plain": 10370,
+    "missed by plain, recovered by validated": 1
+   },
+   "PharmGKB-clinical | level 3": {
+    "validated": 1924,
+    "plain": 1924,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 4": {
+    "validated": 163,
+    "plain": 163,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1A": {
+    "validated": 7,
+    "plain": 7,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2B": {
+    "validated": 4,
+    "plain": 4,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 1B": {
+    "validated": 3,
+    "plain": 3,
+    "missed by plain, recovered by validated": 0
+   },
+   "PharmGKB-clinical | level 2A": {
+    "validated": 6,
+    "plain": 6,
+    "missed by plain, recovered by validated": 0
+   }
+  }
+ }
+}

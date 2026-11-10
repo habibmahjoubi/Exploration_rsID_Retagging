@@ -1,0 +1,124 @@
+== HG002_wg.vcf.gz (bundle files wg_*.tsv)
+   4,048,342 variants
+
+-- dbSNP138 (GATK/WARP)
+   retired rsIDs written: 212,757 annotations (212,757 distinct)
+     target same allele                        212,011/212,757 = 99.65% [99.62-99.67]
+     target same position, other allele        102/212,757 = 0.05% [0.04-0.06]
+     target elsewhere or absent in dbSNP156    644/212,757 = 0.30% [0.28-0.33]
+   ClinVar, allele-aware (reference = entries matched by position and allele):
+     B/LB 0*                matched    865 | missed by plain rsID join 9/865 = 1.04% [0.55-1.97] | of which retired rsID 3, entry without rsID 5 | blind-join false: same-pos 106, other-locus 7 | plain-join other-allele 95
+     B/LB >=1*              matched 39,061 | missed by plain rsID join 1,375/39,061 = 3.52% [3.34-3.71] | of which retired rsID 446, entry without rsID 739 | blind-join false: same-pos 2,771, other-locus 173 | plain-join other-allele 2,339
+     P/LP 0*                matched      0 | missed by plain rsID join 0/0 = 0.00% [0.00-0.00] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 3, other-locus 2 | plain-join other-allele 3
+     P/LP >=1*              matched      1 | missed by plain rsID join 0/1 = 0.00% [0.00-79.35] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 31, other-locus 2 | plain-join other-allele 30
+     VUS 0*                 matched     38 | missed by plain rsID join 1/38 = 2.63% [0.47-13.50] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 12, other-locus 4 | plain-join other-allele 10
+     VUS >=1*               matched    126 | missed by plain rsID join 22/126 = 17.46% [11.82-25.02] | of which retired rsID 9, entry without rsID 9 | blind-join false: same-pos 399, other-locus 2 | plain-join other-allele 368
+     conflicting 0*         matched      5 | missed by plain rsID join 0/5 = 0.00% [0.00-43.45] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     conflicting >=1*       matched    142 | missed by plain rsID join 2/142 = 1.41% [0.39-4.99] | of which retired rsID 1, entry without rsID 0 | blind-join false: same-pos 124, other-locus 4 | plain-join other-allele 114
+     drug_response 0*       matched     58 | missed by plain rsID join 6/58 = 10.34% [4.83-20.79] | of which retired rsID 1, entry without rsID 5 | blind-join false: same-pos 1, other-locus 4 | plain-join other-allele 1
+     drug_response >=1*     matched     11 | missed by plain rsID join 0/11 = 0.00% [0.00-25.88] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 1 | plain-join other-allele 0
+     other 0*               matched    244 | missed by plain rsID join 2/244 = 0.82% [0.23-2.94] | of which retired rsID 1, entry without rsID 1 | blind-join false: same-pos 20, other-locus 24 | plain-join other-allele 19
+     other >=1*             matched  4,112 | missed by plain rsID join 4,097/4,112 = 99.64% [99.40-99.78] | of which retired rsID 0, entry without rsID 4,097 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     risk_factor 0*         matched     40 | missed by plain rsID join 0/40 = 0.00% [0.00-8.76] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 1, other-locus 8 | plain-join other-allele 1
+   GWAS / PharmGKB (rsID-level), validated conversion:
+     GWAS               p<5e-8               validated  377,818 | plain  373,935 | missed by plain 3,890/377,818 = 1.03% [1.00-1.06]
+     GWAS               p>=5e-8              validated   59,447 | plain   59,072 | missed by plain 375/59,447 = 0.63% [0.57-0.70]
+     PharmGKB-clinical  level 1A             validated        4 | plain        4 | missed by plain 0/4 = 0.00% [0.00-48.99]
+     PharmGKB-clinical  level 1B             validated        3 | plain        3 | missed by plain 0/3 = 0.00% [0.00-56.15]
+     PharmGKB-clinical  level 2A             validated        9 | plain        9 | missed by plain 0/9 = 0.00% [0.00-29.92]
+     PharmGKB-clinical  level 2B             validated        6 | plain        6 | missed by plain 0/6 = 0.00% [0.00-39.03]
+     PharmGKB-clinical  level 3              validated    1,843 | plain    1,837 | missed by plain 6/1,843 = 0.33% [0.15-0.71]
+     PharmGKB-clinical  level 4              validated      147 | plain      147 | missed by plain 0/147 = 0.00% [0.00-2.55]
+     PharmGKB-variant   variant annotation   validated    9,556 | plain    9,542 | missed by plain 14/9,556 = 0.15% [0.09-0.25]
+
+-- dbSNP144 (GDC)
+   retired rsIDs written: 458,933 annotations (458,933 distinct)
+     target same allele                        457,859/458,933 = 99.77% [99.75-99.78]
+     target same position, other allele        182/458,933 = 0.04% [0.03-0.05]
+     target elsewhere or absent in dbSNP156    892/458,933 = 0.19% [0.18-0.21]
+   ClinVar, allele-aware (reference = entries matched by position and allele):
+     B/LB 0*                matched    835 | missed by plain rsID join 8/835 = 0.96% [0.49-1.88] | of which retired rsID 3, entry without rsID 4 | blind-join false: same-pos 111, other-locus 7 | plain-join other-allele 96
+     B/LB >=1*              matched 38,314 | missed by plain rsID join 1,236/38,314 = 3.23% [3.05-3.41] | of which retired rsID 399, entry without rsID 737 | blind-join false: same-pos 3,083, other-locus 207 | plain-join other-allele 2,406
+     P/LP 0*                matched      0 | missed by plain rsID join 0/0 = 0.00% [0.00-0.00] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 3, other-locus 2 | plain-join other-allele 3
+     P/LP >=1*              matched      1 | missed by plain rsID join 0/1 = 0.00% [0.00-79.35] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 31, other-locus 2 | plain-join other-allele 30
+     VUS 0*                 matched     38 | missed by plain rsID join 0/38 = 0.00% [0.00-9.18] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 11, other-locus 5 | plain-join other-allele 8
+     VUS >=1*               matched    151 | missed by plain rsID join 29/151 = 19.21% [13.72-26.22] | of which retired rsID 13, entry without rsID 15 | blind-join false: same-pos 410, other-locus 2 | plain-join other-allele 370
+     conflicting 0*         matched      5 | missed by plain rsID join 0/5 = 0.00% [0.00-43.45] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     conflicting >=1*       matched    146 | missed by plain rsID join 5/146 = 3.42% [1.47-7.77] | of which retired rsID 2, entry without rsID 1 | blind-join false: same-pos 124, other-locus 4 | plain-join other-allele 109
+     drug_response 0*       matched     52 | missed by plain rsID join 5/52 = 9.62% [4.18-20.61] | of which retired rsID 0, entry without rsID 5 | blind-join false: same-pos 0, other-locus 4 | plain-join other-allele 0
+     drug_response >=1*     matched     11 | missed by plain rsID join 0/11 = 0.00% [0.00-25.88] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 1 | plain-join other-allele 0
+     other 0*               matched    240 | missed by plain rsID join 2/240 = 0.83% [0.23-2.99] | of which retired rsID 1, entry without rsID 1 | blind-join false: same-pos 19, other-locus 25 | plain-join other-allele 18
+     other >=1*             matched  4,009 | missed by plain rsID join 3,993/4,009 = 99.60% [99.35-99.75] | of which retired rsID 0, entry without rsID 3,993 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     risk_factor 0*         matched     39 | missed by plain rsID join 2/39 = 5.13% [1.42-16.89] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 2, other-locus 7 | plain-join other-allele 1
+   GWAS / PharmGKB (rsID-level), validated conversion:
+     GWAS               p<5e-8               validated  364,462 | plain  362,849 | missed by plain 1,615/364,462 = 0.44% [0.42-0.47]
+     GWAS               p>=5e-8              validated   57,945 | plain   57,755 | missed by plain 190/57,945 = 0.33% [0.28-0.38]
+     PharmGKB-clinical  level 1A             validated        4 | plain        4 | missed by plain 0/4 = 0.00% [0.00-48.99]
+     PharmGKB-clinical  level 1B             validated        3 | plain        3 | missed by plain 0/3 = 0.00% [0.00-56.15]
+     PharmGKB-clinical  level 2A             validated        9 | plain        9 | missed by plain 0/9 = 0.00% [0.00-29.92]
+     PharmGKB-clinical  level 2B             validated        6 | plain        6 | missed by plain 0/6 = 0.00% [0.00-39.03]
+     PharmGKB-clinical  level 3              validated    1,826 | plain    1,820 | missed by plain 6/1,826 = 0.33% [0.15-0.72]
+     PharmGKB-clinical  level 4              validated      152 | plain      151 | missed by plain 1/152 = 0.66% [0.12-3.63]
+     PharmGKB-variant   variant annotation   validated    9,828 | plain    9,733 | missed by plain 95/9,828 = 0.97% [0.79-1.18]
+
+-- dbSNP146 (sarek default)
+   retired rsIDs written: 478,756 annotations (478,756 distinct)
+     target same allele                        476,772/478,756 = 99.59% [99.57-99.60]
+     target same position, other allele        253/478,756 = 0.05% [0.05-0.06]
+     target elsewhere or absent in dbSNP156    1,731/478,756 = 0.36% [0.34-0.38]
+   ClinVar, allele-aware (reference = entries matched by position and allele):
+     B/LB 0*                matched    873 | missed by plain rsID join 9/873 = 1.03% [0.54-1.95] | of which retired rsID 3, entry without rsID 5 | blind-join false: same-pos 112, other-locus 8 | plain-join other-allele 96
+     B/LB >=1*              matched 39,387 | missed by plain rsID join 1,277/39,387 = 3.24% [3.07-3.42] | of which retired rsID 410, entry without rsID 763 | blind-join false: same-pos 3,160, other-locus 234 | plain-join other-allele 2,474
+     P/LP 0*                matched      0 | missed by plain rsID join 0/0 = 0.00% [0.00-0.00] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 3, other-locus 2 | plain-join other-allele 3
+     P/LP >=1*              matched      1 | missed by plain rsID join 0/1 = 0.00% [0.00-79.35] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 31, other-locus 2 | plain-join other-allele 30
+     VUS 0*                 matched     41 | missed by plain rsID join 1/41 = 2.44% [0.43-12.60] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 12, other-locus 5 | plain-join other-allele 9
+     VUS >=1*               matched    159 | missed by plain rsID join 29/159 = 18.24% [13.01-24.97] | of which retired rsID 11, entry without rsID 16 | blind-join false: same-pos 422, other-locus 1 | plain-join other-allele 384
+     conflicting 0*         matched      5 | missed by plain rsID join 0/5 = 0.00% [0.00-43.45] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     conflicting >=1*       matched    148 | missed by plain rsID join 5/148 = 3.38% [1.45-7.66] | of which retired rsID 2, entry without rsID 1 | blind-join false: same-pos 129, other-locus 4 | plain-join other-allele 115
+     drug_response 0*       matched     60 | missed by plain rsID join 5/60 = 8.33% [3.61-18.07] | of which retired rsID 0, entry without rsID 5 | blind-join false: same-pos 1, other-locus 4 | plain-join other-allele 1
+     drug_response >=1*     matched     11 | missed by plain rsID join 0/11 = 0.00% [0.00-25.88] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 1 | plain-join other-allele 0
+     other 0*               matched    245 | missed by plain rsID join 2/245 = 0.82% [0.22-2.93] | of which retired rsID 1, entry without rsID 1 | blind-join false: same-pos 20, other-locus 25 | plain-join other-allele 19
+     other >=1*             matched  4,137 | missed by plain rsID join 4,121/4,137 = 99.61% [99.37-99.76] | of which retired rsID 0, entry without rsID 4,121 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     risk_factor 0*         matched     40 | missed by plain rsID join 1/40 = 2.50% [0.44-12.88] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 2, other-locus 8 | plain-join other-allele 1
+   GWAS / PharmGKB (rsID-level), validated conversion:
+     GWAS               p<5e-8               validated  381,736 | plain  379,865 | missed by plain 1,873/381,736 = 0.49% [0.47-0.51]
+     GWAS               p>=5e-8              validated   59,778 | plain   59,508 | missed by plain 270/59,778 = 0.45% [0.40-0.51]
+     PharmGKB-clinical  level 1A             validated        4 | plain        4 | missed by plain 0/4 = 0.00% [0.00-48.99]
+     PharmGKB-clinical  level 1B             validated        3 | plain        3 | missed by plain 0/3 = 0.00% [0.00-56.15]
+     PharmGKB-clinical  level 2A             validated        9 | plain        9 | missed by plain 0/9 = 0.00% [0.00-29.92]
+     PharmGKB-clinical  level 2B             validated        6 | plain        6 | missed by plain 0/6 = 0.00% [0.00-39.03]
+     PharmGKB-clinical  level 3              validated    1,881 | plain    1,874 | missed by plain 7/1,881 = 0.37% [0.18-0.77]
+     PharmGKB-clinical  level 4              validated      154 | plain      153 | missed by plain 1/154 = 0.65% [0.11-3.59]
+     PharmGKB-variant   variant annotation   validated   10,142 | plain   10,042 | missed by plain 100/10,142 = 0.99% [0.81-1.20]
+
+-- dbSNP156 (NCBI, Nov 2022)
+   retired rsIDs written: 18,812 annotations (18,812 distinct)
+     target same allele                        18,808/18,812 = 99.98% [99.95-99.99]
+     target same position, other allele        1/18,812 = 0.01% [0.00-0.03]
+     target elsewhere or absent in dbSNP156    3/18,812 = 0.02% [0.01-0.05]
+   ClinVar, allele-aware (reference = entries matched by position and allele):
+     B/LB 0*                matched    876 | missed by plain rsID join 5/876 = 0.57% [0.24-1.33] | of which retired rsID 0, entry without rsID 5 | blind-join false: same-pos 117, other-locus 7 | plain-join other-allele 117
+     B/LB >=1*              matched 39,511 | missed by plain rsID join 768/39,511 = 1.94% [1.81-2.08] | of which retired rsID 0, entry without rsID 768 | blind-join false: same-pos 3,568, other-locus 227 | plain-join other-allele 3,568
+     P/LP 0*                matched      0 | missed by plain rsID join 0/0 = 0.00% [0.00-0.00] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 3, other-locus 2 | plain-join other-allele 3
+     P/LP >=1*              matched      1 | missed by plain rsID join 0/1 = 0.00% [0.00-79.35] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 33, other-locus 0 | plain-join other-allele 33
+     VUS 0*                 matched     42 | missed by plain rsID join 0/42 = 0.00% [0.00-8.38] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 15, other-locus 4 | plain-join other-allele 15
+     VUS >=1*               matched    178 | missed by plain rsID join 19/178 = 10.67% [6.94-16.07] | of which retired rsID 0, entry without rsID 19 | blind-join false: same-pos 447, other-locus 0 | plain-join other-allele 447
+     conflicting 0*         matched      5 | missed by plain rsID join 0/5 = 0.00% [0.00-43.45] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     conflicting >=1*       matched    148 | missed by plain rsID join 0/148 = 0.00% [0.00-2.53] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 143, other-locus 3 | plain-join other-allele 143
+     drug_response 0*       matched     60 | missed by plain rsID join 5/60 = 8.33% [3.61-18.07] | of which retired rsID 0, entry without rsID 5 | blind-join false: same-pos 1, other-locus 4 | plain-join other-allele 1
+     drug_response >=1*     matched     11 | missed by plain rsID join 0/11 = 0.00% [0.00-25.88] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 0, other-locus 1 | plain-join other-allele 0
+     other 0*               matched    248 | missed by plain rsID join 1/248 = 0.40% [0.07-2.25] | of which retired rsID 0, entry without rsID 1 | blind-join false: same-pos 21, other-locus 25 | plain-join other-allele 21
+     other >=1*             matched  4,141 | missed by plain rsID join 4,125/4,141 = 99.61% [99.37-99.76] | of which retired rsID 0, entry without rsID 4,125 | blind-join false: same-pos 0, other-locus 0 | plain-join other-allele 0
+     risk_factor 0*         matched     40 | missed by plain rsID join 0/40 = 0.00% [0.00-8.76] | of which retired rsID 0, entry without rsID 0 | blind-join false: same-pos 2, other-locus 8 | plain-join other-allele 2
+   GWAS / PharmGKB (rsID-level), validated conversion:
+     GWAS               p<5e-8               validated  382,640 | plain  378,198 | missed by plain 4,442/382,640 = 1.16% [1.13-1.20]
+     GWAS               p>=5e-8              validated   59,789 | plain   59,293 | missed by plain 496/59,789 = 0.83% [0.76-0.91]
+     PharmGKB-clinical  level 1A             validated        4 | plain        4 | missed by plain 0/4 = 0.00% [0.00-48.99]
+     PharmGKB-clinical  level 1B             validated        3 | plain        3 | missed by plain 0/3 = 0.00% [0.00-56.15]
+     PharmGKB-clinical  level 2A             validated        9 | plain        9 | missed by plain 0/9 = 0.00% [0.00-29.92]
+     PharmGKB-clinical  level 2B             validated        6 | plain        6 | missed by plain 0/6 = 0.00% [0.00-39.03]
+     PharmGKB-clinical  level 3              validated    1,882 | plain    1,882 | missed by plain 0/1,882 = 0.00% [0.00-0.20]
+     PharmGKB-clinical  level 4              validated      154 | plain      154 | missed by plain 0/154 = 0.00% [0.00-2.43]
+     PharmGKB-variant   variant annotation   validated   10,150 | plain   10,150 | missed by plain 0/10,150 = 0.00% [0.00-0.04]
+
+done
