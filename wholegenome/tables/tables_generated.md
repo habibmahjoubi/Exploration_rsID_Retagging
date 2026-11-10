@@ -117,7 +117,7 @@ n = 30; all at the same position as the HG002 variant (source: other_allele_PLP_
 
 ## Table S9. Live RefSNP check of 30 retired rsIDs whose current rsID is not at the same position in dbSNP156 (HG002, dbSNP146)
 
-30 cases drawn at random (seed 11) from the first 400 'elsewhere' cases in genome order (chromosomes 1-3; Supplementary Methods M7), listed in genome order. Classes: same chromosome, within 50 bp: 23; same chromosome, > 50 bp away: 4; API error: 2; target not placed on GRCh38 chromosomes: 1. Variants are given as position, then reference and alternate allele after normalization; an empty allele is shown as nothing (before '>') or '-' (after '>'). API error: the live query failed.
+30 cases drawn at random (seed 11) from the first 400 'elsewhere' cases in genome order (chromosomes 1-3; Supplementary Methods M7), listed in genome order. Classes: same chromosome, within 50 bp: 23; same chromosome, > 50 bp away: 4; API error: 2; target not placed on GRCh38 chromosomes: 1. Variants are given as position, then reference and alternate allele after normalization; an empty allele is shown as nothing (before '>') or '-' (after '>'). API error: the live query failed. The 4 cases more than 50 bp away link positions near 120 Mb and 149 Mb of chromosome 1 that lie in segmental duplications of each other (98.6-99.2% identity; Supplementary Methods M7).
 
 | HG002 variant (normalized) | Retired rsID | Current rsID | Current placement (GRCh38) | Class |
 |---|---|---|---|---|

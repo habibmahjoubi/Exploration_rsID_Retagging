@@ -218,7 +218,9 @@ summ = "; ".join(f"{k}: {v}" for k, v in sorted(tally.items(), key=lambda kv: -k
 P(f"30 cases drawn at random (seed 11) from the first {nret} 'elsewhere' cases in genome order "
   "(chromosomes 1-3; Supplementary Methods M7), listed in genome order. Classes: " + summ + ". "
   "Variants are given as position, then reference and alternate allele after normalization; an empty "
-  "allele is shown as nothing (before '>') or '-' (after '>'). API error: the live query failed.\n")
+  "allele is shown as nothing (before '>') or '-' (after '>'). API error: the live query failed. "
+  "The 4 cases more than 50 bp away link positions near 120 Mb and 149 Mb of chromosome 1 that lie "
+  "in segmental duplications of each other (98.6-99.2% identity; Supplementary Methods M7).\n")
 P("| HG002 variant (normalized) | Retired rsID | Current rsID | Current placement (GRCh38) | Class |")
 P("|---|---|---|---|---|")
 ms = list(re.finditer(r"^  (\S+) (\S+)  (rs\d+) -> (rs\d+)  now at (\S+)  \[(.+)\]$", live, re.M))
