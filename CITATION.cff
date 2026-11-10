@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
 type: software
-title: "Code and data: Retired dbSNP identifiers in the default reference files of germline variant-calling pipelines"
+title: "Code and data: Retired dbSNP identifiers and rsID-based lookups in germline variant-calling pipelines"
 version: "V2"
 authors:
   - family-names: Mahjoubi

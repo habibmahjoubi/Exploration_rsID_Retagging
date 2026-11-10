@@ -1,4 +1,4 @@
-# Retired dbSNP identifiers in the default reference files of germline variant-calling pipelines
+# Retired dbSNP identifiers and rsID-based lookups in germline variant-calling pipelines
 
 Code, derived tables and result files for the study of the same name (Mahjoubi H., Brief
 Communication, submitted 2026). This repository covers the reproducibility of the results; it
