@@ -32,6 +32,8 @@ Benchmark variants (chr1-22): HG001 3,893,341, HG002 4,048,342, HG005 3,856,856.
 
 ## Table S11. Per-chromosome range of the annotation rate, and bundle rate
 
+Bundle rate: retired rsIDs among all distinct rsIDs of each file on chromosomes 1-22; it does not depend on any sample. Per-chromosome range: lowest and highest annotation rate over chromosomes 1-22, for each genome.
+
 | dbSNP file | Bundle rate (retired / distinct rsIDs, chr1-22) | Per-chromosome annotation rate, range: HG001 / HG002 / HG005 |
 |---|---|---|
 | dbSNP138 | 1,021,831 / 58,373,860 = 1.750% | 4.03-5.09% / 4.18-5.33% / 3.53-4.84% |
@@ -40,6 +42,8 @@ Benchmark variants (chr1-22): HG001 3,893,341, HG002 4,048,342, HG005 3,856,856.
 | dbSNP156 | 508,061 / 1,051,650,413 = 0.048% | 0.04-0.29% / 0.03-0.29% / 0.03-0.34% |
 
 ## Table S2. Where the current rsID of each retired rsID sits in dbSNP156
+
+Retired rsIDs written to each genome that have a merge target (Supplementary Methods M1), by where dbSNP156 lists their current rsID: at the same normalized allele, at the same position with another allele, or neither (elsewhere, or absent from dbSNP156). 95% Wilson intervals.
 
 | dbSNP file | Genome | Retired rsIDs written | Same allele (95% CI) | Same position, other allele | Elsewhere or absent |
 |---|---|---|---|---|---|
@@ -56,7 +60,7 @@ Benchmark variants (chr1-22): HG001 3,893,341, HG002 4,048,342, HG005 3,856,856.
 | dbSNP156 | HG002 | 18,812 | 99.98% (99.95-99.99) | 1 (0.01%) | 3 (0.02%) |
 | dbSNP156 | HG005 | 18,966 | 99.98% (99.95-99.99) | 0 (0.00%) | 4 (0.02%) |
 
-## Table S4. ClinVar entries brought in by blind reconciliation (no locus check), by category
+## Table S4. ClinVar entries brought in by the blind join (no locus check), by category
 
 Counts per genome, HG001 / HG002 / HG005: entries reached only after converting every retired rsID through the ledger without checking the locus, that do not match the variant's position and allele. Counts are net of the entries that the plain rsID join already attaches (Table 2).
 
@@ -69,7 +73,7 @@ Counts per genome, HG001 / HG002 / HG005: entries reached only after converting 
 
 ## Table S5. Sample-independent check: ClinVar, GWAS Catalog and PharmGKB entries that a file holds only under a retired rsID
 
-Denominator: entries whose rsID the file holds in current or retired form (identifier level). Retired only: the file holds a retired rsID that merges into the entry's rsID, but not the entry's own rsID or its current rsID. Same allele: that retired rsID is listed by the file at the allele of the ClinVar entry, so a genome carrying this variant would miss the entry in a plain rsID join. Allele verification was run for dbSNP138, 144 and 146 (verify_s5_alleles.py).
+Denominator: entries whose rsID the file holds in current or retired form (identifier level). Retired only: the file holds a retired rsID that merges into the entry's rsID, but not the entry's own rsID or its current rsID. Same allele: that retired rsID is listed by the file at the allele of the ClinVar entry, so a genome carrying this variant would miss the entry in a plain rsID join. Allele verification was run for dbSNP138, 144 and 146 (verify_s5_alleles.py). PharmGKB: clinical annotations of levels 1A-2B, retired only of entries held.
 
 | dbSNP file | ClinVar P/LP >=1 star: retired only | of which same allele | ClinVar B/LB >=1 star: retired only | of which same allele | GWAS p < 5x10^-8: retired only | GWAS p < 5x10^-8 filed under a retired rsID by the Catalog | PharmGKB clinical 1A-2B: retired only |
 |---|---|---|---|---|---|---|---|
@@ -80,7 +84,7 @@ Denominator: entries whose rsID the file holds in current or retired form (ident
 
 ## Table S6. ClinVar P/LP (>=1 star) entries attached by a plain rsID join to a different allele (HG002, dbSNP146)
 
-n = 30; all at the same position as the HG002 variant (source: other_allele_PLP_HG002_d146.tsv).
+n = 30; all at the same position as the HG002 variant. Genotype of HG002: 0/1, heterozygous; 1/1, homozygous for the alternate allele (source: other_allele_PLP_HG002_d146.tsv).
 
 | HG002 variant (HGVS, GRCh38) | Genotype | rsID | ClinVar P/LP variant (HGVS) | Gene | ClinVar classification |
 |---|---|---|---|---|---|

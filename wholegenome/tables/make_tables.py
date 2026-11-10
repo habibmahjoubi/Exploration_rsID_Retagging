@@ -4,8 +4,8 @@ Usage: python make_tables.py
 """
 import json, math, os, re, sys
 
+WG = os.environ.get("RSID_WG", os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))   # directory holding the result files
 HERE = os.path.dirname(os.path.abspath(__file__))
-WG = os.environ.get("RSID_WG", os.path.join(HERE, ".."))   # directory holding the result files
 S = ["HG001", "HG002", "HG005"]
 B = [("dbSNP138 (GATK/WARP)", "dbSNP138"), ("dbSNP144 (GDC)", "dbSNP144"),
      ("dbSNP146 (sarek default)", "dbSNP146"), ("dbSNP156 (NCBI, Nov 2022)", "dbSNP156")]
@@ -134,6 +134,9 @@ P("")
 
 # ---------------------------------------------------------------- Table S11: per-chromosome + bundle-level
 P("## Table S11. Per-chromosome range of the annotation rate, and bundle rate\n")
+P("Bundle rate: retired rsIDs among all distinct rsIDs of each file on chromosomes 1-22; it does not "
+  "depend on any sample. Per-chromosome range: lowest and highest annotation rate over chromosomes 1-22, "
+  "for each genome.\n")
 bundle_rate = {}
 for ln in open(os.path.join(WG, "bundle_rate.txt")):
     m = re.match(r"(\S+)\.vcf\.gz: distinct chr1-22 rsIDs ([\d,]+); retired ([\d,]+)", ln)
@@ -149,6 +152,9 @@ P("")
 
 # ---------------------------------------------------------------- Table S2: locus check
 P("## Table S2. Where the current rsID of each retired rsID sits in dbSNP156\n")
+P("Retired rsIDs written to each genome that have a merge target (Supplementary Methods M1), by where "
+  "dbSNP156 lists their current rsID: at the same normalized allele, at the same position with another "
+  "allele, or neither (elsewhere, or absent from dbSNP156). 95% Wilson intervals.\n")
 P("| dbSNP file | Genome | Retired rsIDs written | Same allele (95% CI) | Same position, other allele | Elsewhere or absent |")
 P("|---|---|---|---|---|---|")
 for key, lab in B:
@@ -160,7 +166,7 @@ for key, lab in B:
 P("")
 
 # ---------------------------------------------------------------- Table S4: blind reconciliation false entries
-P("## Table S4. ClinVar entries brought in by blind reconciliation (no locus check), by category\n")
+P("## Table S4. ClinVar entries brought in by the blind join (no locus check), by category\n")
 P("Counts per genome, HG001 / HG002 / HG005: entries reached only after converting every retired rsID "
   "through the ledger without checking the locus, that do not match the variant's position and allele. Counts are net of the entries that the plain rsID join already attaches (Table 2).\n")
 P("| dbSNP file | P/LP >=1 star: same position, other allele | P/LP >=1 star: other locus | B/LB >=1 star: other locus |")
@@ -179,7 +185,8 @@ P("Denominator: entries whose rsID the file holds in current or retired form (id
   "Retired only: the file holds a retired rsID that merges into the entry's rsID, but not the entry's own "
   "rsID or its current rsID. Same allele: that retired rsID is listed by the file at the allele of the "
   "ClinVar entry, so a genome carrying this variant would miss the entry in a plain rsID join. "
-  "Allele verification was run for dbSNP138, 144 and 146 (verify_s5_alleles.py).\n")
+  "Allele verification was run for dbSNP138, 144 and 146 (verify_s5_alleles.py). "
+  "PharmGKB: clinical annotations of levels 1A-2B, retired only of entries held.\n")
 P("| dbSNP file | ClinVar P/LP >=1 star: retired only | of which same allele | ClinVar B/LB >=1 star: retired only | of which same allele | GWAS p < 5x10^-8: retired only | GWAS p < 5x10^-8 filed under a retired rsID by the Catalog | PharmGKB clinical 1A-2B: retired only |")
 P("|---|---|---|---|---|---|---|---|")
 ver = json.load(open(os.path.join(WG, "downstream", "verify_s5_alleles.json")))
@@ -201,7 +208,8 @@ P("")
 # ---------------------------------------------------------------- Table S6: other-allele P/LP (HG002, dbSNP146)
 P("## Table S6. ClinVar P/LP (>=1 star) entries attached by a plain rsID join to a different allele (HG002, dbSNP146)\n")
 rows = [l.rstrip("\n").split("\t") for l in open(os.path.join(WG, "downstream", "other_allele_PLP_HG002_d146.tsv"))][1:]
-P(f"n = {len(rows)}; all at the same position as the HG002 variant (source: other_allele_PLP_HG002_d146.tsv).\n")
+P(f"n = {len(rows)}; all at the same position as the HG002 variant. Genotype of HG002: 0/1, "
+  "heterozygous; 1/1, homozygous for the alternate allele (source: other_allele_PLP_HG002_d146.tsv).\n")
 P("| HG002 variant (HGVS, GRCh38) | Genotype | rsID | ClinVar P/LP variant (HGVS) | Gene | ClinVar classification |")
 P("|---|---|---|---|---|---|")
 for r in rows:
