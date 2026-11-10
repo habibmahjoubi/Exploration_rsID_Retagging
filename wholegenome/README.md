@@ -24,22 +24,22 @@ a newer build will differ from the build 157 file used here (md5 in `download_in
 |---|---|---|
 | `filter_local.py` | keeps dbSNP records at benchmark positions (chr1-22) | Methods |
 | `normalize.py` | allele trimming (SPDI-like), no left-alignment | Methods, M3 |
-| `wg_analysis.py` -> `wg_results*.json/.txt` | annotation and variant rates, SNV/indel split, per-chromosome ranges | Table 1, Tables S2, S10 |
-| `bundle_rate.py` -> `bundle_rate.txt` | retired rsIDs among all rsIDs of each file, by retiring build | Figure 1b, Table S2 |
-| `merged_years.py` -> `merged_years.txt` | retirements per dbSNP build in the ledger | Figure 1a, Table S8 |
+| `wg_analysis.py` -> `wg_results*.json/.txt` | annotation and variant rates, SNV/indel split, per-chromosome ranges | Table 1, Tables S11, S7 |
+| `bundle_rate.py` -> `bundle_rate.txt` | retired rsIDs among all rsIDs of each file, by retiring build | Figure 1b, Table S11 |
+| `merged_years.py` -> `merged_years.txt` | retirements per dbSNP build in the ledger | Figure 1a, Table S9 |
 | `dup_keys.py` -> `dup_keys.txt` | sites holding two or more rsIDs, and a retired plus a current one | Supplementary Note 1 |
 | `dup_keys_chr20.py` -> `dup_keys_chr20.txt` | same, chromosome 20 only | Supplementary Note 1 |
 | `check_indel_examples.py` -> `indel_examples_d146.txt` | live check of 25 indels and 5 SNVs | M7, check 3 |
 | `retired_variants_HG00x_d146.tsv.gz` | every benchmark variant carrying a retired rsID with dbSNP146 | derived table |
 | `downstream/downstream_join.py` -> `downstream_results*.json/.txt` | rsID joins to ClinVar, GWAS Catalog, PharmGKB; whole-file check | Table 2, Table S5 |
 | `downstream/post_locus_allele.py` -> `post_*.txt`, `post_locus_allele_*.json` | locus check of merges; allele-aware ClinVar reference | Tables 2, S3, S4 |
-| `downstream/check_elsewhere.py` -> `elsewhere_live_HG002.txt` | live RefSNP check of 30 "elsewhere" cases | Table S9 |
+| `downstream/check_elsewhere.py` -> `elsewhere_live_HG002.txt` | live RefSNP check of 30 "elsewhere" cases | Table S3 |
 | `downstream/check_other_allele.py` -> `other_allele_PLP_HG002_d146.tsv` | P/LP ClinVar entries attached to another allele | Table S6 |
 | `downstream/verify_s5_alleles.py` -> `verify_s5_alleles.*` | allele check of the whole-file estimate | Table S5 |
 | `downstream/SOURCES.txt`, `MD5SUMS.txt`, `MD5_samples.txt` | exact sources and checksums | Table S1 |
 | `audit_*.py` | independent Wilson intervals (statsmodels), ledger records without target, unmatched indels | M1, M3 |
-| `sarek_chr20/` | real nf-core/sarek 3.9.0 run, HG002 chr20 30x: output VCF, ledger check, live checks, pipeline defaults | Table S7, M2, M4, M7 |
-| `tables/make_tables.py` -> `tables/tables_generated.md` | every table number, read from the files above | Tables 1-2, S2-S6, S9-S11 |
+| `sarek_chr20/` | real nf-core/sarek 3.9.0 run, HG002 chr20 30x: output VCF, ledger check, live checks, pipeline defaults | Table S10, M2, M4, M7 |
+| `tables/make_tables.py` -> `tables/tables_generated.md` | every table number, read from the files above | Tables 1-2, S2-S8, S11 |
 | `tables/check_hgvs.py` -> `tables/hgvs_validation.tsv` | VariantValidator check of all 60 HGVS descriptions | Table S6, Related Manuscript File |
 
 `sarek_chr20/ledger_check.py` also needs the chromosome 20 extracts of the four dbSNP files

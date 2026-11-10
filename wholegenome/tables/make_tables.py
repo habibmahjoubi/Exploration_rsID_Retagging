@@ -1,5 +1,5 @@
 """Builds every number table of the Brief Communication from the result files on G:/rsid_wg.
-Nothing is typed by hand. Output: tables_generated.md (main Tables 1-2, Supplementary Tables S2-S5).
+Nothing is typed by hand. Output: tables_generated.md (main Tables 1-2, Supplementary Tables S11-S5).
 Usage: python make_tables.py
 """
 import json, math, os, re, sys
@@ -132,8 +132,8 @@ def pgx(s, k, f):
 row("PharmGKB clinical annotations, levels 1A-2B, missed, n of N", lambda s, k: pgx(s, k, lambda a, b: f"{a} of {b}"))
 P("")
 
-# ---------------------------------------------------------------- Table S2: per-chromosome + bundle-level
-P("## Table S2. Per-chromosome range of the annotation rate, and bundle rate\n")
+# ---------------------------------------------------------------- Table S11: per-chromosome + bundle-level
+P("## Table S11. Per-chromosome range of the annotation rate, and bundle rate\n")
 bundle_rate = {}
 for ln in open(os.path.join(WG, "bundle_rate.txt")):
     m = re.match(r"(\S+)\.vcf\.gz: distinct chr1-22 rsIDs ([\d,]+); retired ([\d,]+)", ln)
@@ -147,8 +147,8 @@ for key, lab in B:
       " / ".join(f"{txt[s][key]['chrom'][0]:.2f}-{txt[s][key]['chrom'][1]:.2f}%" for s in S) + " |")
 P("")
 
-# ---------------------------------------------------------------- Table S3: locus check
-P("## Table S3. Where the current rsID of each retired rsID sits in dbSNP156\n")
+# ---------------------------------------------------------------- Table S2: locus check
+P("## Table S2. Where the current rsID of each retired rsID sits in dbSNP156\n")
 P("| dbSNP file | Genome | Retired rsIDs written | Same allele (95% CI) | Same position, other allele | Elsewhere or absent |")
 P("|---|---|---|---|---|---|")
 for key, lab in B:
@@ -209,8 +209,8 @@ for r in rows:
     P(f"| {ACC[c]}:g.{pos}{ref}>{alt} | {r[1]} | {r[3]} | {r[8]} | *{r[7]}* | {r[9].replace('_', ' ')} |")
 P("")
 
-# ---------------------------------------------------------------- Table S9: live check of 'elsewhere' targets
-P("## Table S9. Live RefSNP check of 30 retired rsIDs whose current rsID is not at the same position in dbSNP156 (HG002, dbSNP146)\n")
+# ---------------------------------------------------------------- Table S3: live check of 'elsewhere' targets
+P("## Table S3. Live RefSNP check of 30 retired rsIDs whose current rsID is not at the same position in dbSNP156 (HG002, dbSNP146)\n")
 live = open(os.path.join(WG, "downstream", "elsewhere_live_HG002.txt"), encoding="utf-8").read()
 tally = eval(re.search(r"SUMMARY: (.*)$", live, re.M).group(1))
 nret = int(re.search(r"^(\d+) 'elsewhere' examples", live, re.M).group(1))
@@ -229,8 +229,8 @@ for m in sorted(ms, key=lambda m: (int(m.group(1).split(":")[0][3:]), int(m.grou
 P("")
 
 
-# ---------------------------------------------------------------- Table S10: bounds for indels without an rsID match
-P("## Table S10. Indels that received no rsID, and bounds on the variant rate\n")
+# ---------------------------------------------------------------- Table S7: bounds for indels without an rsID match
+P("## Table S7. Indels that received no rsID, and bounds on the variant rate\n")
 P("Indels were not left-aligned, so an indel written at a shifted position by the file receives no rsID "
   "and leaves both the numerator and the denominator of the variant rate. Lower bound: all such indels "
   "would have received only current rsIDs. Upper bound: all would have received a retired rsID. Indels "
@@ -246,8 +246,8 @@ for key, lab in B:
         P(f"| {lab} | {s_} | {un:,} of {nind:,} ({100*un/nind:.1f}%) | {100*k/n:.2f}% | {100*k/(n+un):.2f}% | {100*(k+un)/(n+un):.2f}% |")
 P("")
 
-# ---------------------------------------------------------------- Table S11: counts behind Table 2
-P("## Table S11. Counts behind the percentages of Table 2\n")
+# ---------------------------------------------------------------- Table S8: counts behind Table 2
+P("## Table S8. Counts behind the percentages of Table 2\n")
 P("Each cell: entries missed of reference entries (percentage). Reference entries as defined in the "
   "legend of Table 2.\n")
 P("| Knowledge base and category | Genome | " + " | ".join(lab for _, lab in cols) + " |")

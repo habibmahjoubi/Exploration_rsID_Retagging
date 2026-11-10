@@ -30,7 +30,7 @@ Benchmark variants (chr1-22): HG001 3,893,341, HG002 4,048,342, HG005 3,856,856.
 |   of which retired rsID on the pipeline side, % | 0.47% / 0.45% / 0.49% | 0.09% / 0.10% / 0.07% | 0.00% / 0.00% / 0.00% |
 | PharmGKB clinical annotations, levels 1A-2B, missed, n of N | 0 of 48 / 0 of 22 / 0 of 18 | 0 of 48 / 0 of 22 / 0 of 20 | 0 of 48 / 0 of 22 / 0 of 20 |
 
-## Table S2. Per-chromosome range of the annotation rate, and bundle rate
+## Table S11. Per-chromosome range of the annotation rate, and bundle rate
 
 | dbSNP file | Bundle rate (retired / distinct rsIDs, chr1-22) | Per-chromosome annotation rate, range: HG001 / HG002 / HG005 |
 |---|---|---|
@@ -39,7 +39,7 @@ Benchmark variants (chr1-22): HG001 3,893,341, HG002 4,048,342, HG005 3,856,856.
 | dbSNP146 | 2,294,215 / 143,491,344 = 1.599% | 7.64-9.44% / 8.11-9.74% / 6.53-8.45% |
 | dbSNP156 | 508,061 / 1,051,650,413 = 0.048% | 0.04-0.29% / 0.03-0.29% / 0.03-0.34% |
 
-## Table S3. Where the current rsID of each retired rsID sits in dbSNP156
+## Table S2. Where the current rsID of each retired rsID sits in dbSNP156
 
 | dbSNP file | Genome | Retired rsIDs written | Same allele (95% CI) | Same position, other allele | Elsewhere or absent |
 |---|---|---|---|---|---|
@@ -115,7 +115,7 @@ n = 30; all at the same position as the HG002 variant (source: other_allele_PLP_
 | NC_000019.10:g.11100236C>T | 0/1 | rs2228671 | NC_000019.10:g.11100236C>G | *LDLR* | Pathogenic |
 | NC_000020.11:g.10652589G>A | 1/1 | rs1131695 | NC_000020.11:g.10652589G>C | *JAG1* | Pathogenic |
 
-## Table S9. Live RefSNP check of 30 retired rsIDs whose current rsID is not at the same position in dbSNP156 (HG002, dbSNP146)
+## Table S3. Live RefSNP check of 30 retired rsIDs whose current rsID is not at the same position in dbSNP156 (HG002, dbSNP146)
 
 30 cases drawn at random (seed 11) from the first 400 'elsewhere' cases in genome order (chromosomes 1-3; Supplementary Methods M7), listed in genome order. Classes: same chromosome, within 50 bp: 23; same chromosome, > 50 bp away: 4; API error: 2; target not placed on GRCh38 chromosomes: 1. Variants are given as position, then reference and alternate allele after normalization; an empty allele is shown as nothing (before '>') or '-' (after '>'). API error: the live query failed. The 4 cases more than 50 bp away link positions near 120 Mb and 149 Mb of chromosome 1 that lie in segmental duplications of each other (98.6-99.2% identity; Supplementary Methods M7).
 
@@ -152,7 +152,7 @@ n = 30; all at the same position as the HG002 variant (source: other_allele_PLP_
 | chr3:101116569 AC>- | rs796992790 | rs764183857 | chr3:101116578 | same chromosome, within 50 bp |
 | chr3:126079239 CC>- | rs796693172 | rs34429413 | chr3:126079240 | same chromosome, within 50 bp |
 
-## Table S10. Indels that received no rsID, and bounds on the variant rate
+## Table S7. Indels that received no rsID, and bounds on the variant rate
 
 Indels were not left-aligned, so an indel written at a shifted position by the file receives no rsID and leaves both the numerator and the denominator of the variant rate. Lower bound: all such indels would have received only current rsIDs. Upper bound: all would have received a retired rsID. Indels absent from the file because they were submitted to dbSNP later also fall in this group, so the bounds are conservative.
 
@@ -171,7 +171,7 @@ Indels were not left-aligned, so an indel written at a shifted position by the f
 | dbSNP156 | HG002 | 535 of 588,091 (0.1%) | 0.14% | 0.14% | 0.15% |
 | dbSNP156 | HG005 | 1,312 of 469,951 (0.3%) | 0.15% | 0.15% | 0.18% |
 
-## Table S11. Counts behind the percentages of Table 2
+## Table S8. Counts behind the percentages of Table 2
 
 Each cell: entries missed of reference entries (percentage). Reference entries as defined in the legend of Table 2.
 
