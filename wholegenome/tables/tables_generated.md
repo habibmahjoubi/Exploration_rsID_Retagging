@@ -67,16 +67,16 @@ Counts per genome, HG001 / HG002 / HG005: entries reached only after converting 
 | dbSNP146 | 0 / 1 / 0 | 1 / 2 / 1 | 6 / 8 / 5 |
 | dbSNP156 | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 
-## Table S5. Sample-independent check: ClinVar and GWAS entries that a file holds only under a retired rsID
+## Table S5. Sample-independent check: ClinVar, GWAS Catalog and PharmGKB entries that a file holds only under a retired rsID
 
 Denominator: entries whose rsID the file holds in current or retired form (identifier level). Retired only: the file holds a retired rsID that merges into the entry's rsID, but not the entry's own rsID or its current rsID. Same allele: that retired rsID is listed by the file at the allele of the ClinVar entry, so a genome carrying this variant would miss the entry in a plain rsID join. Allele verification was run for dbSNP138, 144 and 146 (verify_s5_alleles.py).
 
-| dbSNP file | ClinVar P/LP >=1 star: retired only | of which same allele | ClinVar B/LB >=1 star: retired only | of which same allele | GWAS p < 5x10^-8: retired only | GWAS p < 5x10^-8 filed under a retired rsID by the Catalog |
-|---|---|---|---|---|---|---|
-| dbSNP138 | 41 of 24,032 (0.17%) | 33 (0.14%) | 844 of 377,644 (0.22%) | 671 (0.18%) | 3,287 of 828,710 (0.40%) | 5,021 (0.61%) |
-| dbSNP144 | 189 of 56,334 (0.34%) | 159 (0.28%) | 468 of 616,941 (0.08%) | 376 (0.06%) | 336 of 809,757 (0.04%) | 757 (0.09%) |
-| dbSNP146 | 92 of 61,329 (0.15%) | 70 (0.11%) | 588 of 645,970 (0.09%) | 440 (0.07%) | 321 of 850,722 (0.04%) | 1,313 (0.15%) |
-| dbSNP156 | 0 of 175,257 (0.00%) | 0 | 0 of 957,042 (0.00%) | 0 | 0 of 854,345 (0.00%) | 9,912 (1.16%) |
+| dbSNP file | ClinVar P/LP >=1 star: retired only | of which same allele | ClinVar B/LB >=1 star: retired only | of which same allele | GWAS p < 5x10^-8: retired only | GWAS p < 5x10^-8 filed under a retired rsID by the Catalog | PharmGKB clinical 1A-2B: retired only |
+|---|---|---|---|---|---|---|---|
+| dbSNP138 | 41 of 24,032 (0.17%) | 33 (0.14%) | 844 of 377,644 (0.22%) | 671 (0.18%) | 3,287 of 828,710 (0.40%) | 5,021 (0.61%) | 0 of 205 |
+| dbSNP144 | 189 of 56,334 (0.34%) | 159 (0.28%) | 468 of 616,941 (0.08%) | 376 (0.06%) | 336 of 809,757 (0.04%) | 757 (0.09%) | 0 of 237 |
+| dbSNP146 | 92 of 61,329 (0.15%) | 70 (0.11%) | 588 of 645,970 (0.09%) | 440 (0.07%) | 321 of 850,722 (0.04%) | 1,313 (0.15%) | 0 of 240 |
+| dbSNP156 | 0 of 175,257 (0.00%) | 0 | 0 of 957,042 (0.00%) | 0 | 0 of 854,345 (0.00%) | 9,912 (1.16%) | 0 of 240 |
 
 ## Table S6. ClinVar P/LP (>=1 star) entries attached by a plain rsID join to a different allele (HG002, dbSNP146)
 

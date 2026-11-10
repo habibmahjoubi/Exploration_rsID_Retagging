@@ -174,14 +174,14 @@ for key, lab in B:
 P("")
 
 # ---------------------------------------------------------------- Table S5: whole-file check, with allele verification
-P("## Table S5. Sample-independent check: ClinVar and GWAS entries that a file holds only under a retired rsID\n")
+P("## Table S5. Sample-independent check: ClinVar, GWAS Catalog and PharmGKB entries that a file holds only under a retired rsID\n")
 P("Denominator: entries whose rsID the file holds in current or retired form (identifier level). "
   "Retired only: the file holds a retired rsID that merges into the entry's rsID, but not the entry's own "
   "rsID or its current rsID. Same allele: that retired rsID is listed by the file at the allele of the "
   "ClinVar entry, so a genome carrying this variant would miss the entry in a plain rsID join. "
   "Allele verification was run for dbSNP138, 144 and 146 (verify_s5_alleles.py).\n")
-P("| dbSNP file | ClinVar P/LP >=1 star: retired only | of which same allele | ClinVar B/LB >=1 star: retired only | of which same allele | GWAS p < 5x10^-8: retired only | GWAS p < 5x10^-8 filed under a retired rsID by the Catalog |")
-P("|---|---|---|---|---|---|---|")
+P("| dbSNP file | ClinVar P/LP >=1 star: retired only | of which same allele | ClinVar B/LB >=1 star: retired only | of which same allele | GWAS p < 5x10^-8: retired only | GWAS p < 5x10^-8 filed under a retired rsID by the Catalog | PharmGKB clinical 1A-2B: retired only |")
+P("|---|---|---|---|---|---|---|---|")
 ver = json.load(open(os.path.join(WG, "downstream", "verify_s5_alleles.json")))
 for key, lab in B:
     rc = ds["HG002"][key]["resource_centric"]
@@ -191,9 +191,11 @@ for key, lab in B:
         n = ver[key].get(f"{cat} | same allele", 0)
         return f"{n:,} ({pc(n, rc[c]['in_bundle'])})"
     g = rc["GWAS | p<5e-8"]
+    lv = [f"PharmGKB-clinical | level {x}" for x in ("1A", "1B", "2A", "2B")]
+    pk, pn = sum(rc[x]["retired_only"] for x in lv), sum(rc[x]["in_bundle"] for x in lv)
     P(f"| {lab} | {f('ClinVar | P/LP >=1*')} | {same('P/LP >=1*', 'ClinVar | P/LP >=1*')} | "
       f"{f('ClinVar | B/LB >=1*')} | {same('B/LB >=1*', 'ClinVar | B/LB >=1*')} | {f('GWAS | p<5e-8')} | "
-      f"{g['resource_stale']:,} ({pc(g['resource_stale'], g['in_bundle'])}) |")
+      f"{g['resource_stale']:,} ({pc(g['resource_stale'], g['in_bundle'])}) | {pk} of {pn} |")
 P("")
 
 # ---------------------------------------------------------------- Table S6: other-allele P/LP (HG002, dbSNP146)
