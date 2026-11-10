@@ -27,9 +27,9 @@ a newer build will differ from the build 157 file used here (md5 in `download_in
 | `wg_analysis.py` -> `wg_results*.json/.txt` | annotation and variant rates, SNV/indel split, per-chromosome ranges | Table 1, Tables S11, S7 |
 | `bundle_rate.py` -> `bundle_rate.txt` | retired rsIDs among all rsIDs of each file, by retiring build | Figure 1b, Table S11 |
 | `merged_years.py` -> `merged_years.txt` | retirements per dbSNP build in the ledger | Figure 1a, Table S9 |
-| `dup_keys.py` -> `dup_keys.txt` | sites holding two or more rsIDs, and a retired plus a current one | Supplementary Note 1 |
-| `dup_keys_chr20.py` -> `dup_keys_chr20.txt` | same, chromosome 20 only | Supplementary Note 1 |
-| `check_indel_examples.py` -> `indel_examples_d146.txt` | live check of 25 indels and 5 SNVs | M7, check 3 |
+| `dup_keys.py` -> `dup_keys.txt` | sites holding two or more rsIDs, and a retired plus a current one | Supplementary Note |
+| `dup_keys_chr20.py` -> `dup_keys_chr20.txt` | same, chromosome 20 only | Supplementary Note |
+| `check_indel_examples.py` -> `indel_examples_d146.txt` | live check of 25 indels and 5 SNVs | M7, check 2 |
 | `retired_variants_HG00x_d146.tsv.gz` | every benchmark variant carrying a retired rsID with dbSNP146 | derived table |
 | `downstream/downstream_join.py` -> `downstream_results*.json/.txt` | rsID joins to ClinVar, GWAS Catalog, PharmGKB; whole-file check | Table 2, Table S5 |
 | `downstream/post_locus_allele.py` -> `post_*.txt`, `post_locus_allele_*.json` | locus check of merges; allele-aware ClinVar reference | Tables 2, S3, S4 |
